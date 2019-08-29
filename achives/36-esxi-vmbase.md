@@ -145,8 +145,6 @@ rm -rf /var/log/journal/*
 
 ```bash
 rm -rf /usr/share/doc
-rm -rf /
-
 cd /usr/share/locale
 # 下面这条命令一定要在 /usr/share/locale 目录下执行
 ls | grep -v zh | grep -v en | grep -v us | grep -v @ | grep -v local | xargs rm -rf

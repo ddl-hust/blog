@@ -1,4 +1,8 @@
-# about me
+---
+title: about me
+---
+
+# about
 
 ## info
 
