@@ -11,7 +11,7 @@
 
 韭菜|屁民🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User
 
-## connect me
+## connect
 
 **email** 📧 [blog@502.li](mailto:blog#502.li)  |  **telegram** ☎️[muzi_ii](https://telegram.me/muzi_li)  |  **blog** 🏠 [blog.502.li](https://blog.502.li) | **twitter** 🕊[muzi_ii](https://twitter.com/muzi_ii)
 
@@ -27,12 +27,13 @@ moto z play | moto g 1nd/2nd/3nd/4nd | Microsoft Lumia 640 | Nokia Lumia 530 | K
 
 **ingress** | **崩坏3rd** | **DNF** | **Minecraft** | **Age of Empires®: Castle Siege**
 
-## about the blog
+## blog
 
-我坚信独立博客就像一艘小船在互联网的大海里自由航行，这里有我们的言论自由。这里没有删帖、没有封号。只要域名和服务器还在就会被搜索引擎检索到，会在互联网中永远地存在下去。
-博客中文文章全部为原创或翻译自英文博客，转载是否署名和标注来源是你的自由。
-英文是~~引用~~剽窃别人的，是英语学习的材料。
-WTFPL © Do What the Fuck You Want to Public License
+- 我坚信独立博客就像一艘小船在互联网的大海里自由航行，这里有我们的言论自由。
+- 这里没有删帖、没有封号。只要域名和服务器还在就会被搜索引擎检索到，会在互联网中永远地存在下去
+- 博客中文文章全部为原创或翻译自英文博客，转载是否署名和标注来源是你的自由
+- 英文是~~引用~~剽窃别人的，是英语学习的材料
+- WTFPL © Do What the Fuck You Want to Public License
 
 ## love and passion
 
@@ -67,5 +68,7 @@ WTFPL © Do What the Fuck You Want to Public License
 
 ## 碎碎念
 
-1. 香港返送中的六月里，感触最深的一句话：**人民有力量、民族有信仰、国家有希望**。
+1. 香港返送中的六月里，感触最深的一句话：**人民有力量、民族有信仰、国家有希望**
 2. 我这里没有敌人，无论你是乳包、粉红还是五毛等，我都希望能够和平共处，因为我们都是老大哥的韭菜😂
+
+## 时光轴
