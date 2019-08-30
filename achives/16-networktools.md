@@ -1,4 +1,7 @@
-# every linux networking tool i know
+---
+title: every linux networking tool i know
+date:
+---
 
 不久前在twitter上看到一张描述45个Linux网络工具的[图片](https://wizardzines.com/networking-tools-poster/)，于是想整理一下它们常用功能
 
@@ -16,7 +19,7 @@
 
 6.`dig/nsloopup` what's the ip for the domain (DNS requery)
 
-7.`whois` is the domain registered 
+7.`whois` is the domain registered
 
 8.`ssh` secure shell
 
@@ -68,7 +71,7 @@
 
 32.`socat` proxy a tcp socket a unix domain socket + lost more
 
-33.`hping3` contect ang TCP packet that server 
+33.`hping3` contect ang TCP packet that server
 
 34.`traceroute/mtr` what server are on the way to what server?
 

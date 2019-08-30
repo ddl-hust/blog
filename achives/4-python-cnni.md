@@ -1,4 +1,10 @@
-```import re
+---
+title: 一个简单的 python 爬虫
+date:
+---
+
+```python
+import re
 import requests
 def input_url(i):
     if i == 0:
@@ -13,7 +19,8 @@ def input_url(i):
         urls[m] = dome + html + ".pdf"
     return urls
 ```
-```
+
+```python
 if __name__ == '__main__':
     file = open("pdf.json", "w")
     for i in range(0,7):

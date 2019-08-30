@@ -1,4 +1,7 @@
-# 手搓虚拟机模板
+---
+title: 手搓虚拟机模板
+date: 2019-08-26
+---
 
 ### 0. 背景
 
@@ -14,13 +17,13 @@
 
 安装进入系统后使用 `sudo passwd` 来重置 root 的密码
 
-1. 安装 ncdu 工具结合 du 用来分析系统根分区占用大小情况
+1.安装 ncdu 工具结合 du 用来分析系统根分区占用大小情况
 
 ```bash
 apt update && apt install ncdu -y
 ```
 
-2. 默认安装后的系统分区占用情况，虽然在安装的过程中
+2.默认安装后的系统分区占用情况，虽然在安装的过程中
 
 ```bash
 root@ubuntu:~# df -h
@@ -40,7 +43,7 @@ Mem:           3.8G        213M        2.9G        1.1M        759M        3.3G
 Swap:          3.8G          0B        3.8G
 ```
 
-3. 默认给分配了个 swap 文件，使用 swapoff -a 关闭 swap 就行，再修改 fstab 文件，删除 swap 那一行，或注释掉
+3.默认给分配了个 swap 文件，使用 swapoff -a 关闭 swap 就行，再修改 fstab 文件，删除 swap 那一行，或注释掉
 
 ```bash
 root@ubuntu:~# swapoff -a
@@ -49,7 +52,7 @@ root@ubuntu:~# vi /etc/fstab
 
 ```
 
-4. 删除 swap file 之后的分区情况，占用的 1.8GB ，如果直接导出的话，OVA 文件至少得 2GB。我们接下来精简系统不需要得包和文件，最终 OVA 大小缩小到 450MB
+4.删除 swap file 之后的分区情况，占用的 1.8GB ，如果直接导出的话，OVA 文件至少得 2GB。我们接下来精简系统不需要得包和文件，最终 OVA 大小缩小到 450MB
 
 ```bash
 root@ubuntu:~# df -h
@@ -150,7 +153,7 @@ cd /usr/share/locale
 ls | grep -v zh | grep -v en | grep -v us | grep -v @ | grep -v local | xargs rm -rf
 
 root@ubuntu:/usr/share/locale# du -sh
-1.5M 
+1.5M
 ```
 
 **最后完毕**
@@ -238,27 +241,27 @@ dd: error writing '/zero': No space left on device
 
 ### 2. Debian 10
 
-#### 1. 安装镜像 
+#### 安装镜像
 
-#### 2. 卸载不用的软件包
+#### 卸载不用的软件包
 
-#### 3. 清理日志和缓存
+#### 清理日志和缓存
 
-#### 4. 清理不用的文件
+#### 清理不用的文件
 
-#### 5. 置零剩余空间
+#### 置零剩余空间
 
-#### 6. 导出 OVA 虚拟机模板
+#### 导出 OVA 虚拟机模板
 
 ### 3. CentOS 7.6
 
-#### 1. 安装镜像 
+#### 安装镜像
 
-#### 2. 卸载不用的软件包
+#### 卸载不用的软件包
 
-#### 3. 清理日志和缓存
+#### 清理日志和缓存
 
-#### 4. 清理不用的文件
+#### 清理不用的文件
 
 #### 5. 置零剩余空间
 

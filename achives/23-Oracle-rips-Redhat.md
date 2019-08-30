@@ -1,4 +1,7 @@
-# Oracle rips RedHat and 'sort of' launches a new Linux 
+---
+title: Oracle rips RedHat and 'sort of' launches a new Linux
+date:
+---
 
 [原文链接](https://www.computerworld.com/article/2469218/oracle-rips-red-hat-and--sort-of--launches-a-new-linux.html)
 

@@ -1,4 +1,7 @@
-# deploy kubernets dashborad with https
+---
+title: deploy kubernets dashborad with https
+date:
+---
 
 ## 0.踩坑
 
@@ -127,6 +130,6 @@ kubectl apply -f  admin-user-role-binding.yaml
 ```
 
 获取登录要用到的token
-```kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')```
+`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
 
-```kubectl create secret generic kubernetes-dashboard-certs --from-file=certs -n kube-system```
+`kubectl create secret generic kubernetes-dashboard-certs --from-file=certs -n kube-system`

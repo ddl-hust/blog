@@ -1,3 +1,8 @@
+---
+title: RMS 的征婚启示
+date:
+---
+
 [My former Personal Ad](http://www.stallman.org/extra/personal.html)
 (Currently for amusement only.)
 

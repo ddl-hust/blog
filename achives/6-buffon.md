@@ -1,3 +1,8 @@
+---
+title: 布封 自然史
+date:
+---
+
 世界万物运转无止息，万物都在的世间洪流中相遇
 在广袤无尽的空间中，以及物换星移的接轨瞬间
 万物混成冥河，不拘任何形体，不拘任何被赋予的形象
@@ -29,4 +34,4 @@ and balancing without harm,
 they animate the universe
 and make it into a theater
 with ever new scenes
-and objects incessantly reborn ".
+and objects incessantly reborn "

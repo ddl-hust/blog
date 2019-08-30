@@ -1,4 +1,7 @@
-# Play-with-Docker --在线使用/学习Docker
+---
+title:  Play-with-Docker --在线使用/学习Docker
+date:
+---
 
 `Play With Docker` 是一个运行在浏览器中的Docker   Playground，只需要服务端部署好pwd服务，客户端无需安装任何环境，使用浏览器就可以在线体验 Docker。类似的还有近期上线的`instantbox`在线体验Linux发行版。
 按照官方readme或wiki部署起来，会有不少坑，接下来就开始填坑。

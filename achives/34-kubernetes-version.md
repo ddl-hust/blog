@@ -1,6 +1,9 @@
-# 生产环境如何保守地选择 kubernetes 版本
+---
+title: 生产环境如何保守地选择 kubernetes 版本
+date:
+---
 
-## 0. 要开始了？
+## 0. 要开始了
 
 听说汝公司准备或者正在使用 kubernetes 容器调度平台了？那么对于一些及其重要的线上环境，如何选择一个合适的 kubernetes 版本呢？Kubernetes 版本号最循着 x.y.z 的命名规范，相信大家肯定不会拿 1.15.0 这样的版本用于生产环境吧😂。如何选择一个稳定的版本号最好的方法就是参考各大云计算厂商(Google、AWS digitalocean)。他们提供 kubernetes 云平台，稳定性一般要高于我们平时的生产环境。他们如何选择 kubernetes 版本是个不错的参考依照。
 
@@ -8,7 +11,7 @@
 
 下面是我根据 kubernetes GitHub 的 release 总结汇总的一张表格
 
-**<center> Kubernetes release </center>**
+Kubernetes release
 
 | month   | stable                                                       | stable                                                       | stable                                                       | stable                                                       |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -55,7 +58,7 @@
 
 **Google kubernetes [官方文档](https://cloud.google.com/kubernetes-engine/docs/release-notes)**
 
- **August 1, 2019**
+August 1, 2019
 
 ```ini
 1.13.7-gke.15
@@ -64,7 +67,7 @@
 1.12.8-gke.12
 ```
 
-**June 27, 2019**
+June 27, 2019
 
 ```ini
 1.11.8-gke.10
@@ -80,7 +83,7 @@
 1.13.7-gke.0
 ```
 
-**June 4, 2019**
+June 4, 2019
 
 ```ini
 1.11.8-gke.6
@@ -89,21 +92,17 @@
 1.14.2-gke.1 [Preview]
 ```
 
-**May 20, 2019**
+May 20, 2019
 
 ```ini
-1.10.x (nodes only, completing)					1.11.8-gke.6
-1.12.6-gke.10									1.12.6-gke.11
-1.14.1-gke.4 and older 1.14.x (Alpha)			1.14.1-gke.5 (Alpha)
-
---------
+1.10.x (nodes only, completing) 1.11.8-gke.6
+1.12.6-gke.10 1.12.6-gke.11
+1.14.1-gke.4 and older 1.14.x (Alpha)1.14.1-gke.5 (Alpha)
 
 1.12.x clusters v1.12.7-gke.17 and newer
 1.13.x clusters v1.13.5-gke.10 and newer
 1.14.x (Alpha) clusters v1.14.1-gke.5 and newer
 ```
-
-
 
 ## 3. AWS kubernetes
 
@@ -111,14 +110,14 @@ AWS 的 Kubernetes 平台叫做 EKS，在创建 kubernetes 集群时可以选择
 
 下面我就直接剽窃一下 EKS 的[官方文档](https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html)😂
 
-**Kubernetes version 1.13**
+Kubernetes version 1.13
 
 | Kubernetes Version | Release Notes                                                |
 | :----------------- | :----------------------------------------------------------- |
 | `1.13.8`           | New platform version updating Amazon EKS Kubernetes 1.13 clusters to a patched version of 1.13.8 to address [CVE-2019-11247](https://groups.google.com/forum/#!topic/kubernetes-security-announce/vUtEcSEY6SM). |
 | `1.13.7`           | Initial release of Kubernetes 1.13 for Amazon EKS. For more information, see [Kubernetes 1.13](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-1.13). |
 
-**Kubernetes version 1.12**
+Kubernetes version 1.12
 
 | Kubernetes Version | Release Notes                                                |
 | :----------------- | :----------------------------------------------------------- |
@@ -126,9 +125,7 @@ AWS 的 Kubernetes 平台叫做 EKS，在创建 kubernetes 集群时可以选择
 | `1.12.6`           | New platform version to support custom DNS names in the Kubelet certificate and improve `etcd` performance. This fixes a bug that caused worker node Kubelet daemons to request a new certificate every few seconds. |
 | `1.12.6`           | Initial release of Kubernetes 1.12 for Amazon EKS.           |
 
-**Kubernetes version 1.11**
-
-
+Kubernetes version 1.11
 
 | Kubernetes Version | Release Notes                                                |
 | ------------------ | ------------------------------------------------------------ |
@@ -182,19 +179,17 @@ Linux deploy 3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
 
 1. [2019-08-05](https://github.com/Azure/AKS/releases/tag/2019-08-05)
 
-	[![@jnoller](img/51528-1566108021820.jpg)](https://github.com/jnoller) [jnoller](https://github.com/jnoller) released this 5 days ago · [4 commits](https://github.com/Azure/AKS/compare/2019-08-05...master) to master since this release
+released this 5 days ago · [4 commits](https://github.com/Azure/AKS/compare/2019-08-05...master) to master since this release
 
-	**This release is rolling out to all regions**
+This release is rolling out to all regions
+Please Note: This release includes new Kubernetes versions 1.13.9 &
+1.14.5 (GA today) these include the fixes for CVEs CVE-2019-11247 and
+CVE-2019-11249. Please see our [customer guidance](https://github.com/Azure/AKS/issues/1145)
 
-	**Please Note**: This release includes new Kubernetes versions 1.13.9 &
-	1.14.5 (GA today) these include the fixes for CVEs CVE-2019-11247 and
-	CVE-2019-11249. Please see our [customer guidance](https://github.com/Azure/AKS/issues/1145)
+2.[2019-07-08](https://github.com/Azure/AKS/releases/tag/2019-07-08)
 
-2. [2019-07-08](https://github.com/Azure/AKS/releases/tag/2019-07-08)
-
-	[![@jnoller](img/51528-1566108091163.jpg)](https://github.com/jnoller) [jnoller](https://github.com/jnoller) released this on 13 Jul · [17 commits](https://github.com/Azure/AKS/compare/2019-07-08...master) to master since this release
-
-	- Preview Features
-		- Kubernetes 1.14.3 is now available for preview users.
+[jnoller](https://github.com/jnoller) released this on 13 Jul · [17 commits](https://github.com/Azure/AKS/compare/2019-07-08...master) to master since this release
+Preview Features
+Kubernetes 1.14.3 is now available for preview users.
 
 看来 M$ 的 kubernetes 平台比 Google 更新的还要快，版本 GA 的时候也要早于 GKE 。即便如此，各大云计算厂商仍然会倾向于等到 kubernetes 版本修复得差不了才将上线新版本。

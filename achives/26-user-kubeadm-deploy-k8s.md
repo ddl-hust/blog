@@ -1,4 +1,7 @@
-#
+---
+title: deploy kubernetes by kubeadm
+date:
+---
 
 注意: 这个部署在了digital ocean的VPS上，国内的机器需要代理。
 
@@ -381,6 +384,3 @@ name: Invalid value: "vm_158_35_centos": a DNS-1123 subdomain must consist of lo
 ```
 
 ----
-
-## 6.坑
-~~~

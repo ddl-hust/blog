@@ -1,7 +1,9 @@
-# 未完、待续
+---
+title:
+date:
+---
 
 **弃坑了，博主已经准备换用水果机了，不想折腾这种无聊的事儿了。**
-
 
 ## 1.背景
 
@@ -27,7 +29,7 @@
 
 ## 2.oh-my-pink 一键粉红
 
-### 2.1它是什么东东？
+### 2.1它是什么东东
 
 根据前面的分析，做一个忠党爱国的小粉红，毕恭毕敬地交出手机，放心大胆地让警察蜀黍检查手机，这样的风险最小。但我们不是小粉红，如何在那种紧急的场景快速地将手机伪装成一个小粉红的手机呢？于是就出了 oh-my-pink 教程，将我们的手机进行社会主义改造，变成粉红版的手机，爱国手机，战狼手机😂。
 
@@ -95,12 +97,9 @@ addison:/
 
 用法
 
-```bash
-rsync [OPTION]... SRC DEST
-```
+`rsync [OPTION]... SRC DEST`
 
 可能会用到的选项
-	
 
 ```bash
 -v, --verbose 详细模式输出。
@@ -155,7 +154,7 @@ mkdir -p /data/pink
 
 ![1561802425505](/img/1561802425505.png)
 
-**PC端**
+PC端
 
 安装好[platform-tools](<https://developer.android.com/studio/releases/platform-tools>)工具，打开终端
 
@@ -258,7 +257,7 @@ total size is 1,099,358,469  speedup is 1.00
 ## 看来备份数据的速度还是相当快的
 ```
 
-#### 4.5拉清单？
+#### 4.5拉清单
 
 ~~别看你今天闹得欢，小心我日后拉清单~~😂
 我们这个清单就老大哥不待见的东西，比如膜蛤、乳包等等你懂😜。无论时图片还是音频，我们统统把他们放在外置 SD 卡里，到时候在一件粉红的时候自动把  外置 SD 卡卸载掉，从而让取证软件识别不到外置 SD 卡。当然内部存储里的一些文件也需要删除，比如 telegram 的 /sdcard/Android/data/**telegram/ 目录，这里面有很多东西，都很危险。到时候我们使用 rsync 直接删除 /sdcard/Android 和 /mnt/media_rw/A10F-22E/Android 。因为每个 app 都可能会自己创建一些目录和文件，所以这一步主要是用来排查这些文件，把他们拉到清单里。如果文件和目录比较少的话，可以直接将这些目录修改到想要的变量。
@@ -390,15 +389,15 @@ am start -d file:////data/local/tmp/black_white.png -a \ android.service.wallpap
 
 ![1562110188032](img/1562110188032.png)
 
-**点击 about 左侧那个按钮**
+点击 about 左侧那个按钮
 
 ![1562110228770](img/1562110228770.png)
 
-**接着点击 Activity**
+接着点击 Activity
 
 ![1562110273463](img/1562110273463.png)
 
-**找到你使用的 Lancher，拉到最下面你会找到一个 WallpaperCropActivity。**
+找到你使用的 Lancher，拉到最下面你会找到一个 WallpaperCropActivity。
 
 ![1562110333067](img/1562110333067.png)
 
