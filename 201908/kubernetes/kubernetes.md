@@ -1,9 +1,17 @@
 Kubernetes Introduction for VMware Users – Part 1: The Theory
 =============================================================
 
+``给 VMware 用户的 Kubernetes 简介–-第一部分``：理论
+
 _By Hany Michaels, Senior Staff Solutions Architect NSBU, VMware_
 
 This is the second part of my “Kubernetes in the Enterprise” blog series. As I mentioned in my [last article](http://www.hanymichaels.com/2017/10/04/kubernetes-in-the-enterprise-a-vmware-guide-on-how-to-design-deploy-and-operate-k8saas-with-nsx-t-and-vra/), it is important to get everyone to the same level of understanding about Kubernetes ([K8s](https://kubernetes.io/)) before we can proceed to the design and implementation guides.
+
+```ini
+这是我的“ kubernetes 在企业中应用” 博客系列的第二篇文章。正如我在上一篇文章提到的，在我们推进设计与实现指南
+```
+
+
 
 I am not going to take the traditional approach here to explain the Kubernetes architecture and technologies. I will explain everything through comparisons with the v[Sphere platform](https://www.vmware.com/products/vsphere.html) that you, as a VMware user, are already familiar with. You can say that this was the approach I would have liked someone to use to introduce K8s to me. The latter could be very confusing and overwhelming to understand at the beginning. I’d like to add also that I used this approach internally at VMware to introduce Kubernetes to some audiences from different practices, and it has proven to work great and get people up to speed with the core concepts.
 
