@@ -239,31 +239,136 @@ dd: error writing '/zero': No space left on device
 
 ### 2. Debian 10
 
-#### 1. 安装镜像 
+#### 1. 安装镜像
+
+安装镜像选用 Debian 的网络版安装镜像，[debian-10.0.0-amd64-netinst.iso](https://mirrors.ustc.edu.cn/debian-cd/10.0.0/amd64/iso-cd/debian-10.0.0-amd64-netinst.iso) 其实选择 [debian-10.0.0-amd64-netinst.iso  ](https://mirrors.ustc.edu.cn/debian-cd/10.0.0/amd64/iso-cd/debian-10.0.0-amd64-xfce-CD-1.iso)版的也行，在最后不要安装桌面环境就可以。
 
 #### 2. 卸载不用的软件包
 
+```bash
+# 首先修改一下 apt 源
+sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+apt update
+# 装上一些比较实用的工具
+apt install --no-install-recommends --no-install-suggests -y wget  ncdu
+
+# 这几个包卸载掉影响不大，应该。。
+apt purge emacsen-common firmware-linux-free gcc-8-base linux-image-amd64
+```
+
 #### 3. 清理日志和缓存
+
+```
+rm -rf /var/lib/apt/lists/*
+apt autoclean
+apt autoremove
+```
+
+
 
 #### 4. 清理不用的文件
 
+```bash
+cd /usr/share/local
+du -sh * | grep -v en | grep -v zh | grep -v cn | grep -v us | awk '{print $2}' | xargs rm -rf
+rm -rf /usr/share/doc/*
+```
+
 #### 5. 置零剩余空间
 
+直接使用 dd 暴力清零就行啦 `dd if=/dev/zero of=/zero bs=4M || rm -rf /zero`
+
+```bash
+╭─root@debian ~
+╰─# df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         2.0G     0  2.0G   0% /dev
+tmpfs                        395M   11M  385M   3% /run
+/dev/mapper/debian--vg-root   26G  698M   24G   3% /
+tmpfs                        2.0G     0  2.0G   0% /dev/shm
+tmpfs                        5.0M     0  5.0M   0% /run/lock
+tmpfs                        2.0G     0  2.0G   0% /sys/fs/cgroup
+/dev/sda1                    236M   48M  176M  22% /boot
+tmpfs                        395M     0  395M   0% /run/user/0
+```
+
 #### 6. 导出 OVA 虚拟机模板
+
+最终导出的 vmdk 模板为 351M ，棒棒哒😂
+
+```bash
+351M Sep  1 16:17 disk-0.vmdk
+```
 
 ### 3. CentOS 7.6
 
-#### 1. 安装镜像 
+#### 1. 安装镜像
+
+安装镜像就选择使用[CentOS-7-x86_64-Minimal-1810.iso](https://mirrors.ustc.edu.cn/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso) 版的 iso 就行，安装过程就不再赘述啦。磁盘分区建议为 lvm ，因为这个是虚拟机模板文件，并不清楚以后的用途和所占用的空间。使用 lvm 可以很方便地扩展根分区。
 
 #### 2. 卸载不用的软件包
 
+```bash
+# 修改 yum 源为阿里云
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+yum install -y wget curl ncdu
+
+yum remove linux-firmware NetworkManager mariadb-libs NetworkManager  alsa-lib centos-logos.noarch
+yum list installed | grep firmware | xargs yum remove -y
+
+```
+
 #### 3. 清理日志和缓存
+
+```
+yum clean all
+
+rm -rf /var/cache
+```
 
 #### 4. 清理不用的文件
 
+```bash
+# 精简一下 local-archive 文件
+localedef --list-archive  | grep -v zh  | grep -v us | grep -v en | grep -v cn | xargs localedef --delete-from-archive
+mv /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
+build-locale-archive
+
+rm -rf /usr/share/doc
+cd /usr/share/locale
+# 下面这条命令一定要在 /usr/share/locale 目录下执行
+ls | grep -v zh | grep -v en | grep -v us | grep -v @ | grep -v local | xargs rm -rf
+rm -rf /usr/share/backgrounds
+```
+
 #### 5. 置零剩余空间
 
+直接使用 dd 暴力清零就行啦 `dd if=/dev/zero of=/zero bs=4M || rm -rf /zero`
+
+最后看一下磁盘空间，占用不到 700M ，还是可以的哈
+
+```bash
+╭─root@centos ~
+╰─# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   29G  594M   27G   3% /
+devtmpfs                 1.9G     0  1.9G   0% /dev
+tmpfs                    1.9G     0  1.9G   0% /dev/shm
+tmpfs                    1.9G  9.3M  1.9G   1% /run
+tmpfs                    1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/sda1                488M  113M  340M  25% /boot
+tmpfs                    378M     0  378M   0% /run/user/0
+
+```
+
 #### 6. 导出 OVA 虚拟机模板
+
+```bash
+348M Sep  1 09:00 disk-1.vmdk
+```
+
+最后导出的虚拟机模板大小不到 350M
 
 ### 4. Alpine 3.10
 
