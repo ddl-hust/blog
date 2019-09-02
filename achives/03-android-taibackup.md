@@ -8,7 +8,7 @@ date:
 
 ------
 
-1、备份
+
 1.先kill要备份应用
 `killall -s STOP com.music.moto`
 
