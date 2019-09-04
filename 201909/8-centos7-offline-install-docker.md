@@ -22,6 +22,9 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 ```
 
 ```bash
+# 查看 yum 源中的版本
+yum list docker-ce --showduplicates | sort -r
+yum list docker-ce-cli --showduplicates | sort -r
 yum install --downloadonly --downloaddir=/root/docker-ce docker-ce docker-ce-cli containerd.io
 mv /var/cache/yum/x86_64/7/updates/packages/* /root/docker-ce
 mv /var/cache/yum/x86_64/7/base/packages/* /root/docker-ce
