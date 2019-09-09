@@ -44,7 +44,7 @@ docker-ce-cli                      1:19.03.1-3.el7        docker-ce-stable
 Installing dependencies:
 audit-libs-python                  2.8.4-4.el7            base
 checkpolicy                        2.5-8.el7              base
-container-selinux                  2:2.107-1.el7_6 		  extras
+container-selinux                  2:2.107-1.el7_6 		    extras
 libcgroup                          0.41-20.el7            base
 libseccomp                         2.3.1-3.el7            base
 libsemanage-python                 2.5-14.el7             base
