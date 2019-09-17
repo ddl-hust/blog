@@ -13,7 +13,21 @@ title: about me
 
 ## bio
 
-韭菜|屁民🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User
+韭菜|屁民🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
+
+- 垃圾佬，喜欢折腾洋垃圾、软路由、LEDE、OpenWRT、NAS、群晖、MLC 固态
+- 技术方面主要擅长 Linux 运维、容器、kubernetes、CI/CD等
+- 装机、魔改、修电脑、装系统、拆机、贴膜、换屏、换主板、飞线都会干😂
+- 工作环境用的最多的是 ESXi ，上面跑着一堆做测试和部署用的虚拟机
+- ESXi 上跑了个 OpenWRT 的软路由，供同一网段的机器做代理网关用
+- 以前喜欢刷机折腾，从 2011 年开始接触 Android 刷机到现在
+- 不玩抖音快手等短视频，并且十分厌恶这些东西
+- 平时下班回来打半个小时的游戏，读项目的源码，最后躺穿上捧着我的 kindle 看书到困睡觉
+- 没有女朋友、单身很快乐、不想找、大概三十岁之前都不想找女朋友
+- 患有不能脱支抑郁症，尽余生努力逃离这个国家吧
+- 讨厌恶心憎恶国内的互联网，尽量远离他们吧
+- RSS 忠实用户，目前在用 [telegram rssbot](https://github.com/iovxw/rssbot) 和 [miniflux](https://github.com/miniflux/miniflux) 
+- 不喜欢闲聊和扯蛋，所以 IM 工具不怎么使用，telegram 是 rss 和 gmail 的推送通知工具
 
 ## connect
 
@@ -21,19 +35,22 @@ title: about me
 
 ## devices
 
-moto z play | moto g 1nd/2nd/3nd/4nd | Microsoft Lumia 640 | Nokia Lumia 530 | Kindle Paperwhite 3 | SONY SBH60 | ThinkPad Yoga 12 | Debian ♥ Xfce | ESXi 6.5 |
+moto z play | moto g 1nd/2nd/3nd/4nd | Microsoft Lumia 640 | Nokia Lumia 530 | Kindle Paperwhite 3 | SONY SBH60 | ThinkPad Yoga 12 | Debian ♥ Xfce | ESXi 6.7 | OpenWRT | R6300 V2 | WNDR 3700 V4 | iPhone 6s 
 
 ## service
 
-| Google | Microsoft Azure | Amazone | Google Cloud Platform‎ | DigitalOcean | Amazon AWS | namecheap |
+Google Cloud Platform‎ |Amazon AWS | namecheap | CloudFlare
 
 ## game
 
-**ingress** | **崩坏3rd** | **DNF** | **Minecraft** | **Age of Empires®: Castle Siege**
+**ingress**
+
+**崩坏3rd** 
 
 ## blog
 
-- 我坚信独立博客就像一艘小船在互联网的大海里自由航行，这里有我们的言论自由。
+- 博客 19 年刚开始，先从最简单的教程开始，等有经验了会深挖原理
+- 我坚信独立博客就像一艘小船在互联网的大海里自由航行，这里有我们的言论自由
 - 这里没有删帖、没有封号。只要域名和服务器还在就会被搜索引擎检索到，会在互联网中永远地存在下去
 - 博客中文文章全部为原创或翻译自英文博客，转载是否署名和标注来源是你的自由
 - 英文是~~引用~~剽窃别人的，是英语学习的材料
@@ -43,21 +60,21 @@ moto z play | moto g 1nd/2nd/3nd/4nd | Microsoft Lumia 640 | Nokia Lumia 530 | K
 
 0. 爱憎分明、嫉恶如仇
 
-1. 互联网自由，开源，开放，包容
+1. 互联网自由、开源、开放、包容
 2. 开源软件及其基金会和非盈利性组织
-3. 精简主义者，遵循Unix设计理念，一个程序只做一件事儿
-4. 素食者，不是什么素食主义，仅仅是素食
-5. 言论自由，新闻自由，出版自由，集会自由
-6. 理性主义者、
-7. 简单随意，不整花架子，实用主义，轻量级
-8. 垃圾佬，折腾多了，DIY控，喜欢自己定制
+3. 精简主义者、遵循Unix设计理念、一个程序只做一件事儿
+4. 素食者、不是什么素食主义、仅仅是素食
+5. 言论自由、新闻自由、出版自由、集会自由
+6. 理性主义者、反对洗脑教育
+7. 简单随意、不整花架子、实用主义、轻量级
+8. 垃圾佬、折腾多了、DIY控、喜欢自己定制
 9. 国内软件和服务我能不用绝不用
-10. 人民有力量，民族有信仰，国家有希望
+10. 人民有力量、民族有信仰、国家有希望
 
 ## detest and fuck
 
 1. 从小就极其讨厌那些告密，举报，打小报告的卑鄙小人，这种人有时连自己的亲人都会出卖！学生举报老师言论不当，被处分的应该是学生而不是老师
-2. 极其厌恶像 baidu、字节跳动、陌陌、360、2345、hao123、山等这种毫无底线的流氓软件公司，肆无忌惮地侵犯用户隐私。希望他们早点死吧。我讨厌、憎恶、恶心、唾弃这些毒瘤互联网公司，所以国内的垃圾软件我
+2. 极其厌恶像 baidu、字节跳动、陌陌、360、2345、hao123等这种毫无底线的流氓软件公司，肆无忌惮地侵犯用户隐私。希望他们早点死吧。我讨厌、憎恶、恶心、唾弃这些毒瘤互联网公司，所以国内的垃圾软件我
 3. 反对自我审查、自我阉割、个人崇拜、言论审查、网络封锁、实名认证、人脸识别、扫码登录、征信系统、失信名单、人工智能、域名备案等，这些对个人（屁民）没有多少好处，在专制国家只会沦为独裁政府控制人民的工具
 4. 臃肿的移动 app，国内毒瘤公司的 app 一个比一个臃肿，看谁的安装包大，看谁的功能多，看谁的后台服务多，看谁要的权限多，为了 KPI 使劲往里面加屎，本分工作都最不好还使劲加新功能。聊天软件就该像 telegram 那样只做好聊天功能
 5. 希望那些在用户手机，浏览器，输入法，ROM 上建墙进行言论审查，网络封锁的毒瘤公司早点死吧
