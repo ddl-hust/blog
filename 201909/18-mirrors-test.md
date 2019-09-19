@@ -13,7 +13,7 @@ data: 2019-09-18
 | 中科大 |     https://mirrors.ustc.edu.cn/      | 速度最差  |
 |  163   |       https://mirrors.163.com/        | 速度 NO.3 |
 | 阿里云 |      https://mirrors.aliyun.com/      | 速度 NO.2 |
-| 华为云 |   https://mirrors.huaweicloud.com/    | 速度最快  |
+|  华为  |   https://mirrors.huaweicloud.com/    | 速度最快  |
 
 ## 测试系统
 
@@ -62,20 +62,12 @@ Building dependency tree
 Reading state information... Done
 All packages are up to date.
 
-real    0m2.790s
-user    0m1.696s
-sys     0m0.234s
-
-time apt install xfce4 gnome libreoffice  vlc -d -y
+apt install xfce4 gnome libreoffice  vlc -d -y
 0 upgraded, 1574 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1014 MB of archives.
 After this operation, 3471 MB of additional disk space will be used.
 Fetched 1014 MB in 2min 3s (8246 kB/s)
 Download complete and in download only mode
-
-real    2m12.083s
-user    0m16.128s
-sys     0m6.362s
 ```
 
 测试结果 `Fetched 1014 MB in 2min 3s (8246 kB/s)`
@@ -99,11 +91,7 @@ Building dependency tree
 Reading state information... Done
 All packages are up to date.
 
-real    0m4.961s
-user    0m1.664s
-sys     0m0.206s
-
-time apt install xfce4 gnome libreoffice  vlc -d -y
+apt install xfce4 gnome libreoffice  vlc -d -y
 0 upgraded, 1574 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1014 MB of archives.
 Fetched 1005 MB in 37min 31s (446 kB/s)
@@ -112,11 +100,6 @@ E: Failed to fetch http://mirrors.ustc.edu.cn/debian/pool/main/s/shotwell/shotwe
 E: Failed to fetch http://mirrors.ustc.edu.cn/debian/pool/main/d/dom4j/libdom4j-java_2.1.1-2_all.deb  Connection failed [IP: 202.141.176.110 80]
 E: Failed to fetch http://mirrors.ustc.edu.cn/debian/pool/main/x/xfonts-scalable/xfonts-scalable_1.0.3-1.1_all.deb  Connection failed [IP: 202.141.176.110 80]
 E: Some files failed to download
-
-real    37m39.935s
-user    0m16.217s
-sys     0m5.048s
-
 ```
 
 测试结果 `Fetched 1005 MB in 37min 31s (446 kB/s)` ，1000MB 的包下载用时将近 40 分钟
@@ -138,33 +121,22 @@ Get:5 http://mirrors.163.com/debian-security buster/updates/main amd64 Packages 
 Get:6 http://mirrors.163.com/debian buster-updates/main amd64 Packages [884 B]
 Fetched 8195 kB in 3s (2939 kB/s)
 
-
-time apt install xfce4 gnome libreoffice  vlc -d -y
+apt install xfce4 gnome libreoffice  vlc -d -y
 0 upgraded, 1574 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1014 MB of archives.
 
 Fetched 1012 MB in 7min 21s (2295 kB/s)
 Download complete and in download only mode
-
-real    7m30.132s
-user    0m16.815s
-sys     0m6.802s
-
 ```
 
 测试结果 `Fetched 1012 MB in 7min 21s (2295 kB/s)`
 
 ### 阿里云
 
-```
-root@e4b82e40b6c6:/# sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
-root@e4b82e40b6c6:/# sed -i 's|security.debian.org/debian-security|mirrors.aliyun.com/debian-security|g' /etc/apt/sources.list
-root@e4b82e40b6c6:/# time
-
-real    0m0.000s
-user    0m0.000s
-sys     0m0.000s
-root@e4b82e40b6c6:/# time apt update
+```bash
+sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+sed -i 's|security.debian.org/debian-security|mirrors.aliyun.com/debian-security|g' /etc/apt/sources.list
+root@e4b82e40b6c6:/# apt update
 Get:1 http://mirrors.aliyun.com/debian buster InRelease [122 kB]
 Get:2 http://mirrors.aliyun.com/debian-security buster/updates InRelease [39.1 kB]
 Get:3 http://mirrors.aliyun.com/debian buster-updates InRelease [49.3 kB]
@@ -177,11 +149,7 @@ Building dependency tree
 Reading state information... Done
 All packages are up to date.
 
-real    0m1.917s
-user    0m1.684s
-sys     0m0.230s
-
-time apt install xfce4 gnome libreoffice  vlc -d -y
+apt install xfce4 gnome libreoffice  vlc -d -y
 0 upgraded, 1574 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1014 MB of archives.
 After this operation, 3471 MB of additional disk space will be used.
@@ -191,24 +159,14 @@ Download complete and in download only mode
 
 测试结果 `Fetched 1014 MB in 2min 54s (5815 kB/s)`
 
-### 腾讯云
-
-```bash
-apt update
-apt-get  
-sed -i 's/deb.debian.org/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
-sed -i 's|security.debian.org/debian-security|mirrors.cloud.tencent.com/debian-security|g' /etc/apt/sources.list
-apt update
-```
-
-### 华为云
+### 华为
 
 ```bash
 sed -i 's/deb.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list
 sed -i 's|security.debian.org/debian-security|mirrors.huaweicloud.com/debian-security|g' /etc/apt/sources.list
 apt update
 
-root@659549fb7f12:/# time apt update
+root@659549fb7f12:/# apt update
 Get:1 http://mirrors.huaweicloud.com/debian buster InRelease [122 kB]
 Get:2 http://mirrors.huaweicloud.com/debian-security buster/updates InRelease [39.1 kB]
 Get:3 http://mirrors.huaweicloud.com/debian buster-updates InRelease [49.3 kB]
@@ -221,53 +179,38 @@ Building dependency tree
 Reading state information... Done
 All packages are up to date.
 
-real    0m2.365s
-user    0m1.686s
-sys     0m0.191s
-time apt install xfce4 gnome libreoffice  vlc -d -y
+apt install xfce4 gnome libreoffice  vlc -d -y
 0 upgraded, 1574 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1014 MB of archives.
 After this operation, 3471 MB of additional disk space will be used.
 Fetched 1014 MB in 1min 25s (12.0 MB/s)
 Download complete and in download only mode
-
-real    1m33.647s
-user    0m15.806s
-sys     0m5.377s
 ```
 
-测试结果 `Fetched 1014 MB in 1min 25s (12.0 MB/s)`
+测试结果 `Fetched 1014 MB in 1min 25s (12.0 MB/s)` 
 
-### 搜狐
-
-```bash
-sed -i 's/deb.debian.org/mirrors.sohu.com/g' /etc/apt/sources.list
-sed -i 's|security.debian.org/debian-security|mirrors.sohu.com/debian-security|g' /etc/apt/sources.list
-apt update
-```
-
-## 建议
-
-根据一轮的测试速度来看，华为胜出😂 。
-
-1. 华为
-2. 清华
-3. 阿里云
-4. 163
-
-就这四个选择吧，也和本地的网络有关系，我的是电信网络。之前我的测试环境的服务器一直在使用中科大的镜像站，每次都很慢，今天一测才知道，中科大的镜像站这么慢啊，以后还是选择华为云吧。
+不得不说华为云镜像站真香啊。进度条上基本上都是 10MB/s 以上，从没出现低于 10MB/s 的，甚至峰值能达到 20MB/s
 
 ## 附录---测试数据表格
 
-1574 个包，总大小 1014 MB
+`xfce4 、gnome 、libreoffice 、 vlc`  1574 个包，总大小 `1014 MB` 测试时间为白天工作时间
 
-| 序号 |   清华    |  中科大  |    163    |  阿里云   | 腾讯云 |  华为云   |
-| :--: | :-------: | :------: | :-------: | :-------: | :----: | :-------: |
-|  1   | 8246 kB/s | 446 kB/s | 2295 kB/s | 5815 kB/s |        | 12.0 MB/s |
-|  2   | 462 kB/s  | 980 kB/s |           |           |        |           |
-|  3   |           | 657 kB/s |           |           |        |           |
-|  4   |           |          |           |           |        |           |
-|  5   |           |          |           |           |        |           |
+| 序号 |   清华    |  中科大  |    163    |  阿里云   |  华为云   |
+| :--: | :-------: | :------: | :-------: | :-------: | :-------: |
+|  1   | 8246 kB/s | 446 kB/s | 2295 kB/s | 5815 kB/s | 12.0 MB/s |
+|  2   | 462 kB/s  | 980 kB/s | 5498 kB/s | 2642 kB/s | 15.8 MB/s |
+|  3   | 1144 kB/s | 657 kB/s | 1333 kB/s | 5938 kB/s | 13.1 MB/s |
 
+## 建议
 
+根据一轮的测试速度来看，华为胜出😂 
 
+1. 华为
+2. 阿里云
+3. 163
+4. 清华
+5. 中国科大
+
+就这四个选择吧，也和本地的网络有关系，我的是电信网络。之前我的测试环境的服务器一直在使用中科大的镜像站，每次都很慢，今天一测才知道，中科大的镜像站这么慢啊，以后还是选择华为云吧。
+
+撇开偏见，今天评论华为开源镜像站，前端 UI 无疑是国内镜像站里边做的最好的（虽然我不喜欢卡片式设计），下载速度是所有镜像站里面最快的（1574 个包，总大小 1014MB，平均都在 12MB/s 以上，峰值能达到 20MB/s）。其他的镜像站基本上都没能达到 10MB/s 以上。如果注册会员是不是下载速度翻倍，都能跑到 20MB/s 以上？
