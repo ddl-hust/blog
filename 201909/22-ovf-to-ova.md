@@ -15,11 +15,19 @@ data: 2019-09-22
 
 - one OVF descriptor with extension .ovf  
 
+> 描述符用于指定服务对虚拟硬件的要求，并且还包括其他信息，例如虚拟磁盘的说明、服务本身、来宾操作系统、许可协议 (EULA)、在设备中启动和停止 VM 的说明以及服务安装说明。描述符文件的扩展名为 .ovf 。
+
 - zero or one OVF manifest with extension .mf  
+
+清单文件是软件包中每个文件的 SHA-1 摘要，可以用来检测任何损坏，以验证软件包的内容。清单文件的扩展名为 .mf 。
 
 - zero or one OVF certificate with extension .cert
 
+> 签名是用软件包所含 X.509 证书中的公钥进行签名的清单文件摘要，用于对软件包作者进行验证。签名文件的扩展名为 .cert 。
+
 - zero or more disk image files 
+
+> OVF 不指定磁盘映像格式。OVF 包中包含组成虚拟磁盘的文件（格式由导出虚拟磁盘所用的虚拟化产品定义）。XenServer 生成的 OVF 包具有动态 VHD 格式的磁盘映像；VMware 产品和 Virtual Box 生成的 OVF 包具有流技术优化 VMDK 格式的虚拟磁盘。
 
 - zero or more additional resource files, such as ISO images
 
@@ -181,7 +189,11 @@ SHA256(Alpine-240-1.vmdk)= b41596be4a846877cf82c4fd221763ba1cb4384f178454dc064f6
 
 需要注意的是，OVA 单个文件里打包了 OVF 所有的文件，文件是有顺序的，第一个一定要是 OVF 描述文件，即导出虚拟机时的那个 .ovf 后缀的文件
 
+## 使用场景
 
+OVF 包包含一系列未压缩的文件，对于需要访问文件中各个磁盘映像的用户而言较为方便，而 OVA 包只是一个大型文件。尽管您可以压缩此文件，但它不像一系列文件（如 OVF）那样灵活。
+
+OVA 更适用于适合只使用一个文件的特定应用场合（例如创建用于 Web 下载的软件包），这种情况下软件包更易于处理。与 OVF 相比，导出和导入 OVA 包所需的时间更长。
 
 ## 转换
 
