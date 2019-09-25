@@ -1,8 +1,15 @@
+---
+title: 生产环境如何保守地选择 kubernetes 版本
+data: 2019-08-15
+---
+
 # 生产环境如何保守地选择 kubernetes 版本
 
 ## 0. 要开始了？
 
 听说汝公司准备或者正在使用 kubernetes 容器调度平台了？那么对于一些及其重要的线上环境，如何选择一个合适的 kubernetes 版本呢？Kubernetes 版本号最循着 x.y.z 的命名规范，相信大家肯定不会拿 1.15.0 这样的版本用于生产环境吧😂。如何选择一个稳定的版本号最好的方法就是参考各大云计算厂商(Google、AWS digitalocean)。他们提供 kubernetes 云平台，稳定性一般要高于我们平时的生产环境。他们如何选择 kubernetes 版本是个不错的参考依照。
+
+目前绝大多数的教程或者博客都是以 1.14.3 、1.15.2 、1.13.2  等等小版本号低于 5 的版本来部署，虽说小版本号之间没有多大差异，但这样无疑就带来一种风气，就是我生产环境也选择使用这些版本。我认为这样并不恰当，在小版本号低于 5 之前的版本，存在一些漏洞或者问题是我们生产环境是无法容忍的。这也是为什么各大 kubernetes 云服务厂商在上线新版本是会经过三到六个月的测试，比如 1.13 版本，无论是 AKS、EKS、GKE 他们都是在 1.13.6 版本之才推出 1.13 版本的正式版，之前的小版本都是测试或者预览版本。选择 1.12.10 这名高的版本也合适吗？抱歉，依照现在的进度，预估计小版本 10 以后就很少在更新维护了，所以万一有什么问题 1.13.6 可以很轻松地通过升级到 1.13.7 版本能解决，但 1.12 版本升级到 1.13 版本是比较麻烦地，没有稳定升级的空间，因此接近小版本 10 的也不建议使用。
 
 ## 1. kubernetes release timeline
 
@@ -12,8 +19,8 @@
 
 | month   | stable                                                       | stable                                                       | stable                                                       | stable                                                       |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 2019-09 |                                                              |                                                              |                                                              |                                                              |
-| 2019-08 | [v1.15.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.2)<br>[v1.15.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.3) | [v1.14.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.5) <br>[v1.14.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.6) | [v1.13.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.9) <br>[v1.13.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.10) | CVE 紧急修复                                                 |
+| 2019-09 | [v1.16.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.16.0) | [v1.15.4](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.4) | [v1.14.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.7) | [v1.13.11](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.11) |
+| 2019-08 | [v1.15.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.2)<br>[v1.15.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.3) | [v1.14.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.5) <br>[v1.14.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.6) | [v1.13.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.9) <br>[v1.13.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.10) | CVE                                                          |
 | 2019-07 | [v1.15.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.1) | [v1.14.4](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.4) | [v1.13.8](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.8) | [v1.12.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.10) |
 | 2019-06 | [v1.15.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.0) | [v1.14.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.3) | [v1.13.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.7) |                                                              |
 | 2019-05 | [v1.14.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.2) | [v1.13.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.6) | [v1.12.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.9) | [v1.11.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.10) |
@@ -137,9 +144,38 @@ AWS 的 Kubernetes 平台叫做 EKS，在创建 kubernetes 集群时可以选择
 | `1.11.8`           | New platform version updating Amazon EKS Kubernetes 1.11 clusters to patch level 1.11.8 to address [CVE-2019-1002100](https://discuss.kubernetes.io/t/kubernetes-security-announcement-v1-11-8-1-12-6-1-13-4-released-to-address-medium-severity-cve-2019-1002100/5147). |
 | `1.11.5`           | Initial release of Kubernetes 1.11 for Amazon EKS.           |
 
-## 4. DigitalOcean kubernetes
+## 4. AKS
 
-## 5. 宿主机系统的参考
+再补充一下 M$ 家的 AKS 貌似和阿里云的 kubernetes 重名？😂
+
+看来 M$ 家的更新和支持挺快的，要比 kubernetes 亲爹 Google 还要快？不愧是最佳 Android 开发者😂。
+
+[AKS-release](https://github.com/Azure/AKS/releases)
+
+1.  [2019-08-05](https://github.com/Azure/AKS/releases/tag/2019-08-05)
+
+    since this release
+
+    **This release is rolling out to all regions**
+
+    **Please Note**: This release includes new Kubernetes versions 1.13.9 &
+    1.14.5 (GA today) these include the fixes for CVEs CVE-2019-11247 and
+    CVE-2019-11249. Please see our [customer guidance](https://github.com/Azure/AKS/issues/1145)
+
+2.  [2019-07-08](https://github.com/Azure/AKS/releases/tag/2019-07-08)
+
+    since this release
+
+    -   Preview Features
+        -   Kubernetes 1.14.3 is now available for preview users.
+
+看来 M$ 的 kubernetes 平台比 Google 更新的还要快，版本 GA 的时候也要早于 GKE 。即便如此，各大云计算厂商仍然会倾向于等到 kubernetes 版本修复得差不了才将上线新版本。
+
+
+
+## 5. DigitalOcean kubernetes
+
+## 6. 宿主机系统的参考
 
 如果汝刚开始准备使用 Kubernetes ，那就抛弃 CentOS ，因为 CentOS 7.6 (1810) 的内核是 3.10 版本的，而 3.10 版本的内核是 2013 年 [release](https://kernelnewbies.org/Linux_3.10) 的 ，那时候的 Docker 还在妈妈的怀抱里吃奶呢😂。如今 Docker 容器虚拟化的一些特性需要新版本的 kernel 支持才能稳定低运行，而有些特性在 3.10 版本是不稳定的。`新版docker启用Linux CGroup memory这个feature，但这个feature在kernel 4.0以下版本中是非稳定版本` [来自](http://blog.allen-mo.com/2018/08/27/kubernetes_ops_troubleshooting/) 。
 
@@ -171,32 +207,4 @@ Linux deploy 3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
 ## 6. 综上
 
 综上所述，汝对 Kubernetes 版本的选择也有了个大致的方向。在此我并没有使用国内的一些云计算厂商做测试。总的来说吧 Google 对 Kubernetes 的驾驭程度肯定要秒杀其他云计算厂商吧，毕竟是亲爹嘛。所以当汝也开始选择 Kubernetes 版本时，适用于生产环境的话，还是要再小版本号 6 以上才合适，比如 1.14.6 1.15.6 1.13.8 等等，都是比较保守的选择。之前的版本可以做测试用。其实选择 1.14.5 1.15.5 等也合适，M$ 家得 kubernetes 就是从 5 开始 GA 的。
-
-## 7. AKS
-
-再补充一下 M$ 家的 AKS 貌似和阿里云的 kubernetes 重名？😂
-
-看来 M$ 家的更新和支持挺快的，要比 kubernetes 亲爹 Google 还要快？不愧是最佳 Android 开发者😂。
-
-[AKS-release](https://github.com/Azure/AKS/releases)
-
-1. [2019-08-05](https://github.com/Azure/AKS/releases/tag/2019-08-05)
-
-	[![@jnoller](img/51528-1566108021820.jpg)](https://github.com/jnoller) [jnoller](https://github.com/jnoller) released this 5 days ago · [4 commits](https://github.com/Azure/AKS/compare/2019-08-05...master) to master since this release
-
-	**This release is rolling out to all regions**
-
-	**Please Note**: This release includes new Kubernetes versions 1.13.9 &
-	1.14.5 (GA today) these include the fixes for CVEs CVE-2019-11247 and
-	CVE-2019-11249. Please see our [customer guidance](https://github.com/Azure/AKS/issues/1145)
-
-2. [2019-07-08](https://github.com/Azure/AKS/releases/tag/2019-07-08)
-
-	[![@jnoller](img/51528-1566108091163.jpg)](https://github.com/jnoller) [jnoller](https://github.com/jnoller) released this on 13 Jul · [17 commits](https://github.com/Azure/AKS/compare/2019-07-08...master) to master since this release
-
-	- Preview Features
-		- Kubernetes 1.14.3 is now available for preview users.
-
-
-看来 M$ 的 kubernetes 平台比 Google 更新的还要快，版本 GA 的时候也要早于 GKE 。即便如此，各大云计算厂商仍然会倾向于等到 kubernetes 版本修复得差不了才将上线新版本。
 
