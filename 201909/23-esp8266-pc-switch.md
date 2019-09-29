@@ -87,40 +87,65 @@ lede@R6300V2-5501:/sys/devices/pci0000:00/0000:00:0b.1/usb1# cat speed
 #include <ESP8266WebServer.h>
 
 //设置路由器和静态 IP
-const char* ssid = "r6300v2";
-const char* password = "r6300v2r6300v2";
+const char* ssid = " ";
+const char* password = " ";
 IPAddress staticIP(192, 168, 0, 230);
 IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
 
-// 启动 web 服务器监听端口
+// web 服务器监听端口
 ESP8266WebServer server(80);
 
-// 定义相关控制针脚，我使用的 D4 引脚，因为和 3.3v 、GND 三个一块方便固定
-const int SW = D4;
+// 定义相关控制针脚
+const int LED = 13;
+const int SW = 14;
 
-void handleon() {
-    Serial.println("PC POWER TRUN ON");  
-    digitalWrite(D4,LOW);
-    server.send(200, "text/html", "PC POWER TRUN ON");
+// 定义认证用户和密码
+const char* user = "esp8266";
+const char* pass = "esp8266";
+const char* realm = "Custom Auth Realm";
+String authFailResponse = "Authentication Failed";
+const char MAIN_page[] PROGMEM = R"=====(
+<!DOCTYPE html><html><body><a href="pcon">PC POWER TRUN ON</a><br><a href="pcoff">PC POWER TRUN OFF</a></body></html>
+)=====";
+
+void handleRoot() {
+    Serial.println("GET INDEX PAGE");
+    String s = MAIN_page;
+    server.send(200, "text/html", s);
 }
 
-void handleoff() {
-    Serial.println("PC POWER TRUN OFF");
-    digitalWrite(D4,HIGH); //LED off
-    server.send(200, "text/html", "PC POWER TRUN OFF");
-}    
+void handlePCon() {
+ Serial.println("LED on page");
+ digitalWrite(LED,LOW); //LED
+ digitalWrite(SW,LOW); //LED
+ delay(800);
+ digitalWrite(SW,HIGH);
+ server.send(200, "text/html", "LED is ON");
+}
+
+void handlePCoff() {
+ Serial.println("LED off page");
+ digitalWrite(LED,HIGH); //LED off
+ digitalWrite(SW,HIGH); //LED off
+ server.send(200, "text/html", "LED is OFF"); //Send ADC value only to client ajax request
+}
+    
 void setup(void) {
     pinMode(LED, OUTPUT);
-    digitalWrite(D4, 0);
+    digitalWrite(LED, 0);
+    pinMode(SW, OUTPUT);
+    digitalWrite(SW, 1);
     Serial.begin(115200);
     WiFi.begin(ssid, password);
     WiFi.config(staticIP, subnet, gateway);
     WiFi.mode(WIFI_STA); 
     Serial.println("");
+
+  // Wait for connection
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);
-       Serial.print(".");
+        Serial.print(".");
     }
     Serial.println("");
     Serial.print("Connected to ");
@@ -128,12 +153,38 @@ void setup(void) {
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
 
-    server.on("/on", handleon);   
-    server.on("/off", handleoff);
+    server.on("/", []() {
+        if (!server.authenticate(user,pass))
+        return server.requestAuthentication(DIGEST_AUTH, realm, authFailResponse);
+        Serial.println("GET INDEX PAGE");
+        String s = MAIN_page;
+        server.send(200, "text/html", s);
+   });
+   server.on("/pcon",[]() {
+        if (!server.authenticate(user,pass))
+        return server.requestAuthentication(DIGEST_AUTH, realm, authFailResponse);
+        Serial.println("PC POWER TRUN ON");
+        digitalWrite(LED,LOW);
+        digitalWrite(SW,LOW);
+        delay(800);
+        digitalWrite(SW,HIGH);
+        server.send(200, "text/html", "PC POWER TRUN ON");
+   });    
+   server.on("/pcoff", []() {
+        if (!server.authenticate(user,pass))
+        return server.requestAuthentication(DIGEST_AUTH, realm, authFailResponse);
+        Serial.println("PC POWER TRUN OFF");
+        digitalWrite(LED,HIGH); //LED off
+        digitalWrite(SW,HIGH); //LED off
+        server.send(200, "text/html", "PC POWER TRUN OFF");
+   });
+   server.on("/pcon", handlePCon); 
+   server.on("/pcoff", handlePCoff);
+   server.begin();
+   Serial.println("HTTP server started");       
 }
-
 void loop(void) {
-   server.handleClient();
+  server.handleClient();
 }
 ```
 
