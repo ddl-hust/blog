@@ -11,39 +11,50 @@ data: 2019-09-25
 
 ##  构建 docker 镜像
 
-### 准备所需源码
+官方给出了两种构建 docker 镜像的方式，但是我感觉都不好，一是使用的 的是 centos 基础镜像构建，构建出来的大小将近，根本就不用区分本地构建或者网络构建。你构建的整个过程都要都需要连接外网下载构建的包之类的，还用区分什么网络构建和本地构建？所以在这里我们仅仅需要准备配置文件即可。
 
 ```bash
-# 先在本地新建一个 src 目录，所有的文件都放在这个目录下
-mkdir src
-cd src/
-git clone https://github.com/happyfish100/libfastcommon.git --depth 1
+ ╭─root@docker-230 ~/root/container/fastdfs/fastdfs/docker/dockerfile_network ‹master›
+╰─# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+fastdfs             centos              c1488537c23c        8 seconds ago       483MB
+```
+
+### 准备配置文件
+
+```bash
+# 将所有的配置文件一并放到 conf 目录下
+cd ~
+mkdir  -p fastdfs/conf
 git clone https://github.com/happyfish100/fastdfs.git --depth 1
-git clone https://github.com/happyfish100/fastdfs-nginx-module.git --depth 1
-wget http://nginx.org/download/nginx-1.15.4.tar.gz
-tar -zxvf nginx-1.15.4.tar.gz
-
-# 复制所需要的配置文件
-rm -rf fastdfs/conf
-cp -rf fastdfs/docker/dockerfile_local/conf fastdfs/conf
-cp fastdfs/docker/dockerfile_local/fastdfs.sh fastdfs/conf
-
-# 删除不必要的文件，减小镜像体积
-rm -rf fastdfs/.git fastdfs-nginx-module/.git libfastcommon/.git/ fastdfs/docker/
+cp -rf fastdfs/docker/dockerfile_local/conf/* conf
+cp fastdfs/docker/dockerfile_local/fastdfs.sh conf
+touch Dockerfile.debian
+touch Dockerfile.alpine
+# 复制出来配置文件，把源码移除掉就可以
+rm -rf fastdfs
 ```
 
 ### 修改配置文件
 
-所有的配置文件都在 conf 里，我们根据自身的需要修改一下各个配置文件即可
+所有的配置文件都在 conf 里，我们根据自身的需要修改一下各个配置文件即可，关于 fastdfs 配置文件的各个参数可以去参考一下下面的博客。
+
+-  [用FastDFS一步步搭建文件管理系统](https://www.cnblogs.com/chiangchou/p/fastdfs.html)
+
+-  [FastDFS配置参数tracker.conf、storage.conf详解](https://mhl.xyz/Linux/fastdfs-tracker-storage.html)
+
+我修改了默认的配置，数据存放目录修改成了 `/var/fdfs` ,在写 `Dockerfile` 的时候需要建立这个目录，如果你的目录没有修改的话，就把 Dockerfile 里后面那里建立文件夹的路径修改成默认的即可。
+
+把 `tracker_server` 修改成 `tracker_server=tracker_ip:22122` ，容器启动的时候使用环境变量注入的 `FASTDFS_IPADDR` 替换掉就可以。
 
 ```bash
-╭─root@debian-deploy-132 ~/src/conf
+╭─root@debian-deploy-132 ~/fastdfs/conf
 ╰─# tree
 .
 ├── client.conf             # C 语言版本客户端配置文件，可以忽略
 ├── fastdfs.sh              # docker 容器启动 fastdfs 服务的脚本
 ├── http.conf               # http 配置文件，参考官方文档
-├── mime.types
+├── mime.types              #
 ├── mod_fastdfs.conf        # fastdfs nginx 模块配置文件
 ├── nginx.conf              # nginx 配置文件，根据自身项目修改
 ├── storage.conf            # storage 服务配置文件
@@ -55,18 +66,19 @@ rm -rf fastdfs/.git fastdfs-nginx-module/.git libfastcommon/.git/ fastdfs/docker
 ```ini
 disabled=false                #启用配置文件
 port=22122                    #设置tracker的端口号
-base_path=/home/dfs           #设置tracker的数据文件和日志目录（需预先创建）
-http.server_port=8080         #设置http端口号
+base_path=/var/dfs           #设置tracker的数据文件和日志目录（需预先创建）
+http.server_port=28080         #设置http端口号
 ```
 
 #### storage 服务配置文件 storage_ids.conf
 
 ```ini
 # storage服务端口
-port=23000                         # 数据和日志文件存储根目录
-base_path=/home/dfs                # 第一个存储目录
-store_path0=/home/dfs              # tracker服务器IP和端口
-http.server_port=8888
+port=23000                         # 监听端口号
+base_path=/var/dfs                # 数据和日志文件存储根目录
+store_path0=/var/dfs              # 第一个存储目录
+tracker_server=tracker_ip:22122    # tracker服务器IP和端口
+http.server_port=28888
 ```
 
 #### nginx 配置文件 nginx.conf   
@@ -74,7 +86,7 @@ http.server_port=8888
 ```nginx
 # 在 nginx 配置文件中添加修改下面这段
 server {
-    listen       8888;    ## 该端口为storage.conf中的http.server_port相同
+    listen       28888;    ## 该端口为storage.conf中的http.server_port相同
     server_name  localhost;
     location ~/group[0-9]/ {
         ngx_fastdfs_module;
@@ -89,9 +101,9 @@ server {
 #### nginx 模块配置文件 mod_fastdfs.conf 
 
 ```ini
-tracker_server=10.10.107.232:22122   # tracker服务器IP和端口
+tracker_server=tracker_ip:22122   # tracker服务器IP和端口
 url_have_group_name=true             # url 中包含 group 的名称
-store_path0=/home/dfs                # 数据和日志文件存储根目录
+store_path0=/var/dfs                # 数据和日志文件存储根目录
 ```
 
 #### fastdfs 服务的脚本 fastdfs.sh
@@ -102,13 +114,10 @@ store_path0=/home/dfs                # 数据和日志文件存储根目录
 #!/bin/bash
 
 new_val=$FASTDFS_IPADDR
-old="com.ikingtech.ch116221"
+old="tracker_ip"
 
-sed -i "s/$old/$new_val/g" /etc/fdfs/client.conf
 sed -i "s/$old/$new_val/g" /etc/fdfs/storage.conf
 sed -i "s/$old/$new_val/g" /etc/fdfs/mod_fastdfs.conf
-
-cp /etc/fdfs/nginx.conf /usr/local/nginx/conf
 
 echo "start trackerd"
 /etc/init.d/fdfs_trackerd start
@@ -119,7 +128,7 @@ echo "start storage"
 echo "start nginx"
 /usr/local/nginx/sbin/nginx
 
-tail -f  /dev/null                
+tail -f  /dev/null
 ```
 
 #### 把 bash 替换成 sh
@@ -142,17 +151,168 @@ docker/dockerfile_network/fastdfs.sh:1:#!/bin/sh
 
 ### Dockerfile
 
-```dockerfile
+#### alpine:3.10
 
+```dockerfile
+FROM alpine:3.10
+
+COPY conf/ /home
+RUN set -xe \
+    && echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repositories \
+    && echo "http://mirrors.aliyun.com/alpine/latest-stable/community/" >> /etc/apk/repositories \
+    && apk update \
+    && apk add --no-cache --virtual .build-deps alpine-sdk gcc libc-dev make perl-dev openssl-dev pcre-dev zlib-dev tzdata \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone \
+    && mkdir -p /usr/local/src \
+    && cd /usr/local/src \
+    && git clone https://github.com/happyfish100/libfastcommon.git --depth 1 \
+    && git clone https://github.com/happyfish100/fastdfs.git --depth 1    \
+    && git clone https://github.com/happyfish100/fastdfs-nginx-module.git --depth 1  \
+    && wget http://nginx.org/download/nginx-1.15.4.tar.gz \
+    && tar -xf nginx-1.15.4.tar.gz \
+    && cd /usr/local/src/libfastcommon \
+    && sed -i 's/sys\/poll\.h/poll\.h/g' src/sockopt.c \
+    && ./make.sh \
+    && ./make.sh install \
+    && cd /usr/local/src/fastdfs/ \
+    && ./make.sh \
+    && ./make.sh install \
+    && cd /usr/local/src/nginx-1.15.4/ \
+    && ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ \
+    && make && make install \
+    && apk del .build-deps tzdata \
+    && apk add --no-cache pcre-dev bash \
+    && mkdir -p /var/fdfs /home/fastdfs/ \
+    && mv /home/fastdfs.sh /home/fastdfs/ \
+    && mv /home/*.conf /home/mime.types /etc/fdfs \
+    && mv /home/nginx.conf /usr/local/nginx/conf/ \
+    && chmod +x /home/fastdfs/fastdfs.sh \
+    && sed -i 's/bash/sh/g' /etc/init.d/fdfs_storaged \
+    && sed -i 's/bash/sh/g' /etc/init.d/fdfs_trackerd \
+    && sed -i 's/bash/sh/g' /home/fastdfs/fastdfs.sh \
+    && rm -rf /usr/local/src/* /var/cache/apk/* /tmp/* /var/tmp/* $HOME/.cache
+VOLUME /var/fdfs
+EXPOSE 22122 23000 28888 28080
+CMD ["/home/fastdfs/fastdfs.sh"]
 ```
 
+#### debian:stretch-slim
 
+```dockerfile
+FROM debian:stretch-slim
+
+COPY conf/ /home/
+RUN set -x \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/shanghai" > /etc/timezone \
+    && sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list \
+    && sed -i 's|security.debian.org/debian-security|mirrors.aliyun.com/debian-security|g' /etc/apt/sources.list \
+    && apt update \
+    && apt install  --no-install-recommends --no-install-suggests -y build-essential libpcre3 libpcre3-dev zlib1g \
+                   git wget ca-certificates  zlib1g-dev libtool libssl-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /usr/local/src \
+    && cd /usr/local/src \
+    && git clone https://github.com/happyfish100/libfastcommon.git --depth 1 \
+    && git clone https://github.com/happyfish100/fastdfs.git --depth 1    \
+    && git clone https://github.com/happyfish100/fastdfs-nginx-module.git --depth 1  \
+    && wget http://nginx.org/download/nginx-1.15.4.tar.gz \
+    && tar -xf nginx-1.15.4.tar.gz \
+    && cd /usr/local/src/libfastcommon \
+    && ./make.sh \
+    && ./make.sh install \
+    && cd /usr/local/src/fastdfs/ \
+    && ./make.sh \
+    && ./make.sh install \
+    && cd /usr/local/src/nginx-1.15.4/ \
+    && ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ \
+    && make && make install \
+    && apt purge -y build-essential libtool git wget ca-certificates \
+    && apt autoremove -y \
+    && mkdir -p /var/dfs /home/fastdfs/ \
+    && mv /home/fastdfs.sh /home/fastdfs/ \
+    && mv /home/*.conf /home/mime.types /etc/fdfs \
+    && mv /home/nginx.conf /usr/local/nginx/conf/ \
+    && chmod +x /home/fastdfs/fastdfs.sh \
+    && rm -rf /var/lib/apt/list  /usr/local/src/*
+
+VOLUME /var/fdfs
+EXPOSE  22122 23000 28888 28080
+```
+
+### 构不同基础镜像构建出的大小对比
+
+哭了，官方构建出来的镜像将近 500MB
+
+```bash
+fastdfs             alpine              e855bd197dbe        10 seconds ago      29.3MB
+fastdfs             debian              e05ca1616604        20 minutes ago      103MB
+fastdfs             centos              c1488537c23c        30 minutes ago      483MB
+```
+
+#### 使用 dive 分析各个镜像
+
+官方的
+
+![1569728664464](img/1569728664464.png)
+
+#### alpine
+
+基于 alpine 的基础镜像构建完成后，只有三层镜像😂
+
+![1569728744655](img/1569728744655.png)
+
+#### debian
+
+![1569729043301](img/1569729043301.png)
+
+### `musl libc` 带来的问题
+
+不过需要注意的是，使用 CentOS 和 Alpine 基础镜像分别构建出来的镜像，使用 ldd 查看二者编译出来的 fastdfs ，两者的动态链接库存在很大的差异， Alpine 缺少了很多动态链接库，这是因为 alpine 的 c 库是 `musl libc` ，而不是正统的 `glibc` ，另外对于一些依赖 `glibc` 的大型项目，像 openjdk 、tomcat、rabbitmq 等都不建议使用 alpine 基础镜像，因为  `musl libc` 会导致 jvm 一些奇怪的问题。这也是为什么 tomcat 官方没有给出基础镜像是 alpine 的 Dockerfile
+
+```bash
+centos# find /usr/bin/ -name "fdfs*" | xargs ldd
+        linux-vdso.so.1 =>  (0x00007fffe1d30000)
+        libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f86036e6000)
+        libfastcommon.so => /lib/libfastcommon.so (0x00007f86034a5000)
+        libc.so.6 => /lib64/libc.so.6 (0x00007f86030d8000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f8603902000)
+        libm.so.6 => /lib64/libm.so.6 (0x00007f8602dd6000)
+        libdl.so.2 => /lib64/libdl.so.2 (0x00007f8602bd2000)
+```
+
+```bash
+alpine # find /usr/bin/ -name "fdfs*" | xargs ldd
+        /lib/ld-musl-x86_64.so.1 (0x7f4f91585000)
+        libfastcommon.so => /usr/lib/libfastcommon.so (0x7f4f91528000)
+        libc.musl-x86_64.so.1 => /lib/ld-musl-x86_64.so.1 (0x7f4f91585000)
+```
+
+```bash
+debian # find /usr/bin/ -name "fdfs*" | xargs ldd
+        linux-vdso.so.1 (0x00007ffd17e50000)
+        libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007feadf317000)
+        libfastcommon.so => /usr/lib/libfastcommon.so (0x00007feadf0d6000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007feaded37000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007feadf74a000)
+        libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007feadea33000)
+        libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007feade82f000)
+```
+
+### 容器启动方法
+
+需要注意的是，FastDFS 的容器需要使用 host 网络，因为 fastdfs storage 服务器需要向 tracker 服务器汇报自己 IP，这个 IP 还需要通过环境变量的方式注入到相关的配置文件当中。
+
+```bash
+docker run -d -e FASTDFS_IPADDR=10.10.107.230 \
+           -p 28888:28888 -p 22122:22122 -p 23000:23000 -p 28088:28080 \
+           -v $PWD/data:/var/fdfs --net=host --name fastdfs fastdfs:alpine
+```
 
 ##  测试
 
-
-
-### 3.1 测试工具
+###   测试工具
 
 1. 上传客户端：`fdfs_upload_file`
 2. 并发执行工具 ：`xargs`
@@ -164,75 +324,51 @@ docker/dockerfile_network/fastdfs.sh:1:#!/bin/sh
 下载测试命令：`time cat url.log  | xargs -n 1 -I {} -P 256 sh -c "wget  {}"`
 ```
 
-### 3.2 文件上传测试
+###   文件上传测试
 
-
-
-**3.2.1 测试样本为 10W 张 8KB-100 KB 大小不等的图片**
-
-
+  测试样本为 10W 张 8KB-100 KB 大小不等的图片
 
 ![1564128425387](img/1564128425387-1569556026956.png)
 
-
-
-
-
-**3.2.2 测试文件数量和大小**
+** 测试文件数量和大小**
 
 ![1564128874832](img/1564128874832-1569556026956.png)
 
-
-
-**3.2.3 使用 xargs 执行 256 个进程并发上传 10w 张照片所用所用时间 为 2 分钟左右（内网）**
+**使用 xargs 执行 256 个进程并发上传 10w 张照片所用所用时间 为 2 分钟左右（内网）**
 
 ![1564128721547](img/1564128721547-1569556026956.png)
 
-
-
-**3.2.4 用时 2 分 11 秒**
+**用时 2 分 11 秒**
 
 ![1564364594777](img/1564364594777-1569556026956.png)
 
-
-
-**3.2.5 客户端负载情况**
+**客户端负载情况**
 
 ![1564127683217](img/1564127683217-1569556026956.png)
 
-
-
-
-
-**3.2.6 服务端负载情况**
+**服务端负载情况**
 
 ![1564364294952](img/1564364294952-1569556026956.png)
 
-
-
-
-
-**3.2.7 服务端带宽流量**
+**服务端带宽流量**
 
 ![1564365025177](img/1564365025177-1569556026956.png)
 
-**3.2.8 服务端带宽流量**
+**服务端带宽流量**
 
 ![服务端带宽流量](img/1564363829960-1569556026956.png)
 
-**3.2.9 服务端上传结果**
+**服务端上传结果**
 
 ![1564125161155](img/1564125161155-1569556026956.png)
 
-**3.2.10 服务端上传日志记录 ，均无错误输出**
+**服务端上传日志记录 ，均无错误输出**
 
 ![1564130238346](img/1564130238346-1569556026956.png)
 
+### 文件下载测试
 
-
-### 3.3 文件下载测试
-
-**3.3.1 从日志中提取文件路径**
+**从日志中提取文件路径**
 
 从服务端的 `storage_access.log` 日志里提取出文件的路径，使用 `sed` 添加 `nginx` 的访问端口地址得到 10W 个记录 上传文件的 `http` 访问 `url` 地址
 
@@ -240,19 +376,17 @@ docker/dockerfile_network/fastdfs.sh:1:#!/bin/sh
 
 
 
-**3.3.2 wget 下载**
+**wget 下载**
 
 使用 `wget -i` 参数指定 `url.log` 为标准输出来测试下载刚刚上传的 10W 张图片 用时 3 分 23 秒
 
 ![1564023927851](img/1564023927851-1569556026957.png)
 
-
-
-### 3.4 测试结果分析
+### 测试结果分析
 
 使用 FastDFS 自带的上传测试工具和 xargs 并发执行工具，通过 xargs -P 参数指定的并发请求数，测得结果为单机性能在网络环境稳定的情况下可以达到 5000 并发上传请求。10W 张图片上传时间耗时 2 分 11 秒左右。使用定时脚本持续测试，总测试上传 100W 张图片。分析 tracker 服务器和 storage 服务器的日志，无论上传还是下载均未发现错误和异常，性能和稳定性较好。
 
-## 4 优化参数
+##  优化参数
 
 根据业务需求和线上环境调整一下参数，可充分发挥 FastDFS 文件系统的性能
 
@@ -296,11 +430,9 @@ connection_pool_max_idle_time = 3600
 
 ```
 
+## 常见问题
 
-
-## 5 常见问题
-
-#### 5.1.1 无法连接到 tracker 服务器
+####  无法连接到 tracker 服务器
 
 需要在 tracker.conf 配置文件中添加允许访问的 IP ,并添加防火墙规则
 
@@ -310,7 +442,7 @@ upload file fail, error no: 107, error info: Transport endpoint is not connected
 [2019-07-25 10:40:54] ERROR - file: tracker_proto.c, line: 37, server: 10.20.172.192:23000, recv data fail, errno: 107, error info: Transport endpoint is not connected
 ```
 
-#### 5.1.2 storage 服务器磁盘用尽
+#### 服务器磁盘用尽
 
 当 storage 服务器设定的上传存储目录所在的分区磁盘用尽将会出现无剩余空间的错误日志
 
@@ -320,7 +452,7 @@ upload file fail, error no: 107, error info: Transport endpoint is not connected
 tracker_query_storage fail, error no: 28, error info: No space left on device
 ```
 
-#### 5.1.3 重启服务时失败
+#### 重启服务时失败
 
 使用 service fdfs_trackerd restart 重启 tracker 或者 storage 服务时会报错，会提示端口已经占用。解决的方案就是使用 kill -9 命令杀死 tracker 服务或者 storage 服务，然后再重新启动相应服务即可
 
@@ -330,7 +462,7 @@ tracker_query_storage fail, error no: 28, error info: No space left on device
 [2019-07-25 10:36:55] CRIT - exit abnormally!
 ```
 
-### 5.2 安全相关
+### 安全相关
 
 1. tracker.conf 、storage.conf 配置文件默认允许所有 IP 地址访问 ，建议去掉  `allow_hosts=*` 修改为 FastDFS 客户端所在的内网 IP 地址。
 
@@ -344,7 +476,7 @@ tracker_query_storage fail, error no: 28, error info: No space left on device
 
 ![1564384906456](img/1564384906456.png)
 
-### 5.3 release 版本问题
+### release 版本问题
 
 **fastdfs** 的 GitHub上的 repo 已经有两年没有 release 新版本了，是选用 2017 年的 v5.11 版本还是直接用 master 分支版本？
 
