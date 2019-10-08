@@ -15,19 +15,19 @@ data: 2019-09-26
 | [老钱文集](http://lao-qian.hxwk.org/)                        | 历史、美国                         | 考古                                     |
 | [考えるF4n9X](https://fanqxu.com/)                           | 渗透测试、社会工程学               | 社工                                     |
 | [未知的世界](http://lulalap.com/)                            | PAT                                | 活捉一枚妹子😂                            |
-| [ KaiRen's Blog](https://k2r2bai.com/)                       | Kubernetes、Docker 容器            | 台湾博主                                 |
-| [暗无天日](http://blog.lujun9972.win/)                       | Linux、Emacs、开源                 | 喜欢 xjb 搞                              |
-| [云原生实验室](https://www.yangcs.net/)                      | 云原生、Kubernetes、容器           |                                          |
+| [KaiRen's Blog](https://k2r2bai.com/)                        | Kubernetes、Docker 容器            | 台湾博主                                 |
+| [暗无天日](http://blog.lujun9972.win/)                       | Linux、Emacs、开源                 | 有趣、喜欢 xjb 搞                        |
+| [云原生实验室](https://www.yangcs.net/)                      | 云原生、Kubernetes、容器           | 也喜欢 xjb 搞                            |
 | [MoeLove](https://moelove.info/)                             | Kubernetes 生态相关、开源          | 每周坚持周报👍                            |
 | [运维之美](https://www.hi-linux.com/)                        | Linux 、运维                       | 一年没更新了🤔                            |
-| [国光](https://www.sqlsec.com/)                              | 信息安全、CTF、黑苹果、Linux       |                                          |
+| [国光](https://www.sqlsec.com/)                              | 信息安全、CTF、黑苹果、Linux       | 内容很丰富                               |
 | [ 约伊兹的萌狼乡手札](https://blog.yoitsu.moe/)              | Archlinux、安卓、开源              | 喜欢用😂                                  |
 | [HuoJu's BLOG](https://jhuo.ca/)                             | 开源、互联网历史                   |                                          |
 | [依云's Blog](https://blog.lilydjwg.me/)                     | Archinux、内核                     |                                          |
 | [青木のJava小屋](https://qingmu.io/)                         | Kubernetes 生态、Java              |                                          |
 | [梦旭随想](https://blog.ihypo.net/)                          | Kubernetes、docker                 |                                          |
 | [Aylei's Blog](https://aleiwu.com/)                          | Kubernetes、docker                 |                                          |
-| [宋净超Jimmy Song](https://jimmysong.io)                     | Kubernetes、servicemesh            |                                          |
+| [宋净超Jimmy Song](https://jimmysong.io)                     | Kubernetes、servicemesh            | 蚂蚁金服                                 |
 | [結城浩](http://hyuki.com/)                                  | 数学、《数学女孩》                 | 日本作家                                 |
 | [王子亭的博客](https://jysperm.me/)                          | 后端、Node.js                      |                                          |
 | [浮生若梦](https://fs.tn/)                                   | 测试、Linux                        |                                          |
@@ -62,10 +62,10 @@ data: 2019-09-26
 
 | 站点                                                         | 主要内容          | 站长      |
 | ------------------------------------------------------------ | ----------------- | --------- |
-| [阿里中间件团队博客](http://jm.taobao.org/)                  | 中间件、          |           |
-| [美团技术团队](https://tech.meituan.com)                     | 综合              |           |
-| [闲鱼技术团队](https://www.yuque.com/xytech)                 | 前端              |           |
-| [腾讯云容器团队](https://tencentcloudcontainerteam.github.io/) | 容器              |           |
+| [阿里中间件团队博客](http://jm.taobao.org/)                  | 中间件            | 阿里云    |
+| [美团技术团队](https://tech.meituan.com)                     | 综合              | 美团      |
+| [闲鱼技术团队](https://www.yuque.com/xytech)                 | 前端              | 闲鱼      |
+| [腾讯云容器团队](https://tencentcloudcontainerteam.github.io/) | 容器              | 腾讯云    |
 | [搜云库技术团队](https://www.souyunku.com/)                  | 前端              |           |
 | [Nginx开发从入门到精通](http://tengine.taobao.org/book/)     | Nginx             | 淘宝      |
 | [IBM 开发者社区](https://www.ibm.com/developerworks/cn/topics/) | 综合              | IBM       |
