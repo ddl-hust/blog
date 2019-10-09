@@ -8,7 +8,7 @@ link: wndr3700v4-openwrt
 
 
 
-刷完 openwrt 1804 后，根分区只利用了 14 MB，大多数帖子都是通过修改源码分区表，重新编译固件而全部利用剩余空间，不过这样做可以一劳永逸。但很容易变砖，而且刷回原厂变砖的概率极大。索性还是不动分区表，直接重新新建一个分区即可。重新建立一个分区坑也比较多😂
+刷完`OpenWrt-18.06.0`后，根分区只利用了 14 MB，大多数帖子都是通过修改源码分区表，重新编译固件而全部利用剩余空间，不过这样做可以一劳永逸。但很容易变砖，而且刷回原厂变砖的概率极大。索性还是不动分区表，直接重新新建一个分区即可。重新建立一个分区坑也比较多😂
 
 ```bash
 root@OpenWrt:~# df -h
@@ -69,6 +69,10 @@ lists_dir ext /var/opkg-lists
 option overlay_root /overlay
 
 opkg install zsh git -d opt
+
+# 添加环境变量
+export LD_LIBRARY_PATH="/opt/lib:/opt/usr/lib"
+export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/opt/usr/bin:/opt/bin
 ```
 
 ## 3.安装 frpc 并设置开机自启
