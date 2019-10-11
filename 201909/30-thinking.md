@@ -1,13 +1,14 @@
 ---
+
 title: 大学四年总结及感想
 data: 2019-09-20
 link: thinking
-tag: 草稿、未完结、更新中应该写点什么？
+tag: 草稿、未完结、更新中
+
 ---
 
 ## 应该写点什么？
 
-## 
 
 明天就是国庆了，又到了一年一度给`伟大光荣正确`唱赞歌的时候了，真幸福啊！
 
@@ -21,7 +22,9 @@ tag: 草稿、未完结、更新中应该写点什么？
 
 ## 对名校由憧憬到失望
 
-上大学以前我是特别有名校情结，特别崇拜羡慕清华北大这样的名校，即便是到了大一大二的时候，也特别羡慕其他名校的学生多么牛逼，大佬大佬地跪舔他们。直到后来了解到了 [北大岳昕事件](https://zh.wikipedia.org/wiki/北大岳昕事件)  以及 [佳士事件 ]([https://zh.wikipedia.org/wiki/%E4%BD%B3%E5%A3%AB%E4%BA%8B%E4%BB%B6](https://zh.wikipedia.org/wiki/佳士事件))后，对如今的这些大学，他们的形象在我心中砰然倒塌，彻底粉碎，甚至有一种痛恨感，痛恨他们作为国内顶级的学府，接受着国内最好的教育，却对为受压迫的工人维权的进步学生不管不顾。直到现在岳昕、沈梦雨，以及众多为佳士员工发声的学生们仍然生死不明，若他们敢集体站出来去支持岳昕他们，或许他们现在还能活下来。每当看到有人赞美祖国强的大时候，心中总会想起岳昕他们是否还活着？他们生死未卜，一个连为底层工人呐喊的学生都保护不好，我们的祖国是否真的强大？还是说，祖国强大了，你也就无处可逃了？
+上大学以前我是特别有名校情结，特别崇拜羡慕清华北大这样的名校，即便是到了大一大二的时候，也特别羡慕其他名校的学生多么优秀。直到后来了解到了 [北大岳昕事件](https://zh.wikipedia.org/wiki/北大岳昕事件)  以及 [佳士事件 ]([https://zh.wikipedia.org/wiki/%E4%BD%B3%E5%A3%AB%E4%BA%8B%E4%BB%B6](https://zh.wikipedia.org/wiki/佳士事件))  后，如今的这些大学，他们的形象在我心中砰然倒塌，彻底粉碎，甚至有一种痛恨感，痛恨他们作为国内顶级的学府，接受着国内最好的教育，却不敢支持为受压迫的工人维权的进步学生。直到现在岳昕、沈梦雨，以及众多为佳士员工发声的学生们仍然生死不明。若他们敢集体站出来去支持岳昕他们，或许他们现在还能活下来，也可能是我想得太天真了，毕竟他们都是既得利益者。
+
+每当看到有人赞美祖国强的大时候，心中总会想起岳昕他们是否还活着？他们生死未卜，一个连为底层工人呐喊的学生都保护不好，我们的祖国是否真的强大？还是说，祖国强大了，你也就无处可逃了？前不久国庆期间，很多网友因发表不当言论被拘留。呵呵，我们连最基本得包容心都没有，无法容忍反对的声音，这算是真正得强大吗？
 
 作为最应该提倡自由的大学校园却做着各种限制自由的龌龊勾当，虽为 985 、211、国内顶级大学，也不过如此，同样乌烟瘴气，甚至是审查者重点关注的对象。再到后来许章润教授被撤职，遭到处分，再到后来的电子科技大学教授因言论不当被处分。越来越多的教授和老师因言论不但被处分，学生不爱国被退学，等等种种加起来，让我对中国的大学彻底失望透顶，对中国的教育彻底失望透顶，对中国的未来也彻底失望透顶。
 
@@ -31,11 +34,17 @@ tag: 草稿、未完结、更新中应该写点什么？
 
 
 
+## 爱国主义？
+
+引用人民日报在 2012 年 8 月 5 日发表的一篇 [微博](https://www.weibo.com/2803301701/yvO8Xb3es?type=comment#_rnd1569064328001) 。如果哪天这条微博消失了，说明这个社会已经成为 1984 了吧，祈求上帝保卫住这条微博吧。这也很像是《动物庄园》里刚开始写在墙上的那几句话吧。
+
+>   【你好，明天】专家最近宣布，经三级指标体系测评，民族复兴任务已完成62%。然而，当湖南永州遭强暴幼女的母亲因上访被劳教的新闻传出，这一数字显得如此苍白。一个国家的强大，不应只有GDP和奥运金牌，复杂的数理模型中，更应包含百姓的权利与尊严、社会的公平与正义。我们共同努力。晚安。 
+
+事实上，这个是会已经开始迈入 1984 了，越来越多的人因言论不当被拘留，越来越多的教授和老师遭到处分，越来越多的东西要抵制，权力也越来越集中。
+
 ## 重塑世界观价值观
 
-中学的时候可能因为高考中考的压力，没有花时间和精力去读课外书籍，很多奇思异想也因为考试压力被压制了，到了大学，有了充足的时间和精力去思考这个世界是如何运转的。
-
-在中学小学接受所谓的红色教育，这都是洗脑灌输的思想。大学的时候你可以好好地去反思过去接受的教育，多去读一些书，去重新了解这个世界。下面是我建议的书单：另外这是我的 kindle  [书单](https://blog.502.li/I-read)
+中学的时候可能因为高考中考的压力，没有花时间和精力去读课外书籍，很多奇思异想也因为考试压力被压制了，到了大学，有了充足的时间和精力去思考这个世界。在中学小学接受所谓的红色教育，这都是洗脑灌输的思想。大学的时候你可以好好地去反思过去接受的教育，多去读一些书，去重新了解这个世界。下面是我建议的书单：另外这是我的 kindle  [书单](https://blog.502.li/I-read) 
 
 -   《民主的奇迹》 
 -   《1984》
@@ -48,6 +57,7 @@ tag: 草稿、未完结、更新中应该写点什么？
 -   《学会提问 - 批判性思维指南》
 -   《少有人走的路》
 -   《轴心时代》
+-   《通往奴役之路》
 
 ## 养成一些好习惯
 
@@ -61,9 +71,9 @@ tag: 草稿、未完结、更新中应该写点什么？
 
 > 你所接触的信息和人，决定了你以后走什么样的路
 
-这句话嘛，如果我们接触的都是真理部审查过的书籍、新闻、视频等，那么我们的思想也只会受制于真理部。我这人从来不看抖音快手等短视频，这些短视频看多了会上瘾，而且都是无聊来打发时间。我从来不会觉和无聊，即便闲暇时间我也会去思考看书时留下来的问题。
+这句话嘛，如果我们接触的都是真理部审查过的书籍、新闻、视频等，那么我们的思想也只会受制于真理部。
 
-阅读，是个自己积累一点一点的知识，脑袋中东西，任何人都取走不了。
+阅读最大得收获就是思考得价值
 
 ### 折腾
 
@@ -71,7 +81,7 @@ tag: 草稿、未完结、更新中应该写点什么？
 
 PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到手第一时间就拆开看看里面的内存颗粒是什么，结果发现是假的。硬盘外壳是三星的，但里面的颗粒确是海力士的，挂着羊皮卖狗肉。内存 PCB 的信息可以修改，即便你是海力士的内存也能修改成三星的，但硬件你是无法无法伪装成真的（辨别需要经验）。二话不说直接怼卖家，卖家道歉并同意退回退款。普通人可能买到硬盘后会拿来直接使用，不去管什么颗粒啦。
 
-自己去亲自动手去完成一些事情，去亲自拆开自己的手机，拆开自己的笔记本，
+自己去亲自动手去完成一些事情，去亲自拆开自己的手机，拆开自己的笔记本，尝试着自己动手维修一些东西。
 
 ## 计算机是个极其重要的工具
 
@@ -121,17 +131,51 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 说实话，我在学校里的课堂上，基本上没有认真听过课，除了数据结构、计算机组成、计算机网络等一些十分重要的基础课认真听讲了。其他课都是瞎几把玩儿😂。但课下我通过开源社区以及一些技术峰会，了解和学习到很多主流的技术。那时候 2016 年的时候 docker 正式如日中天地向前发展，我参加了 2016 年的阿里云云栖大会，在那里第一次听过 docker 容器，也是第一次和 MySQL 的作者`米卡埃尔·维德纽斯` [Michael Widenius](https://en.wikipedia.org/wiki/Michael_Widenius) 站在一起合影😂，还有 docker 创始人之一的。回到学校后还和同学们分享了再大会上听取到的技术，当时我特别建议大三或大四的也来听听。因为像 docker 这样的技术在面试的时候绝对是个加分项😂。很可惜大三大四的都没来，只有我们年级和大一的学弟学妹们来捧场 😂
 
-
-
 ### 国外的开源社区
 
-[与互联网相关的一些基金会和非营利性组织](https://blog.502.li/org) 
+这张表格大概是我花了一上午的时间收集整理的，里面所包含的项目几乎和我们每一个人息息相关。
 
+|  name |  wikipedia | hosts project / work / service |
+|---|---|---|
+| [Linux 基金会](https://www.linuxfoundation.org/) | [wikipedia](https://en.wikipedia.org/wiki/Linux_Foundation) | [kernel](https://kernel.org)  [NodeJs]([https://nodejs.org)  [Xen](https://xenproject.org/)   [DPDK](https://www.dpdk.org/)  [etcd]([https://etcd.io)  [Jenkins]([https://jenkins.io)  [kubernetes]([https://kubernetes.io) [Ceph](https://ceph.com/foundation/)  [CNI](https://github.com/containernetworking/cni)  [Fluentd](https://www.fluentd.org/)  [Let’s Encrypt](https://letsencrypt.org/)  [Prometheus](https://prometheus.io/)  [CoreDNS](https://coredns.io/) |
+| [FSF 自由软件基金会](https://www.gnu.org)  |  [wikipedia](https://en.wikipedia.org/wiki/Free_Software_Foundation)| [GNU](https://www.gnu.org/) [libc](https://www.gnu.org/software/libc/) [glib](https://www.gnu.org/software/glib/) [bash](https://www.gnu.org/software/bash/) [gzip](https://www.gnu.org/software/gzip/) [wget](https://www.gnu.org/software/wget/)  [gcc](https://www.gnu.org/software/gcc/) [grub](https://www.gnu.org/software/grub/) [sed](https://www.gnu.org/software/sed/)  [tar](https://www.gnu.org/software/tar/)  [grep](https://www.gnu.org/software/grep/)   |
+| [Mozilla 基金会](https://foundation.mozilla.org)  |  [wikipedia](https://en.wikipedia.org/wiki/Mozilla_Foundation)| [Firefox]([https://www.mozilla.org)  [Thunderbird]([https://www.thunderbird.net) |
+| [维基媒体基金会](https://wikimediafoundation.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Wikimedia_Foundation)| [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) |
+| [OpenSSL 基金会](https://www.openssl.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/OpenSSL) | [OpenSSL](https://www.openssl.org/source/) |
+| [SPI 组织](https://www.spi-inc.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Software_in_the_Public_Interest) | [Debian](https://www.debian.org/distrib/)  [FFmpeg](https://ffmpeg.org/)  [OpenWrt](https://openwrt.org/)  [PostgreSQL]([https://www.postgresql.org)  [LibreOffice](https://www.libreoffice.org/) [Jenkins]([https://jenkins.io)  [Arch Linux](https://www.archlinux.org/) [MinGW](https://www.spi-inc.org/projects/mingw) [X.Org](https://www.spi-inc.org/projects/x.org) [haskell.org](https://www.spi-inc.org/projects/haskell) [Gallery](https://www.spi-inc.org/projects/gallery) [OpenZFS](https://www.spi-inc.org/projects/openzfs) |
+| [EFF 电子前哨基金会](https://www.eff.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Electronic_Frontier_Foundation)| [HTTPS Everywhere](https://www.eff.org/https-everywhere)  [Privacy Badger](https://www.eff.org/privacybadger)  [Let's Encrypt](https://letsencrypt.org/about/) |
+| [OpenStack 基金会](https://www.openstack.org/foundation/)  |  [wikipedia](https://en.wikipedia.org/wiki/OpenStack)| [nova](https://www.openstack.org/software/releases/stein/components/nova)  [OpenStack ](https://www.openstack.org/software/project-navigator/openstack-components/#openstack-services) |
+| [CNCF 基金会](https://www.cncf.io/)  |  [wikipedia](https://en.wikipedia.org/wiki/CNCF)| [Kubernetes](http://kubernetes.io/)  |
+| [Cloud Foundry 基金会](https://www.cloudfoundry.org)  |  [wikipedia](https://en.wikipedia.org/wiki/Cloud_Foundry)|  |
+| [Apache 软件基金会](https://www.apache.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/The_Apache_Software_Foundation)| [Apache](https://www.apache.org/)  [Hadoop](https://hadoop.apache.org/)  [Kafka](http://kafka.apache.org/)  [Zookeeper](http://zookeeper.apache.org/)  [HBase](http://hbase.apache.org/)  [Maven](http://maven.apache.org/) |
+| [Python 基金会](https://www.python.org/psf/)  |  [wikipedia](https://en.wikipedia.org/wiki/Python_Software_Foundation)| [Python]([https://www.python.org) |
+| [GNOME 基金会](https://www.gnome.org/foundation/)  |  [wikipedia](https://en.wikipedia.org/wiki/GNOME_Foundation) | [GNOME]([https://www.gnome.org)  [systemd](http://www.freedesktop.org/wiki/Software/systemd/)  [GLib](https://developer.gnome.org/glib/)  [GTK+](http://www.gtk.org/)  [D-Bus](http://www.freedesktop.org/wiki/Software/dbus/)  [Linux Kernel](https://www.kernel.org/)  [GDM](https://wiki.gnome.org/Projects/GDM) |
+| [OWF 开放 web 基金会](http://openwebfoundation.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Open_Web_Foundation) | |
+| [ONF 开放网络基金会](https://www.opennetworking.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Open_Networking_Foundation) | [onos](https://www.opennetworking.org/onos/) [OMEC](https://www.opennetworking.org/omec/)  []() |
+| [FreeBSD 基金会](https://www.freebsdfoundation.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/FreeBSD_Foundation) | [FreeBSD](https://www.freebsd.org)|
+| [OpenBSD 基金会](http://www.openbsdfoundation.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/OpenBSD_Foundation) | [ OpenSSH](http://www.openssh.com/)  [LibreSSL](http://www.libressl.org/)  [OpenBSD](http://www.openbsd.org/) |
+| [Golang 基金会](http://golangfoundation.org/about/)  |  [wikipedia](https://#) | |
+| [OSI 开放源代码组织](https://opensource.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Open_Source_Initiative) | |
+| [Linaro 非营利性组织](https://www.linaro.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Linaro) | [Linaro Toolchain](https://www.linaro.org/downloads/) |
+| [Tor 项目](https://www.torproject.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Tor_(anonymity_network)) | [Tor ](https://www.torproject.org/download/) |
+| [FPF 新闻自由基金会](https://freedom.press/)  |  [wikipedia](https://en.wikipedia.org/wiki/Freedom_of_the_Press_Foundation) | [SecureDrop](https://securedrop.org/)  [Secure the News](https://securethe.news/)  [Archive the News](https://freedom.press/news/archiving-alternative-press-threatened-wealthy-buyers/) [FOIAFeed](https://twitter.com/foiafeed) |
+| [OPJ 保护记者委员会](https://cpj.org)  |  [wikipedia](https://en.wikipedia.org/wiki/Committee_to_Protect_Journalists) | [Safety Kit](https://cpj.org/safety-kit/)  [Safety Advisories](https://cpj.org/safety-advisories/) |
+| [Web Foundation 万维网基金会](https://webfoundation.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web_Foundation) | [Alliance for Affordable Internet](https://webfoundation.org/our-work/projects/alliance-for-affordable-internet/)  [Open Data Barometer](https://webfoundation.org/our-work/projects/open-data-barometer/)  [Women’s Rights Online](https://webfoundation.org/our-work/projects/womens-rights-online/) [The Web Index](https://webfoundation.org/our-work/projects/the-web-index/) |
+| [EPIC 电子隐私信息中心](https://epic.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Electronic_Privacy_Information_Center) | [Litigation Docket](https://epic.org/privacy/litigation/ ) [Privacy Campaigns](https://epic.org/campaigns/) [Spotlight on Surveillance](https://epic.org/privacy/surveillance/spotlight/) |
+| [SFC 软件自由保护组织](https://sfconservancy.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Software_Freedom_Conservancy) | [BusyBox](https://busybox.net/)  [Git](https://git-scm.com/)  [phpMyAdmin](https://phpmyadmin.net/)  [QEMU](http://qemu.org/)  [Samba](https://www.samba.org/samba/)  [Wine](http://www.winehq.org/) []() |
+| [SFLC 软件自由法律中心](https://www.softwarefreedom.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Software_Freedom_Law_Center) | [services](https://www.softwarefreedom.org/services/) |
+| [Internet Archive 互联网档案馆](https://archive.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Internet_Archive) | [Building Libraries Together](https://archive.org/projects/)  [Open Library](https://openlibrary.org/)  [301Works.org](https://archive.org/details/301works)  [Open Community Networks](https://archive.org/web/sflan.php) |
+| [X.Org 基金会](https://www.x.org/wiki/)  |  [wikipedia](https://en.wikipedia.org/wiki/X.Org_Foundation) |[X.Org project](https://www.x.org) |
+| [RISC-V 基金会](https://riscv.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/RISC-V) | [RISC-V](https://riscv.org/) |
+| [Creative Commons](https://creativecommons.org/)  |  [wikipedia](https://en.wikipedia.org/wiki/Creative_Commons) | [about](https://creativecommons.org/about/) |
+| [Eclipse 基金会](https://www.eclipse.org/org/foundation/) |  [wikipedia](https://en.wikipedia.org/wiki/Eclipse_Foundation) | [Eclipse](https://projects.eclipse.org/) |
+| [TDF 文档基金会](https://www.documentfoundation.org/) | [wikipedia](https://en.wikipedia.org/wiki/The_Document_Foundation) | [LibreOffice](http://www.libreoffice.org/) |
+| [ISRG 互联网安全研究小组](https://www.abetterinternet.org/) | [wikipedia](https://en.wikipedia.org/wiki/Internet_Security_Research_Group) | [Let’s Encrypt](https://letsencrypt.org/) |
 美国拥有着世界上最多的开源软件、自由软件基金会及其非营利性组织、社区。同时这些基金会和非营利性组织在独立于政府、公开透明、开放包容、自由平等的社会环境下领跑整个世界开源软件/自由软件的发展。在美国，假如向这些非营利性组织捐款，纳税人或者企业能够在自己的收入税中抵税。没有这一条，许多非营利组织就不能收到足够的捐款。
 
 ### 国内开源社区
 
-我接触到的第一个开源社区就是 [Linus Story](https://10.linuxstory.net/) ,
+我接触到的第一个开源社区就是 [Linus Story](https://10.linuxstory.net/) 
 
 ## 该拒绝哪些东西
 
@@ -169,13 +213,13 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
     如果同龄人中男生或者女孩吸烟的话，他在我心中的期望会降低到平均值以下
 
-#### 校园贷
+### 校园贷
 
 绝对不能碰、绝对不能碰、绝对不能碰、绝对不能碰、绝对不能碰、绝对不能碰、绝对不能碰。
 
 明白我的意思吧，我们学校大一刚开学的时候，会有一些没良心的学长学姐去宿舍推销校园贷的 APP，然后你会毫不知情地被注册上账号。而且这些 APP 会读取你的通信录，上传通信录到他们的服务器数据库。然后你通信录里的家人朋友们会收到众多贷款平台的广告和电话骚扰
 
-#### 短视频
+### 短视频
 
 >   我为什么从来不刷抖音快手这些短视频？
 >   一是、这类短视频“很香”，看了会上瘾，并且会让自己丧失对注意力的掌控，并且我极度讨厌网红文化。
@@ -184,7 +228,7 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 >   如果你觉着无聊的话不如也和我一样做一些思想实验。推荐一本书《如果没有今天，明天会不会有昨天？》，里面有五十多个思想实验，值得闲的时候去思考。
 >   其实是来推荐书的(*>_<*)ﾉ
 
-#### 洗脑的教育
+### 洗脑的教育
 
 像一些夹带私货洗脑的教育就不要去碰了，比如 `某学习 xx`  ，一个人无法代表一个国家，同样一个人的思想也无法代表我们整个国家的想法。被洗脑灌输个人思想是及其危险的，个人崇拜是及其危险的。
 
@@ -194,15 +238,13 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 ## 去思考一些问题
 
-《生命的跃升》
-
-去年十二月份的时候读过一本书《如果没有今天，明天会不会有昨天？》
+去年十二月份的时候读过一本书《如果没有今天，明天会不会有昨天？》，里面有五十多个十分有趣的思想实验，引导读者们去思考，同时包含了大量的举例论证。十分推荐去读一下这本书。
 
 >   摘自  [Philo](http://lulalap.com/2019/01/01/hello-2019/) 
 
 >   我想知道世界是如何运转的，为什么我们看到的世界是这个样子，想知道外星人到底存不存在，想知道马斯克是不是真的会移民去火星；想知道不同的文化是如何形成的，不同的制度是怎样演变的，贸易到底在国家之间扮演着怎样的角色，为什么会有战争，黑市到底是怎样形成的，为什么大多数历史时期女性地位都处于弱势常常被压迫；想知道人类为什么有喜怒哀乐，性格到底是天生因素比较多还是后天影响比较多，基因到底有哪些奥妙，为什么有婚姻以及婚姻制度是否合理，为什么有如此多的性倾向，福柯的书里到底说了些什么……
 
-### 世界是怎么运转的
+### 科普
 
 关于科普，推荐李永乐老师的视频，他的 [bilibili](https://space.bilibili.com/9458053)  和  [Youtube](https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw)  ，他是我的良师益友，即便现在我已经不是学生了，但我依然收看他的科普视频，去了解这个世界的运转的原理，去回答我心中的十万个为什么。
 
@@ -210,15 +252,17 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 >   很多小孩在小的时候就知道未来要干什么，而我们的学生呢？到了大学，考上大学都不知道我这一辈子到底要从事什么，上了大学之后，发现这个专业自己不喜欢，还要转专业，其实是我们教育的悲哀。
 
+### 人民的力量
+
+思考了很久想明白，人民拥有的力量的唯一来源就是`自由`，即言论自由、新闻自由、出版自由、集会自由。
+
 ### 人权 VS 主权 ?
 
 当我看到小学六年级的课本上要求默写下面的这句话时就对这样的洗脑教育很绝望
 
 >   祖宗疆土，当以死守，不可尺寸与人
 
-我不认可国家主权高于人权，我和爱因斯坦一样，认为人权高于主权。你也思考一下你的答案
-
-### 幸福是什么 ？
+我绝对不认可国家主权高于人权，我和爱因斯坦一样，认为人权高于主权。你也思考一下你的答案
 
 ### 关心政治
 
@@ -296,7 +340,7 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 但这样的儿童世界上数不胜数——香港返送中和平示威民众、假疫苗的受害者、维权的退役老兵、维权的尘肺病工人、罢工的环卫工人、罢工的卡车司机、上街讨薪的六安教师、强拆受害者、因言论不当被处分的教师、关心底层的大学生、维权的佳士员工、被抓捕的律师、被性侵的花季少女、被失踪的民主人士、豆腐渣工程的受害者、讨要血汗钱的农民工、上访的穷苦老百姓、被驱逐的低端人口、毒奶粉的受害者、红黄蓝幼儿园家属们、被摘走器官的罪犯、因言获罪的网民、被拘禁的调查记者、暴力执法的受害者、P2P 暴雷的受害者，还有很多很多吧。
 
-看到他们的遭遇，我也十分同情和理解，因为我也是其中的一员，毕竟小时候是靠捡菜叶子生存下来的人，我理解他们和我一样，底层的低端人口对这个社会的绝望和无助。负数开始的人生，如此艰难。
+看到他们的遭遇，我也十分同情和理解，因为我也是其中的一员，毕竟我们家和他们一样遭遇过社会主义铁拳的打击。我理解他们和我一样，底层的低端人口当遭到不公时，对这个社会的绝望和无助。负数开始的人生，如此艰难。
 
 引用人民日报在 2012 年 8 月 5 日发表的一篇 [微博](https://www.weibo.com/2803301701/yvO8Xb3es?type=comment#_rnd1569064328001) 。如果哪天这条微博消失了，说明这个社会已经成为 1984 了，祈求上帝保卫住这条微博吧。这也很像是《动物庄园》里刚开始写在墙上的那几句话吧。
 
@@ -312,21 +356,31 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 说实话，我最惧怕的就是官员，我惧怕他们手中的权力能把我捏得粉身碎骨，惧怕他们去迫害我的家人。我一介草民，贱命一条，死不足惜，我敢面对生死却对权力恐惧至极。我的家人、我的朋友以及与我相关的人，他们是我最珍贵的东西。家人的生命远高于我的一切，甚至我愿意用牺牲我的生命来保护他们，但我能保护好他们吗？我姐是一个基督徒，当他有一天因为宗教信仰受到迫害时，我怎么去保护她呢？弱小的自己无法守护住任何人吧，要怪就怪自己弱小吧。等自己变强大了，就带着家人逃离这个专制的国家，在一个 `人民有力量` 国家生活下去。
 
-真理部经常宣传的一句话就是 `国家有力量、人民有信仰、民族有希望` ,看到就觉着辣眼睛。不应该是 `人民有力量、民族有信仰、国家有希望 ` 吗？一个人人惧怕政府的国家即便再强大，人民也只能生活在政府的权威统治之下，这样的民族能有什么样的希望？苏联政府是上世纪的老大哥，国家足够强大吧，但他们的人民生活好吗？
+真理部经常宣传的一句话就是 `国家有力量、人民有信仰、民族有希望` ,看到就觉着辣眼睛。在一个自由民主的国家不应该是 `人民有力量、民族有信仰、国家有希望 ` 吗？一个人人惧怕政府的国家即便再强大，人民也只能生活在政府的权威统治之下，这样的民族能有什么样的希望？苏联政府是上世纪的老大哥，国家足够强大吧，但他们的人民生活好吗？
+
+## 关于梦想
+
+
 
 ## 对未来的担忧
 
 [许章润]([https://zh.wikipedia.org/wiki/%E8%AE%B8%E7%AB%A0%E6%B6%A6](https://zh.wikipedia.org/wiki/许章润))教授曾写过一篇文章 [许章润：我们当下的恐惧与期待](http://unirule.cloud/index.php?c=article&id=4625)  值得我们每个人去思考和阅读，像许章润这样干讲真话得教授真的不多了。在受政府和政党控制的大学里，为了在体制内生存，沉默的人也会越来越多（但我坚信未来有一天他们会发出反抗得呐喊，只不过不是现在）。唯独唱赞歌得人比如胡锡进、胡鞍钢、金灿荣等混的如鱼得水，真是对知识份子得极大侮辱。
 
-
-
 ## 未来的打算
 
+未来三年只做这三种事情吧，赚钱、学好英语、积累技术
 
+以后跑路的话，金钱是必须的，所以这几年节俭生活，省下来的钱以后要用到得。女朋友还是不找了，感觉现在有个女朋友没啥用，生活上又会多一笔开销，谈对象又浪费时间。自己一个人拥有充足得时间来看书和学习。一个人过得孤单单的，自己也早已经习惯了。现实生活中也找不到和我一样价值观的女生吧，几乎没有。
+
+### 赚钱
+
+### 英语
+
+### 技术
+
+技术方面主要 kuberentes 生态，把运维的基本功做好。同时这两年把 Golang 和 Python 语言掌握好。
 
 ## 引用
-
-
 
 -   [未知的世界](http://lulalap.com/)
 -   [天泽经济研究所](http://unirule.cloud/)
