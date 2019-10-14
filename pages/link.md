@@ -131,35 +131,39 @@ data: 2019-09-26
 
 ----
 
-## 公司 or 社区
+## 公司 or 社区 or 团队
 
-| 站点                                                         | 主要内容          | 站长      |
-| ------------------------------------------------------------ | ----------------- | --------- |
-| [阿里中间件团队博客](http://jm.taobao.org/)                  | 中间件            | 阿里云    |
-| [美团技术团队](https://tech.meituan.com)                     | 综合              | 美团      |
-| [闲鱼技术团队](https://www.yuque.com/xytech)                 | 前端              | 闲鱼      |
-| [腾讯云容器团队](https://tencentcloudcontainerteam.github.io/) | 容器              | 腾讯云    |
-| [搜云库技术团队](https://www.souyunku.com/)                  | 前端              |           |
-| [Nginx开发从入门到精通](http://tengine.taobao.org/book/)     | Nginx             | 淘宝      |
-| [IBM 开发者社区](https://www.ibm.com/developerworks/cn/topics/) | 综合              | IBM       |
-| [LeanCloud 开放资源](https://open.leancloud.cn/)             | 开放资源          | LeanCloud |
-| [leansoftX.com](https://devopshub.cn/)                       | DevOps            |           |
-| [有容云博客](http://www.youruncloud.com/blog/0_10.html)      | 容器              |           |
-| [编程一小时](https://code.org/learn)                         | 编程学习          | 微软      |
-| [前端导航](http://jsdig.com/)                                | 前端              |           |
-| [勾陈安全实验室](http://www.polaris-lab.com/)                | 安全              |           |
-| [Open-Source Security Architecture](https://bloodzer0.github.io/ossa/) | 安全              |           |
-| [运维笔记](https://wilon.github.io/)                         | 运维              |           |
-| [Linux.cn](https://linux.cn/)                                | Linux、开源、翻译 |           |
-| [EMC中文支持论坛](https://community.emc.com/community/support/chinese) | 存储              |           |
-| [UMCLOUD技术博客](http://blog.umcloud.com/)                  | Ceph 存储         |           |
-| [SecWiki](https://www.sec-wiki.com/)                         | 安全              |           |
-| [众成翻译](https://www.zcfy.cc/archives)                     | 翻译、英文        |           |
-| [星知苑](http://www.myxzy.com/)                              | 软路由、虚拟化    |           |
-| [轻时代](https://lighti.me/)                                 | VPS、建站         |           |
-| [Letitfly](https://bbs.letitfly.me/)                         | 安卓、刷机、搞基  |           |
-| [fundebug 博客](https://blog.fundebug.com/)                  | 前端、测试        |           |
-| [Yo! 服务器](https://yo.zgserver.com/)                       | 问题检索站点      |           |
+| 站点                                                         | 主要内容              | 站长      |
+| ------------------------------------------------------------ | --------------------- | --------- |
+| [https://www.servicemesher.com](https://www.servicemesher.com/) | 云原生 Service Mesher |           |
+| [阿里中间件团队博客](http://jm.taobao.org/)                  | 中间件                | 阿里云    |
+| [美团技术团队](https://tech.meituan.com)                     | 综合                  | 美团      |
+| [闲鱼技术团队](https://www.yuque.com/xytech)                 | 前端                  | 闲鱼      |
+| [腾讯云容器团队](https://tencentcloudcontainerteam.github.io/) | 容器                  | 腾讯云    |
+| [搜云库技术团队](https://www.souyunku.com/)                  | 前端                  |           |
+| [Nginx开发从入门到精通](http://tengine.taobao.org/book/)     | Nginx                 | 淘宝      |
+| [IBM 开发者社区](https://www.ibm.com/developerworks/cn/topics/) | 综合                  | IBM       |
+| [LeanCloud 开放资源](https://open.leancloud.cn/)             | 开放资源              | LeanCloud |
+| [leansoftX.com](https://devopshub.cn/)                       | DevOps                |           |
+| [有容云博客](http://www.youruncloud.com/blog/0_10.html)      | 容器                  |           |
+| [编程一小时](https://code.org/learn)                         | 编程学习              | 微软      |
+| [前端导航](http://jsdig.com/)                                | 前端                  |           |
+| [东岳网络工作室团队博客](https://blog.dongyueweb.com/)       | kubernetes、机器学习  |           |
+| [勾陈安全实验室](http://www.polaris-lab.com/)                | 安全                  |           |
+| [Open-Source Security Architecture](https://bloodzer0.github.io/ossa/) | 安全                  |           |
+| [运维笔记](https://wilon.github.io/)                         | 运维                  |           |
+| [Linux.cn](https://linux.cn/)                                | Linux、开源、翻译     |           |
+| [EMC中文支持论坛](https://community.emc.com/community/support/chinese) | 存储                  |           |
+| [UMCLOUD技术博客](http://blog.umcloud.com/)                  | Ceph 存储             |           |
+| [SecWiki](https://www.sec-wiki.com/)                         | 安全                  |           |
+| [众成翻译](https://www.zcfy.cc/archives)                     | 翻译、英文            |           |
+| [星知苑](http://www.myxzy.com/)                              | 软路由、虚拟化        |           |
+| [轻时代](https://lighti.me/)                                 | VPS、建站             |           |
+| [Letitfly](https://bbs.letitfly.me/)                         | 安卓、刷机、搞基      |           |
+| [fundebug 博客](https://blog.fundebug.com/)                  | 前端、测试            |           |
+| [Yo! 服务器](https://yo.zgserver.com/)                       | 问题检索站点          |           |
+
+
 
 ----
 
