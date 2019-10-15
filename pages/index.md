@@ -5,18 +5,19 @@ date：2019-01-01
 
 # about
 
-## info 
+## info
 
-- 这里是木子的个人博客😘，名字来源于日语 `ムジ` muji 无印良品
+- 这里是木子的个人博客😘，名字来源于日语 `ムジ`
+
 - 502 是一种 HTTP 协议的服务器端错误状态代码 Bad Gateway
 - li 这个域名是我觉着最好听的域名，还有一个是 io ，这两个域名最萌😂
 - 目前在一家 955 企业从事运维方面的工作，主要负责 Kubernetes 平台落地
 
 ## connect
 
-####  **Blog** 🏠 [blog.502.li](https://blog.502.li) 
+####  **Blog** 🏠 [blog.502.li](https://blog.502.li)
 
-####  Email 📧 [blog@502.li](mailto:blog#502.li) 
+####  Email 📧 [blog@502.li](mailto:blog#502.li)
 
 #### Twitter 🕊 [muzi_ii](https://twitter.com/muzi_ii)
 
@@ -24,7 +25,7 @@ date：2019-01-01
 
 #### Telegram ☎️ [muzi_ii](https://telegram.me/muzi_ii)
 
-#### - rss_kubernetes
+#### - Channel 📣 [rss_kubernetes](https://t.me/rss_kubernetes)
 
 
 
@@ -82,7 +83,7 @@ date：2019-01-01
 
 ## love and passion
 
-0. 爱憎分明、嫉恶如仇
+0. 爱憎分明、嫉恶如仇，所以我是那种思想极端的人
 1. 互联网自由、开源、开放、包容
 2. 开源软件及其基金会和非盈利性组织
 3. 精简主义者、遵循 Unix 设计理念、一个程序只做一件事儿
@@ -103,9 +104,15 @@ date：2019-01-01
 
 ## quote
 
-1. 互联网之子Aaron死了以后，Aaron朋友和合作者，哈佛大学法学院教授Laurence Lessig，回忆说，他当年和仅15岁的Aaron 有过一次谈话。Aaron问他：“您刚才讲到网络审查和管制的这些弊病，那您有没有什么实际的方案来解决这些问题呢？”Lessig有点尴尬地说：“没有。我是个学者，我只负责做研究，解决问题不关我的事儿。”Aaron接着问：“您是个学者，所以解决问题不关你的事儿。那，您作为一个公民，又该如何呢？” [Link](https://coolshell.cn/articles/11928.html)
+> 互联网之子Aaron死了以后，Aaron朋友和合作者，哈佛大学法学院教授Laurence Lessig，回忆说，他当年和仅15岁的Aaron 有过一次谈话。Aaron问他：“您刚才讲到网络审查和管制的这些弊病，那您有没有什么实际的方案来解决这些问题呢？”Lessig有点尴尬地说：“没有。我是个学者，我只负责做研究，解决问题不关我的事儿。”Aaron接着问：“您是个学者，所以解决问题不关你的事儿。那，您作为一个公民，又该如何呢？” [互联网之子 – AARON SWARTZ]( https://coolshell.cn/articles/11928.html )
 
-2. 封锁维基百科，将是对审查者的极大讽刺，因为我们不是他们宣称的任何一种审查对象；审查维基百科等于承认，恰恰是中立的事实资料令其担惊受怕。我们不是政治宣传机器，我们不是网路赌博，我们不是色情。我们是一部百科全书。[Link](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%AF%B9%E7%BB%B4%E5%9F%BA%E5%AA%92%E4%BD%93%E7%9A%84%E5%B0%81%E9%94%81#%E5%90%89%E7%B1%B3%C2%B7%E5%A8%81%E7%88%BE%E5%A3%AB)
+
+
+> 封锁维基百科，将是对审查者的极大讽刺，因为我们不是他们宣称的任何一种审查对象；审查维基百科等于承认，恰恰是中立的事实资料令其担惊受怕。我们不是政治宣传机器，我们不是网路赌博，我们不是色情。我们是一部百科全书。[中国大陆对维基媒体的封锁#吉米·威爾士](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%AF%B9%E7%BB%B4%E5%9F%BA%E5%AA%92%E4%BD%93%E7%9A%84%E5%B0%81%E9%94%81#%E5%90%89%E7%B1%B3%C2%B7%E5%A8%81%E7%88%BE%E5%A3%AB)
+
+
+
+> 人人有权享有主张和发表意见的自由；此项权利包括持有主张而不受干涉的自由，和通过任何媒介和不论国界寻求、接受和传递消息和思想的自由。 --[世界人权宣言，第19条]( https://www.un.org/zh/universal-declaration-human-rights/ )
 
 ## 碎碎念
 
