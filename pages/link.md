@@ -11,9 +11,9 @@ tag: 持续更新
 
 - 放心食用、这些博客都是我精选的，内容质量甩国内那些博客平台几条街没问题
 
-- >自己收藏的个人独立博客 [https://blog.502.li/link](https://t.co/PI0tGM2qHN?amp=1) 
+- >自己收藏的个人独立博客 [https://blog.502.li/link](https://blog.502.li/link)
 	>
-	>我为什么要强调独立二字？ 
+	>我为什么要强调独立二字？
 	>
 	>首先中文博客我不喜欢国内像  CSDN、 博客园那样的抄袭博客平台；
 	>
@@ -88,6 +88,16 @@ tag: 持续更新
 | [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/) | 云原生图谱                                            |                                          |
 | [佐仔志](www.jinbo123.com)                                   | 软路由、电子评测、Linux                               | 中年大叔😂                                |
 | [0xBBC](https://blog.0xbbc.com/)                             | C/C++、Rust 、算法、iOS安全、Linux                    | 少女心满满😂                              |
+| [Rat's Blog](https://www.moerats.com/)                       | VPS、建站、工具、羊毛                                 | 工具箱😂                                  |
+| [Eliyar's Blog](https://eliyar.biz/)                         | IOS、Python、机器学习                                 |                                          |
+|                                                              |                                                       |                                          |
+| [iTimothy](https://xiaozhou.net/)                            | VPS、Linux、机械键盘                                  | 四川人也、技术控                         |
+| [Smallpath的小站](https://smallpath.me/)                     | 前端、Node.js、测试                                   |                                          |
+| [HAROLD'S NOTES](https://www.haroldrandom.me/)               |                                                       |                                          |
+| [Wenzi](https://www.xiabingbao.com/)                         | 前端、算法                                            | 前端开发工程师                           |
+| [有趣的网站](http://123.kfd.me/)                             | 网站资源导航                                          |                                          |
+| [杜屹东的博客](https://www.duyidong.com/)                    | Java、CI/CD、Kubernetes 、微服务                      | 阿里高级工程师                           |
+| [ManateeLazyCat](https://manateelazycat.github.io/index.html) | Emacs、Business、Rails、开源                          | 自黑幽默😂                                |
 
 ### 云原生相关
 
@@ -225,4 +235,3 @@ tag: 持续更新
 - [通过对缓存测速提取信息的旁路攻击](https://blog.codingnow.com/2019/05/meltdown_attacks.html)
 - [Docker Network—Bridge 模式](https://lexburner.github.io/Docker-network-bridge/)
 - [Git内部存储原理](https://zhaohuabing.com/post/2019-01-21-git/)
-
