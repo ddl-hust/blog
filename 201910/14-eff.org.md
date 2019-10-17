@@ -9,7 +9,7 @@ date: 2019-10-14
 
 
 
-> # 一段在法律与技术冲突的地方保护自由的历史
+> # 一段在法律与技术冲突的地方捍卫自由的历史
 
 
 
@@ -164,21 +164,21 @@ date: 2019-10-14
 >
 > Encryption is a method for scrambling messages so they can only be understood by their intended recipients. 
 >
-> 加密算法是一种打乱信息的方法，这样它们只能被它们的目标接收者理解。
+> 加密算法是一种加扰信息的方法，这样它们只能被它们的目标接收者理解。
 >
 > 
 >
 > Years before, the government had placed encryption on the United States Munitions List, alongside bombs and flamethrowers, as a weapon to be regulated for national security purposes. 
 >
-> 几年前，政府曾将加密技术与炸弹和火焰喷射器一起列入美国军需品清单，作为一种受国家安全监管的武器。
+> 数年前，政府已经将加密技术与炸弹、火焰喷射器一同置于军需品清单，作为国家安全目的的管制武器。
 >
 > 
->
+
 > Companies and individuals exporting items on the munitions list, including software with encryption capabilities, had to obtain prior State Department approval.
 >
-> 出口军火清单上物品的公司和个人，包括具有加密功能的软件，必须事先获得国务院的批准。
-
-
+> 公司或个人出口军需品清单上的物品，包括软件和加密功能，必须事先获得国务院批准。
+>
+> 
 
 > Encryption export restrictions crippled American businesses and damaged the free speech rights of individuals. 
 >
@@ -248,7 +248,7 @@ date: 2019-10-14
 >
 > Once again, the Electronic Frontier Foundation led the charge to establish important cyberspace rights.
 >
-> 电子前哨基金会再次带头建立了重要的网络空间权利。
+> 电子前哨基金会再次领导建立了重要的网络空间权利
 
 
 
@@ -256,35 +256,25 @@ date: 2019-10-14
 
 > While many early battles over the right to communicate freely and privately stemmed from government censorship, today EFF is fighting for users on many other fronts as well.
 >
-> 虽然早期许多关于自由和私下交流的权利的斗争源于政府的审查制度，但今天EFF也在许多其他方面为用户而战。
-
-
+> 虽然早期许多关于自由和私下交流权利的斗争源于政府的审查制度，但今天 EFF 也在许多其他战线上为用户而战。
 
 > Today, certain powerful corporations are attempting to shut down online speech, prevent new innovation from reaching consumers, and facilitating government surveillance. 
 >
-> 今天，某些强大的公司正试图关闭网络言论，阻止新的创新接触消费者，并为政府监控提供便利。
->
-> 
+> 今天，某些强大的公司正试图封杀网络言论，阻止消费者结接触新的创新，并为政府监控提供便利。
 >
 > We challenge corporate overreach just as we challenge government abuses of power.
 >
-> 我们挑战企业的过度扩张，就像我们挑战政府的权力滥用一样。
-
-
+> 我们挑战企业的僭越，就像我们挑战政府的权力滥用一样。
 
 > We also develop technologies that can help individuals protect their privacy and security online, which our technologists build and release freely to the public for anyone to use.
 >
-> 我们还开发技术，帮助个人保护他们的隐私和网络安全，我们的技术人员建立并免费向公众发布，供任何人使用。
+> 我们还开发了保护个人隐私和网络安全的技术，这些技术由我们的技术人员构建，免费向公众发布并供任何人使用。
 
-
-
-> In addition, EFF is engaged in major legislative fights, beating back digital censorship bills disguised as intellectual property proposals, opposing attempts to force companies to spy on users, championing reform bills that rein in government surveillance, and much more .
+> In addition, EFF is engaged in major legislative fights, beating back digital censorship bills disguised as intellectual property proposals, opposing attempts to force companies to spy on users, championing reform bills that rein in government surveillance, and much more.
 >
-> 此外，EFF还参与了重大的立法斗争，打击伪装成知识产权提案的数字审查法案，反对强迫公司监视用户的企图，支持控制政府监视的改革法案，等等。
-
-
+> 此外，EFF 还参与了重大的立法斗争，打击伪装成知识产权法案的网络审查法案，反对强迫公司监视用户的企图，支持控制政府监视的改革法案，等等。
 
 > We are working with advocates worldwide to create a global digital environment that upholds both human rights and Constitutional rights, and we continue to take on cutting-edge legal cases to win victories for user rights.
 >
-> 我们正在与世界各地的倡导者合作，创造一个既维护人权又维护宪法权利的全球数字环境，我们继续受理前沿的法律案件，为用户权利赢得胜利。
+> 我们正在与世界各地的倡导者合作，创造一个既维护人权又维护宪法权利的数字世界，我们继续受理前沿的法律案件，为用户权利赢得胜利。
 

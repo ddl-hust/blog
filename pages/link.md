@@ -90,7 +90,6 @@ tag: 持续更新
 | [0xBBC](https://blog.0xbbc.com/)                             | C/C++、Rust 、算法、iOS安全、Linux                    | 少女心满满😂                              |
 | [Rat's Blog](https://www.moerats.com/)                       | VPS、建站、工具、羊毛                                 | 工具箱😂                                  |
 | [Eliyar's Blog](https://eliyar.biz/)                         | IOS、Python、机器学习                                 |                                          |
-|                                                              |                                                       |                                          |
 | [iTimothy](https://xiaozhou.net/)                            | VPS、Linux、机械键盘                                  | 四川人也、技术控                         |
 | [Smallpath的小站](https://smallpath.me/)                     | 前端、Node.js、测试                                   |                                          |
 | [HAROLD'S NOTES](https://www.haroldrandom.me/)               |                                                       |                                          |
@@ -98,12 +97,14 @@ tag: 持续更新
 | [有趣的网站](http://123.kfd.me/)                             | 网站资源导航                                          |                                          |
 | [杜屹东的博客](https://www.duyidong.com/)                    | Java、CI/CD、Kubernetes 、微服务                      | 阿里高级工程师                           |
 | [ManateeLazyCat](https://manateelazycat.github.io/index.html) | Emacs、Business、Rails、开源                          | 自黑幽默😂                                |
+| [win-man](https://win-man.github.io/)                        | MySQL                                                 |                                          |
 
 ### 云原生相关
 
 | 站点                                                         | 主要内容                                                     | 印象                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------- |
 | [Jimmy Song - 宋净超的博客](https://jimmysong.io/)           | Cloud Native                                                 | 蚂蚁金服云原生布道师                          |
+| [Cloud Native Wiki](https://jimmysong.io/cloud-native/ )     | 云原生百科、图书、编年史                                     | 蚂蚁金服云原生布道师                          |
 | [云原生实验室 \- 米开朗基杨的博客](https://www.yangcs.net/)  | Cloud Native                                                 | 云原生布道师                                  |
 | [zhangguanzhang's Blog](https://zhangguanzhang.github.io/)   | Kubernetes、嵌入式、Linux                                    | 张馆长😂                                       |
 | [漠然的博客mritd Blog](https://mritd.me/)                    | Kubernetes、Golang                                           | Java Web 开发者 1 枚                          |
@@ -112,6 +113,7 @@ tag: 持续更新
 | [Hwchiu Learning Note](https://www.hwchiu.com/)              | Kubernetes、SDN、DevOps                                      | 台湾博主                                      |
 | [Kakashi's Blog](https://kkc.github.io/)                     | AWS、Kubernetes、Prometheus                                  | 台湾博主                                      |
 | [Aylei's Blog](https://aleiwu.com/)                          | Kubernetes、云原生、TiDB                                     | 在 [PingCAP](https://www.pingcap.com/) 的阿磊 |
+| [青木のJava小屋](https://qingmu.io/)                         | [SpringCloud on Kubernetes](https://qingmu.io/2019/09/03/Spring-cloud-on-Kubernetes-index/) | 打杂程序猿                                    |
 | [开元DevOps知识库](https://nicksors.cc/)                     |                                                              |                                               |
 | [起风了](https://xuchao918.github.io/)                       |                                                              |                                               |
 | [茶歇驿站 ](https://maiyang.me/)                             |                                                              |                                               |
@@ -145,7 +147,7 @@ tag: 持续更新
 | [水晶命匣](http://ghoulich.xninja.org/)                      |                                                              |                                               |
 | [苏洋博客](https://soulteary.com/)                           |                                                              |                                               |
 | [Zlatan Eevee](https://ieevee.com/)                          |                                                              |                                               |
-| [青木のJava小屋](https://qingmu.io/)                         | [SpringCloud on Kubernetes](https://qingmu.io/2019/09/03/Spring-cloud-on-Kubernetes-index/) | 打杂程序猿                                    |
+|                                                              |                                                              |                                               |
 |                                                              |                                                              |                                               |
 |                                                              |                                                              |                                               |
 |                                                              |                                                              |                                               |
