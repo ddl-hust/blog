@@ -15,9 +15,9 @@ date: 2019-10-14
 
 > The Electronic Frontier Foundation was founded in July of 1990 in response to a basic threat to speech. 
 >
-> 电子前哨基金会成立于 1990 年 7 月，皆在应对受威胁的言论。
+> 电子前哨基金会成立于 1990 年 7 月，皆在应对基本的言论威胁。
 >
-> 
+> s
 >
 > The United States Secret Service conducted a series of raids tracking the distribution of a document illegally copied from a BellSouth computer that described how the emergency 911 system worked, referred to as the E911 document. 
 >
@@ -260,7 +260,7 @@ date: 2019-10-14
 
 > Today, certain powerful corporations are attempting to shut down online speech, prevent new innovation from reaching consumers, and facilitating government surveillance. 
 >
-> 今天，某些巨头公司正试图封杀网络言论，阻止消费者接触新的创新，并为政府监控提供便利。
+> 今天，某些互联网巨头正试图封杀网络言论，阻止消费者接触创新，并为政府监控提供便利。
 >
 > We challenge corporate overreach just as we challenge government abuses of power.
 >
@@ -268,7 +268,7 @@ date: 2019-10-14
 
 > We also develop technologies that can help individuals protect their privacy and security online, which our technologists build and release freely to the public for anyone to use.
 >
-> 我们还开发了保护个人隐私和网络安全的技术，这些技术由我们的技术人员构建，免费向公众发布并供任何人使用。
+> 我们技术人员还开发了保护个人隐私和网络安全的技术，这些技术免费向公众开放以供所有人使用。
 
 > In addition, EFF is engaged in major legislative fights, beating back digital censorship bills disguised as intellectual property proposals, opposing attempts to force companies to spy on users, championing reform bills that rein in government surveillance, and much more.
 >
@@ -277,4 +277,3 @@ date: 2019-10-14
 > We are working with advocates worldwide to create a global digital environment that upholds both human rights and Constitutional rights, and we continue to take on cutting-edge legal cases to win victories for user rights.
 >
 > 我们正在与世界各地的倡导者合作，创造一个既维护人权又维护宪法权利的数字世界，我们继续受理前沿的法律案件，为用户权利赢得胜利。
-
