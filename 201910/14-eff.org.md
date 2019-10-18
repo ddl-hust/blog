@@ -15,19 +15,19 @@ date: 2019-10-14
 
 > The Electronic Frontier Foundation was founded in July of 1990 in response to a basic threat to speech. 
 >
-> 电子前哨基金会成立于 1990 年 7 月，皆在应对基本的言论威胁。
+> 电子前哨基金会成立于 1990 年 7 月，皆在应对受威胁的言论。
 >
 > 
 >
 > The United States Secret Service conducted a series of raids tracking the distribution of a document illegally copied from a BellSouth computer that described how the emergency 911 system worked, referred to as the E911 document. 
 >
-> BellSouth 计算机非法复制的文档的分发，该文档描述了紧急 911 系统的工作方式，称为 E911 文档
+> 美国特勤局进行了一系列突击搜查，追踪一份非法复制自贝尔南公司一台电脑的文件的分发情况。这份文档描述了紧急911系统的工作原理，被称为E911文档。
 >
 > 
 >
 > The Secret Service believed that if "hackers" knew how to use the telephone lines set aside for receiving emergency phone calls, the lines would become overloaded and people facing true emergencies would be unable to get through.
 >
-> 美国特勤局进行了一系列地突袭，跟踪从 。特勤局认为，如果“黑客”知道如何使用空闲的电话线来接听紧急电话，则电话线将变得超负荷，面对真正紧急情况的人将无法打通电话。
+> 特勤局认为，如果“黑客”知道如何使用空闲的电话线来接听紧急电话，则电话线将变得超负荷，面对真正紧急情况的人将无法打通电话。
 >
 > 
 
@@ -248,7 +248,7 @@ date: 2019-10-14
 >
 > Once again, the Electronic Frontier Foundation led the charge to establish important cyberspace rights.
 >
-> 电子前哨基金会再次领导建立了重要的网络空间权利
+> 电子前哨基金会再次领导确立了重要的网络空间权利
 
 
 
@@ -256,15 +256,15 @@ date: 2019-10-14
 
 > While many early battles over the right to communicate freely and privately stemmed from government censorship, today EFF is fighting for users on many other fronts as well.
 >
-> 虽然早期许多关于自由和私下交流权利的斗争源于政府的审查制度，但今天 EFF 也在许多其他战线上为用户而战。
+> 虽然早期许多关于自由和私密通讯的权利的斗争源于政府的审查制度，但今天 EFF 也在许多其他战线上为用户而战。
 
 > Today, certain powerful corporations are attempting to shut down online speech, prevent new innovation from reaching consumers, and facilitating government surveillance. 
 >
-> 今天，某些强大的公司正试图封杀网络言论，阻止消费者结接触新的创新，并为政府监控提供便利。
+> 今天，某些巨头公司正试图封杀网络言论，阻止消费者接触新的创新，并为政府监控提供便利。
 >
 > We challenge corporate overreach just as we challenge government abuses of power.
 >
-> 我们挑战企业的僭越，就像我们挑战政府的权力滥用一样。
+> 我们挑战公司的越权，就像我们挑战政府的权力滥用一样。
 
 > We also develop technologies that can help individuals protect their privacy and security online, which our technologists build and release freely to the public for anyone to use.
 >
