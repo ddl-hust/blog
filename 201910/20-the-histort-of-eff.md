@@ -1,48 +1,131 @@
 ---
-title: EFF 电子前哨基金会的一段历史
+title: 一段在法律与技术冲突的地方捍卫自由的历史
 date: 2019-10-20
 link: the-histor-of-eff
 
 ---
 
+## 为什么要写？
+
+#### 言论审查
+
+>   【肖华:NBA损失巨大 中方要求解雇莫雷是不可能的】NBA总裁亚当-肖华返回美国后首次公开谈论NBA与中国的关系。肖华表示，NBA在中国遭遇的经济损失已经相当巨大。但肖华重申：“来自中国政府、合作的企业等多方面都明确要求我们解雇莫雷。但我们明确表示，这是不可能的。我们甚至都不会处罚莫雷。”
+>
+>   此处引用
+
 ## 电子前哨基金会
 
+Electronic Frontier Foundation 简称 EFF ，中文译名电子前哨基金会、电子前线基金会。该基金会成立于 1990 年 7 月，皆在捍卫受威胁的言论。并且 EFF 在成立的当天就宣布对美国特勤局提起诉讼，打起”革命“第一枪😂。
 
+
+
+## 时间轴
+
+-   1990 年 3 月 1 日 ---- 美国特勤局突袭史蒂夫·杰克逊游戏公司
+-   1990 年 7 月 6 日 ---- EFF 电子前哨基金会成立并宣布帮助史蒂夫·杰克起诉美国特勤局
+
+-   2002 年 为域名系统的开放，透明治理而斗争。
+
+-   ，作为全国范围内数据盗版调查的一部分。最初的新闻报道只是报道说，特勤局已经突击了一批可疑的黑客团伙。真正的故事逐渐浮出水面。三年多以后，联邦法院判决游戏公司裁定这次袭击是粗心大意的非法行为，并且完全没有道理，因此判给了游戏公司赔偿和律师费。电子公民自由倡导者称赞此案为里程碑。这是迈向建立在线言论即言论并享有宪法保护的第一步……尤其是执法人员不能抓住和持有BBS而不受惩罚。
+-   
 
 ## 创立之初
 
-### 游戏案
+### 史蒂夫•杰克逊游戏案
 
-### 加密算法出口案
+-   [Wikipedia--teve Jackson Games, Inc. v. United States Secret Service]( https://en.wikipedia.org/wiki/Steve_Jackson_Games,_Inc._v._United_States_Secret_Service )
+-   []()
+
+### 伯恩斯坦诉美国政府案
+
+
 
 ## 参与的立法斗争
 
 ### DOPA
 
-- 英文 Deleting Online Predators Act of 2006
+#### 介绍
 
+- 英文 Deleting Online Predators Act of 2006
 - 中文 删除在线侵犯者法案
+- [法案详情](https://www.govtrack.us/congress/bills/110/hr1120/text)
+- [维基百科]( https://en.wikipedia.org/wiki/Deleting_Online_Predators_Act_of_2006 )
+
+#### 各界反应
+
+- 电子前哨基金会反应
+
+The Electronic Frontier Foundation is leading a grass-roots efforts to block passage of the [Deleting Online Predators Act](http://education.zdnet.com/index.php?p=439). Passed by the House earlier this year, the bill is up for Senate action now that Congress has returned for a final session before the elections.
+
+>   The proposal would force any school or library that receives government funding to block access to any web site that "allows users to create web pages or profiles that provide information about themselves and are available to other users, and offers a mechanism for communication with other users, such as a forum, chat room, eMail, or instant messenger."
+
+EFF is offering an [online form for citizens to write](http://action.eff.org/site/Advocacy?id=253) senators about their objections.
+
+>   Cutting off social networking's legitimate uses is bad enough, but DOPA would also give the FCC wide latitude to define the block-list. It potentially covers IM, blogs, wikis, discussion forums, and other sites far beyond MySpace. Despite its limited exceptions, DOPA will restrict children's and adults' online research, distance learning, and use of community forums, among other activities.
+>
+>   Two Congressionally commissioned studies say education, not blocking access, is the most effective way to keep kids safe online. What's more, several new surveys indicate that education is already working: online sexual solicitation rates are reportedly dropping (or were overestimated to begin with), while kids typically ignore solicitations or block the offending user. By hampering educators' abilities to teach such basic Internet safety skills, DOPA may put children more at risk.
+>
+>   此处引用自 [Call to fight DOPA in Senate]( https://www.zdnet.com/article/call-to-fight-dopa-in-senate/ )
 
 ### PCNAA
 
+#### 介绍
+
 - 英文 Protecting Cyberspace as a National Asset Act 
 - 中文 将网络空间作为国家财产保护法
+- [维基百科](Protecting Cyberspace as a National Asset Act)
+- [法案详情]( https://www.govtrack.us/congress/bills/111/hr5548/text )
+
+#### 各界反应
+
+- 电子前哨基金会反击
+
+    >    That definition did not satisfy the ACLU, the American Library Association, the Electronic Frontier Foundation, and many other organizations, who drafted an [open letter](http://www.cdt.org/files/pdfs/20100624_joint_cybersec_letter.pdf) (PDF) to the bill’s sponsors. The letter’s authors proposed modifications to the bill which would include more free speech and information privacy safeguards for the users of critical infrastructure networks. 
+    >
+    >   此处引用[Internet "Kill Switch" Legislation: Can Obama Turn Off the Internet?]( http://btlj.org/2011/03/internet-kill-switch-legislation-can-obama-turn-off-the-internet/ )
 
 ### COICA
 
--  Combating Online Infringement and Counterfeits Act 
+#### 介绍
 
+-  Combating Online Infringement and Counterfeits Act 
 - 打击在线侵权和假冒法案
+- [法案详情]( https://www.govtrack.us/congress/bills/111/s3804/text )
+- [维基百科]( https://en.wikipedia.org/wiki/Combating_Online_Infringement_and_Counterfeits_Act )
+
+#### 各界反应
+
+- 电子前哨基金会反击
 
 ###  **SOPA**
 
+臭名昭著的 SOPA 法案和 PIPA 法案，当时反对的人也特别特别多
+
+#### 介绍
+
 -  Stop Online Piracy Act 
 -  禁止网络盗版法案
+-  [法案详情]( https://www.congress.gov/bill/112th-congress/house-bill/3261 )
+-  [维基百科]( https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act )
+
+#### 各界反应
+
+-   goday 支持该法案
+
+-  电子前哨基金会反击
 
 ### PIPA
 
+#### 介绍
+
+-  Preventing Real Online Threats to Economic Creativity and Theft of Intellectual Property Act 
 -  保护知识产权法案
--  **Preventing Real Online Threats to Economic Creativity and Theft of Intellectual Property Act of 2011**，简称：**PROTECT IP Act**，缩写：**PIPA** 
+-  [维基百科]( https://en.wikipedia.org/wiki/PROTECT_IP_Act )
+-  [法案详情]( https://www.govtrack.us/congress/bills/112/s968/text )
+
+#### 各界反应
+
+-  
 
 #### 相关报道
 
@@ -95,7 +178,10 @@ link: the-histor-of-eff
 
 [美国网络审查](https://zh.wikipedia.org/wiki/美国网络审查)
 
- [https://www.govtrack.us](https://www.govtrack.us/) 
+[https://www.govtrack.us](https://www.govtrack.us/) 
 
 [Internet "Kill Switch" Legislation: Can Obama Turn Off the Internet?](http://btlj.org/2011/03/internet-kill-switch-legislation-can-obama-turn-off-the-internet/ )
 
+[steve-jackson-games-v-secret-service-case-archive]( https://www.eff.org/zh-hans/cases/steve-jackson-games-v-secret-service-case-archive ) 
+
+[EFF 受理案件列表]( https://www.eff.org/zh-hans/cases)
