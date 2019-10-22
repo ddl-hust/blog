@@ -27,7 +27,7 @@ date: 2019-10-14
 >
 > The Secret Service believed that if "hackers" knew how to use the telephone lines set aside for receiving emergency phone calls, the lines would become overloaded and people facing true emergencies would be unable to get through.
 >
-> 特勤局认为，如果“黑客”知道如何使用空闲的电话线来接听紧急电话，则电话线将变得超负荷，面对真正紧急情况的人将无法打通电话。
+> 特勤局认为，如果“黑客”知道如何使用空闲的通信线路来接听紧急电话，则通信线路将变得超负荷，面对真正紧急情况的人将无法打通电话。
 >
 > 
 
