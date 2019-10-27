@@ -25,13 +25,9 @@ date：2019-01-01
 
 #### Telegram ☎️ [muzi_ii](https://telegram.me/muzi_ii)
 
-<<<<<<< HEAD
-#### - Channel 📣 [rss_kubernetes](https://t.me/rss_kubernetes)
+#### Channel 📣 [rss_kubernetes](https://t.me/rss_kubernetes)
 
 
-=======
-#### - rss_kubernetes ☎️ [telegram](https://t.me/rss_kubernetes)
->>>>>>> e7593dbd243ebbfc1168fd31480fb9ca2fd4399b
 
 ## blog
 
@@ -50,7 +46,7 @@ date：2019-01-01
 韭菜 | 屁民🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
 
 - 喜欢捡洋垃圾、折腾软路由、LEDE、OpenWRT、NAS、群晖、固态硬盘、开发板、Arduino等
-- 技术方面主要擅长 Linux 运维、Docker 容器、、Kubernetes、CI/CD 、搓镜像、搓虚拟机
+- 技术方面主要擅长 Linux 运维、Docker 容器、Kubernetes、CI/CD 、搓镜像、搓虚拟机
 - 业余装机、修电脑、装系统、拆机、魔改、贴膜、换屏、飞线、找资源、下片等等都会干😂
 - 从不玩抖音快手等短视频，并且十分厌恶这些东西，娱乐至死、它们会让人放弃思考
 - 没有女朋友、单身很快乐、有自由又不花钱、不想找、大概三十岁之前都不想找女朋友
@@ -126,3 +122,4 @@ date：2019-01-01
 3. 许多年后，假如有人问我，当年你为社会做过的贡献是什么？我会说：我传播了很多充满人性、良知、散发着正义光芒的文字，我拒绝了给`独裁专制极权暴政`唱赞歌。
 
 ## 时光轴
+
