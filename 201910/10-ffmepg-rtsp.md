@@ -26,11 +26,7 @@ link: ffmpeg-rtsp-monitor
 
 找了半天最终还是找到了一个摄像头，价格也比较便宜😂。特意问了卖家能不能通过浏览器访问、能不能不需要专用的摄像机来访问摄像头。卖家说是可以的。
 
-
-
 ![1570702505815](img/1570702505815.png)
-
-
 
 ![1570702514509](img/1570702514509.png)
 
@@ -42,15 +38,11 @@ link: ffmpeg-rtsp-monitor
 
 ![将摄像头底座固定在一个塑料板上，再用螺丝刀插入空调海绵胶里固定住😂](img/1570702447664.png)
 
-
-
 ![路由器放在了空调上面，互不干扰](img/1570702472108.png)
 
 穹妹哦😂，骨科？
 
 ![1570702482302](img/1570702482302.png)
-
-
 
 ![一个RJ45的网线接口和一个12V的DC供电接口](img/1570702739896.png)
 
@@ -60,15 +52,11 @@ link: ffmpeg-rtsp-monitor
 
 ![配套软件](img/1570704765775.png)
 
-
-
 ![在设备管理里添加摄像头](img/1570704813188.png)
 
 ![默认是没有密码的，设置密码了酒店及铅笔✏图标哪里设置密码](img/1570704875787.png)
 
 ![配置摄像头界面](img/1570704956430.png)
-
-
 
 ![网络设置-TCP/IP](img/1570704990621.png)
 
@@ -106,13 +94,13 @@ remote_port = 554
 
 如何访问摄像头的 RTSP 视频流？，一般摄像头的固件供应商那里会有帮助手册，总算在官方网站找到了。
 
->   **使用VLC按RTSP协议连接我司的设备网络串流的格式**
+> **使用VLC按RTSP协议连接我司的设备网络串流的格式**
 >
->   ——使用第3方的播放器通过RTSP连接我司设备的URL格式如下：
+> ——使用第3方的播放器通过RTSP连接我司设备的URL格式如下：
 >
->   rtsp://$(IP):$(PORT)/user=$(USER)&password=$(PWD)&channel=$(Channel)&stream=$(Stream).sdp?real_stream
+> ``rtsp://$(IP):$(PORT)/user=$(USER)&password=$(PWD)&channel=$(Channel)&stream=$(Stream).sdp?real_stream``
 >
->   ——类似rtsp://10.6.10.25:554/user=admin&password=&channel=1&stream=0.sdp?real_stream如果是通过公网需要将RTSP端口开放（ 默认是554），这个端口在网络服务->RTSP中可以设置
+> ——类似 ``rtsp://10.6.10.25:554/user=admin&password=&channel=1&stream=0.sdp?real_stream``如果是通过公网需要将RTSP端口开放（ 默认是554），这个端口在网络服务->RTSP中可以设置
 
 按照官方规定的 URL ，我的摄像头 RTSP 视频流访问 URL 就是如下：
 
@@ -123,8 +111,6 @@ rtsp="rtsp://192.168.0.241:554/user=user&password=password&channel=Channel&strea
 ![PotPlayer 里在打开那里选择打开连接](img/1570705646007.png)
 
 ![输入上述 URL ](img/1570705720287.png)
-
-
 
 然后服务器端安装好 FFmpeg ，使用 FFmpeg读取 rtsp 视频流即可
 
@@ -186,20 +172,14 @@ video:6838kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing 
 
 不得不说 FFmpeg 真是强大的，偶尔了解了 FFmpeg 作者，巨牛逼的天才啊。
 
-
-
->   -   1997年他发现了最快速的计算圆周率的算法，是Bailey-Borwein-Plouffe 公式的变体。
->   -   2000年他化名Gérard Lantau，创建了 FFmpeg 项目。2004年他编写了一个只有138KB的启动加载程序TCCBOOT，可以在15秒内从源代码编译并启动Linux系统。
->   -   2003年开发了Emacs克隆QEmacs。2005年用普通PC和VGA卡设计了一个数字电视系统。
->   -   2009年12月31日，他声称打破了圆周率计算的世界纪录，算出小数点后2.7万亿位，仅用一台普通PC机。
->   -   2011年，他单用JavaScript写了一个PC虚拟机Jslinux 。这个虚拟机仿真了一个32位的x86兼容处理器，一个8259可编程中断控制器，一个8254可编程中断计时器，和一个16450 UART。
->   -   Fabrice Bellard，法国著名程序员，QEMU、TinyCC、FFmpeg等作者。
-
-
+> - 1997年他发现了最快速的计算圆周率的算法，是Bailey-Borwein-Plouffe 公式的变体。
+> - 2000年他化名Gérard Lantau，创建了 FFmpeg 项目。2004年他编写了一个只有138KB的启动加载程序TCCBOOT，可以在15秒内从源代码编译并启动Linux系统。
+> - 2003年开发了Emacs克隆QEmacs。2005年用普通PC和VGA卡设计了一个数字电视系统。
+> - 2009年12月31日，他声称打破了圆周率计算的世界纪录，算出小数点后2.7万亿位，仅用一台普通PC机。
+> - 2011年，他单用JavaScript写了一个PC虚拟机Jslinux 。这个虚拟机仿真了一个32位的x86兼容处理器，一个8259可编程中断控制器，一个8254可编程中断计时器，和一个16450 UART。
+> - Fabrice Bellard，法国著名程序员，QEMU、TinyCC、FFmpeg等作者。
 
 不得不再提一嘴 FFmpeg 这个项目 [从FFmpeg耻辱榜看开源软件的“潜规则”](http://history.programmer.com.cn/3877/)
 
->   FFmpeg是一个开源免费跨平台的视频和音频流方案，属于自由软件，采用LGPL或GPL许可证。2009年，韩国名软KMPlayer被FFmpeg开源项目发现使用了它们的代码和二进制文件，但没有按照规定/惯例开放相应说明/源码。被人举报后，KMPlayer进入了FFmpeg官网上的耻辱黑名单。最近，国内也有同样的产品被列入黑名单比如暴风影音、QQ影音等。
-
->   [FFmpeg](http://ffmpeg.org/index.html)是一个跨平台的视频和音频流方案，属于自由软件，采用LGPL或GPL许可证（依据你选择的组件）。*今年2月韩国播放软件KMPlayer被加入到FFmpeg耻辱名单中，随后网友yegle向FFmpeg举报，指出暴风影音使用了大量开源代码，侵犯了FFmpeg的许可证。5月10日，另一位用户cehoyos下载了暴风软件，用7z解压之后发现其安装程序内包含了大量的开源和私有解码器的dll：avcodec，avformat，avutil，x264，xvid，bass，wmvdmod等等。杀毒软件AntiVir报告lib_VoiceEngine_dll.dll是木马程序“TR\Spy.Legmir.SS.2”。之后暴风影音被正式加入到FFmpeg耻辱名单之列。*
-
+> FFmpeg是一个开源免费跨平台的视频和音频流方案，属于自由软件，采用LGPL或GPL许可证。2009年，韩国名软KMPlayer被FFmpeg开源项目发现使用了它们的代码和二进制文件，但没有按照规定/惯例开放相应说明/源码。被人举报后，KMPlayer进入了FFmpeg官网上的耻辱黑名单。最近，国内也有同样的产品被列入黑名单比如暴风影音、QQ影音等。
+> [FFmpeg](http://ffmpeg.org/index.html)是一个跨平台的视频和音频流方案，属于自由软件，采用LGPL或GPL许可证（依据你选择的组件）。*今年2月韩国播放软件KMPlayer被加入到FFmpeg耻辱名单中，随后网友yegle向FFmpeg举报，指出暴风影音使用了大量开源代码，侵犯了FFmpeg的许可证。5月10日，另一位用户cehoyos下载了暴风软件，用7z解压之后发现其安装程序内包含了大量的开源和私有解码器的dll：avcodec，avformat，avutil，x264，xvid，bass，wmvdmod等等。杀毒软件AntiVir报告lib_VoiceEngine_dll.dll是木马程序“TR\Spy.Legmir.SS.2”。之后暴风影音被正式加入到FFmpeg耻辱名单之列。*
