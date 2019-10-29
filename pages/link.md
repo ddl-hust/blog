@@ -98,6 +98,7 @@ tag: 持续更新
 | [杜屹东的博客](https://www.duyidong.com/)                    | Java、CI/CD、Kubernetes 、微服务                      | 阿里高级工程师                           |
 | [ManateeLazyCat](https://manateelazycat.github.io/index.html) | Emacs、Business、Rails、开源                          | 自黑幽默😂                                |
 | [win-man](https://win-man.github.io/)                        | MySQL                                                 |                                          |
+| [CrownDaisy](https://crowndaisy.com/)                        | Python、数据分析                                      | INTP、极简主义者x                        |
 
 ### 云原生相关
 
@@ -138,7 +139,7 @@ tag: 持续更新
 | [Tomoya's Blog](https://tomoyadeng.github.io/blog/)          |                                                              |                                               |
 | [君无止境](https://youendless.com/)                          |                                                              |                                               |
 | [Jamin Zhang](https://jaminzhang.github.io/)                 |                                                              |                                               |
-| [roc 的博客 - imroc.io](https://imroc.io/)                   | [《Kubernetes实践指南》](https://k8s.imroc.io/) 算法         |                                               |
+| [roc 的博客 - imroc.io](https://imroc.io/)                   | [《Kubernetes实践指南》](https://k8s.imroc.io/)、 算法       |                                               |
 | [Blog - Sysdig](https://sysdig.com/blog/)                    |                                                              |                                               |
 | [sleele的博客](https://sleele.com/)                          |                                                              |                                               |
 | [TauCeti blog · TauCeti blog](https://www.tauceti.blog/)     |                                                              |                                               |
@@ -237,3 +238,4 @@ tag: 持续更新
 - [通过对缓存测速提取信息的旁路攻击](https://blog.codingnow.com/2019/05/meltdown_attacks.html)
 - [Docker Network—Bridge 模式](https://lexburner.github.io/Docker-network-bridge/)
 - [Git内部存储原理](https://zhaohuabing.com/post/2019-01-21-git/)
+
