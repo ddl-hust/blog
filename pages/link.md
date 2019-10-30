@@ -100,6 +100,7 @@ tag: 持续更新
 | [ManateeLazyCat](https://manateelazycat.github.io/index.html) | Emacs、Business、Rails、开源                          | 自黑幽默😂                                        |
 | [win-man](https://win-man.github.io/)                        | MySQL                                                 |                                                  |
 | [CrownDaisy](https://crowndaisy.com/)                        | Python、数据分析                                      | INTP、极简主义者x                                |
+| [觉论](https://blog.ryouissei.com/)                          | 用户体验、交互设计                                    | 多摩美术大学高材生😂                              |
 
 ### 云原生相关
 
