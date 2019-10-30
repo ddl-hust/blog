@@ -1,7 +1,9 @@
 ---
 
-title: 电子前哨基金会历史
+title: 一段在法律与技术冲突的地方捍卫自由的历史
 date: 2019-10-14
+link: A-History-of-Protecting-Freedom-Where-Law-and-Technology-Collide
+tag: 翻译
 
 ---
 
@@ -19,13 +21,13 @@ date: 2019-10-14
 >
 > 美国特勤局进行了一系列突击搜查，追踪一份非法复制自贝尔南公司一台电脑的文件的分发情况。这份文档描述了紧急911系统的工作原理，被称为E911文档。
 >
->
+> 
 >
 > The Secret Service believed that if "hackers" knew how to use the telephone lines set aside for receiving emergency phone calls, the lines would become overloaded and people facing true emergencies would be unable to get through.
 >
 > 特勤局认为，如果“黑客”知道如何使用空闲的通信线路来接听紧急电话，则通信线路将变得超负荷，面对真正紧急情况的人将无法打通电话。
 >
->
+> 
 
 > One of the alleged recipients of the E911 document was the systems operator at a small games book publisher out of Austin, Texas, named Steve Jackson Games.
 >
@@ -151,13 +153,13 @@ date: 2019-10-14
 >
 > In our second big case, *Bernstein v. U.S. Dept. of Justice*, the United States government prohibited a University of California mathematics Ph.D. student from publishing on the Internet an encryption computer program he had created.
 >
-> 在我们的第二个大案子，伯恩斯坦诉美国司法部案中，美国政府禁止加州大学的一名数学博士生在互联网上分发他创建的一个加密计算机程序。
+> 在我们的第二个重大案件，伯恩斯坦诉美国司法部案中，美国政府禁止加州大学的一名数学博士生在互联网上分发他创建的一个加密软件。
 >
 >
 >
 > Encryption is a method for scrambling messages so they can only be understood by their intended recipients.
 >
-> 加密算法是一种加扰信息的方法，这样它们只能被它们的目标接收者理解。
+> 加密算法是一种加扰信息的方法，这样信息只能被它们的目标接收者理解。
 >
 >
 >
@@ -169,25 +171,25 @@ date: 2019-10-14
 
 > Companies and individuals exporting items on the munitions list, including software with encryption capabilities, had to obtain prior State Department approval.
 >
-> 公司或个人出口军需品清单上的物品，包括软件和加密功能，必须事先获得国务院批准。
+> 公司或个人出口军需品清单上的物品，具有加密功能的软件，必须事先获得(美国)国务院的批准。
 >
 >
 
 > Encryption export restrictions crippled American businesses and damaged the free speech rights of individuals.
 >
-> 加密算法出口限制削弱了美国企业，损害了个人的言论自由。
+> 加密技术出口限制削弱了美国企业，并侵犯了个人的言论自由。
 >
 >
 >
 > Critical for ecommerce, companies use encryption to safeguard sensitive information, such as credit card numbers, which they send or receive over electronic networks.
 >
-> 对电子商务至关重要的是，企业使用加密技术来保护信用卡号码等敏感信息，这些信息是它们通过网络发送或接收的。
+> 企业使用加密技术来保护信用卡号码等敏感信息并通过网络发送或接收，因此加密技术对电子商务至关重要。
 >
 >
 >
 >  Companies also secure access to software programs and provide system security using encryption.
 >
-> 公司还使用加密来保护软件程序的访问，并提供系统安全性。
+> 使用加密技术，公司还可以保护对软件程序的访问，并确保系统的安全。
 >
 >
 >
@@ -199,43 +201,43 @@ date: 2019-10-14
 
 > The State Department was unsympathetic to Bernstein's situation and told Bernstein he would need a license to be an arms dealer before he could simply post the text of his encryption program on the Internet.
 >
-> 美国国务院对伯恩斯坦的处境并不同情，并告诉伯恩斯坦，他需要获得军火商执照，才能将他的加密程序的文本发布到互联网上。
+> （美国）国务院并同情伯恩斯坦，并告诉伯恩斯坦，他需要获得军火商的许可证才能将他的加密软件的代码发布到互联网上。
 >
 >
 >
 > They also told him that they would deny him an export license if he actually applied for one, because his technology was too secure.
 >
-> 他们还告诉他，如果他真的申请出口许可证，他们将拒绝他，因为他的技术太安全了。
+> （美国）国务院还告诉伯恩斯坦，如果他真的申请出口许可证，那么他们将会拒绝，因为他的技术太安全了。
 
 
 
 > The Electronic Frontier Foundation pulled together a top-notch legal team and sued the United States government on behalf of Dan Bernstein.
 >
-> 电子前哨基金会(Electronic Frontier Foundation)召集了一个顶尖的法律团队，代表丹·伯恩斯坦(Dan Bernstein)起诉美国政府。
+> 电子前哨基金会召集了一个顶尖的法律团队，代表伯恩斯坦起诉美国政府。
 >
 >
 >
 >  The court ruled, for the first time ever, that written software code is speech protected by the First Amendment.
 >
-> 法院有史以来第一次裁定，书面软件代码是受宪法第一修正案保护的言论。
+> 法院有史以来第一次裁定，编写的软件代码是受宪法第一修正案保护的言论。
 >
 >
 >
 >  The court further ruled that the export control laws on encryption violated Bernstein's First Amendment rights by prohibiting his constitutionally protected speech.
 >
-> 法院进一步裁定，有关加密的出口控制法禁止了伯恩斯坦受宪法保护的言论，违反了《第一修正案》赋予他的权利。
+> 法院进一步裁定，有关加密技术出口管制的法律 禁止伯恩斯坦发表受宪法保护的言论，因此侵犯了伯恩斯坦的第一修正案权利。
 >
 >
 >
 > As a result, the government changed its export regulations.
 >
-> 因此，政府改变了它的出口规则。
+> 因此，美国政府改变了他的出口条例。
 >
 >
 >
 > Now everyone has the right to "export" encryption software -- by publishing it on the Internet -- without prior permission from the U.S. government.
 >
-> 现在每个人都有权利出口加密软件——通过在互联网上发布——而无需事先获得美国政府的许可。
+> 现在，每个人都有权利通过在互联网上发布加密软件而无需事先获得美国政府的许可。
 >
 >
 >
@@ -249,11 +251,11 @@ date: 2019-10-14
 
 > While many early battles over the right to communicate freely and privately stemmed from government censorship, today EFF is fighting for users on many other fronts as well.
 >
-> 虽然早期许多关于自由和私密通讯的权利的斗争源于政府的审查制度，但今天 EFF 也在许多其他战线上为用户而战。
+> 虽然早期许多关于自由和私密通讯权利的斗争源于政府的审查制度，但今天 EFF 也在许多其他领域为用户而战。
 
 > Today, certain powerful corporations are attempting to shut down online speech, prevent new innovation from reaching consumers, and facilitating government surveillance.
 >
-> 今天，某些互联网巨头正试图封杀网络言论，阻止消费者接触创新，并为政府监控提供便利。
+> 今天，某些互联网巨头正试图封杀网络言论，阻止新创新惠及消费者，并为政府监控提供便利。
 >
 > We challenge corporate overreach just as we challenge government abuses of power.
 >
@@ -265,8 +267,8 @@ date: 2019-10-14
 
 > In addition, EFF is engaged in major legislative fights, beating back digital censorship bills disguised as intellectual property proposals, opposing attempts to force companies to spy on users, championing reform bills that rein in government surveillance, and much more.
 >
-> 此外，EFF 还参与了重大的立法斗争，打击伪装成知识产权法案的网络审查法案，反对强迫公司监视用户的企图，支持控制政府监视的改革法案，等等。
+> 此外，EFF 还参与了重大的立法斗争，阻止伪装成知识产权法案的网络审查法案通过，粉碎强迫公司监视用户的企图，拥护改革限制政府监视的法案，等等。
 
 > We are working with advocates worldwide to create a global digital environment that upholds both human rights and Constitutional rights, and we continue to take on cutting-edge legal cases to win victories for user rights.
 >
-> 我们正在与世界各地的倡导者合作，创造一个既维护人权又维护宪法权利的数字世界，我们继续受理前沿的法律案件，为用户权利赢得胜利。
+> 我们正在与世界各地的辩护律师合作，去创造一个既维护人权又维护宪法权利的数字世界，我们继续受理前沿的法律案件，为用户权利赢得胜利。

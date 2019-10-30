@@ -504,6 +504,14 @@ PS：就在前不久我捡垃圾搞来一块”三星“的固态硬盘，拿到
 
 [耶鲁教授关于【政治素质】的20条建议](https://program-think.blogspot.com/2017/02/weekly-share-109.html) ，国内用户无法访问😡
 
+>  People will tell me again to not mix politics with software/business. Doing so surely impacts the popularity of Notepad++: talking about politics is exactly what software and commercial companies generally try to avoid. The problem is, if we don’t deal with politics, politics will deal with us. We can choose to not act when people are being oppressed, but when it’s our turn to be oppressed, it will be too late and there will be no one for us. You don’t need to be Uyghur or a Muslim to act, you need only to be a human and have empathy for our fellow humans. 
+>
+> 此处引用 notepad++ 官网声明 [Notepad++ v7.8.1 : Free Uyghur]( https://notepad-plus-plus.org/news/v781-free-uyghur-edition/ ) 
+>
+> 
+
+>  人们会告诉我不要将政治与软件/商业混为一谈。这样做肯定会影响到 Notepad ++ 声望：谈论政治正是软件和商业公司通常要避免的事情。问题是，如果我们不关心政治，政治会关心我们。当人们被压迫时，我们无所作为，但是当轮到我们被压迫时，为时已晚，那时也就没有人能帮助我们了。不需要你是维吾尔人或穆斯林来行动，你只需要作为一个人并同情我们的人类同胞。
+
 ### 统一？
 
 无论是香港还是台湾，我相信很多大陆人脑子里只有一句，那就是 “`香港/台湾是中国的不可分割的一部分`”，看了外媒对澳洲留学生的采访，提到香港，这些留学生就急冲冲地大喊`香港/台湾是中国的不可分割的一部分`，只有这一句话。对。没错，他们直叫喊这一句话，脑子里对台湾和香港装的也仅仅是这一句话。但他们的大脑从不去思考香港民众的五大诉求、以及五大诉求背后香港民众们的恐惧是什么？他们也不去思考国家为什么要统一？领土完整吗？那被俄爹掠夺走了 154 万平方公里的土地就不是中国的吗？
