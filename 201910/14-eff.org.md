@@ -7,6 +7,12 @@ tag: 翻译
 
 ---
 
+## 题记
+
+本篇文章翻译自 [eff.org](https://eff.org) 官网上的 [A History of Protecting Freedom Where Law and Technology Collide]( https://www.eff.org/about/history ) 
+
+由于是第一次独立翻译整篇文章，肯请读者们能够指出翻译不当的部分，让这篇翻译文章更加完善
+
 > # A History of Protecting Freedom Where Law and Technology Collide
 
 > # 一段在法律与技术冲突的地方捍卫自由的历史
@@ -19,39 +25,45 @@ tag: 翻译
 >
 > The United States Secret Service conducted a series of raids tracking the distribution of a document illegally copied from a BellSouth computer that described how the emergency 911 system worked, referred to as the E911 document.
 >
-> 美国特勤局进行了一系列突击搜查，追踪一份非法复制自贝尔南公司一台电脑的文件的分发情况。这份文档描述了紧急911系统的工作原理，被称为E911文档。
+> 美国特勤局进行了一系列的突击搜查，追踪一份来自非一台南方贝尔公司电脑非法复制文档的分发情况。这份文档描述了紧急 911系统的工作原理，称之为E911文档。
 >
 > 
 >
 > The Secret Service believed that if "hackers" knew how to use the telephone lines set aside for receiving emergency phone calls, the lines would become overloaded and people facing true emergencies would be unable to get through.
 >
-> 特勤局认为，如果“黑客”知道如何使用空闲的通信线路来接听紧急电话，则通信线路将变得超负荷，面对真正紧急情况的人将无法打通电话。
+> 特勤局认为，如果“黑客”知道如何使用空闲的通信线路来接听紧急电话，则通信线路将变得超负荷，面对真正紧急情况的人将因此无法打通电话。
 >
 > 
 
 > One of the alleged recipients of the E911 document was the systems operator at a small games book publisher out of Austin, Texas, named Steve Jackson Games.
 >
-> E911 文件的嫌疑接收者之一，是德克萨斯州奥斯汀市一家名为史蒂夫·杰克逊游戏的小型游戏图书发行商的系统操作员。
+> E911 文档的嫌疑接收者之一，是德克萨斯州奥斯汀市史蒂夫·杰克逊游戏的小型游戏图书发行商的系统操作员。
 >
->
+> 
 >
 > The Secret Service executed a warrant against the innocent Jackson and took all electronic equipment and copies of an upcoming game book from Steve Jackson Games' premises.
 >
 > 特勤局对无辜的杰克逊下达了逮捕令，并从史蒂夫·杰克逊游戏公司取走了所有电子设备和即将发行的游戏书籍的副本。
 >
->
+> 
 >
 > Steve Jackson panicked as he watched the deadline come and go for his latest release and still hadn't received his computers back.
 >
-> 史蒂夫·杰克逊为后期限的来临感到恐慌，因为他要发布他的最新版本，但仍未收到他的电脑。
+> 史蒂夫·杰克逊为最后期限的来临感到恐慌，因为他要发布他的最新版本，但他的电脑仍未归还。
 >
+> 
 >
+> He was forced to lay off nearly half of his staff. 
 >
-> He was forced to lay off nearly half of his staff. In the end, the Secret Service returned all of Steve Jackson's computers and decided not to press charges against the company, since they were unable to find any copies of the E911 document on any of the computers.
+> 他被迫解雇了将近一半的员工。
 >
-> 他被迫解雇了将近一半的员工。最后，特勤局归还了史蒂夫·杰克逊所有的计算机，并决定不对这家公司提起诉讼，因为他们无法在任何计算机上找到 E911 文档的任何副本。
+> 
 >
+> In the end, the Secret Service returned all of Steve Jackson's computers and decided not to press charges against the company, since they were unable to find any copies of the E911 document on any of the computers.
 >
+> 最后，特勤局归还了史蒂夫·杰克逊所有的计算机，因为他们无法在任何计算机上找到 E911 文档的任何副本，所以就决定不对这家公司提起诉讼。
+>
+> 
 
 
 
@@ -63,37 +75,37 @@ tag: 翻译
 
 > In the meantime, Steve Jackson's business was nearly ruined.
 >
-> 同时，史蒂夫·杰克逊的游戏业务几乎破产。
+> 与此同时，史蒂夫·杰克逊的游戏生意几乎破产。
 >
->
+> 
 >
 > And when he and his employees had the opportunity to investigate the returned computers, they noticed that all of the electronic mail that had been stored on the company's electronic bulletin board computer, where non-employee users had dialed in and sent personal messages to one another, had been individually accessed and deleted.
 >
-> 当他和他的员工有机会调查归还的计算机时，他们注意到所有存储在公司电子公告计算机上的电子邮件，非员工用户在该计算机上拨号并相互发送个人消息，已被单独获取删除。
+> 当他和他的员工们事后调查归还的计算机时，他们注意到特勤局访问并删除了所有存储在公司 BBS 上的电子邮件，而这些电子邮件是用户进行私密通信的。
 >
->
+> 
 >
 > Steve Jackson was furious, as he believed his rights as a publisher had been violated and the free speech and privacy rights of his users had been violated.
 >
-> 史蒂夫·杰克逊感到愤怒，因为他认为他作为版商的权利受到侵犯，用户的言论自由和隐私权遭到侵犯。
+> 史蒂夫·杰克逊感到作为出版商的权利受到侵犯以及用户的言论自由和隐私权也遭到侵犯而愤怒。
 >
->
+> 
 >
 > Steve Jackson tried desperately to find a civil liberties group to help him, to no avail.
 >
 > 史蒂夫·杰克逊拼命试图找到一个公民自由组织来帮助他，但无济于事。
 >
->
+> 
 >
 > Unfortunately, none of the existing groups understood the technology well enough to understand the importance of the issues.
 >
-> 不幸的是，现有的组织中没有一个充分了解这项技术以了解这些问题的重要性。
+> 不幸的是，现有的组织中没有一个充分了解有关技术以意识到这些问题的重要性。
 
 
 
 > In an electronic community called the Whole Earth 'Lectronic Link (now WELL.com) several informed technologists understood exactly what civil liberties issues were involved.
 >
-> 在一个名为“全球电子链接”的电子社区（现为WELL.com）中，几位知情的技术专家确切地了解了涉及的公民自由问题。
+> 在一个名为“全球电子链接”的电子社区（现为WELL.com）中，几位见多识广的技术专家确切地知晓涉及的公民自由问题。
 >
 >
 >
@@ -111,7 +123,7 @@ tag: 翻译
 >
 > On the day they formally unveiled the new organization, they announced that they were representing Steve Jackson Games and several of the company's bulletin board users in a lawsuit they were bringing against the United States Secret Service.
 >
-> 在他们正式宣布新组织成立的当天，他们宣布他们代表史蒂夫·杰克逊游戏公司和几位公司的公告栏用户，对美国特勤局提起了诉讼。
+> 在他们正式宣布新组织成立的当天，他们宣布他们代表史蒂夫·杰克逊游戏公司和几位公司的 BBS 用户，对美国特勤局提起了诉讼。
 >
 >
 >
@@ -135,13 +147,13 @@ tag: 翻译
 >
 > We take for granted today that law enforcement must have a warrant that particularly describes all electronic mail messages before seizing and reading them.
 >
-> 今天我们理所当然地认为，执法部门在扣押和阅读所有电子邮件之前，必须持有特别描述所有电子邮件的搜查令。
+> 今天我们理所当然地认为，执法部门在扣押和阅读所有电子邮件之前，必须持有特别描述这些电子邮件的搜查令。
 >
 >
 >
 > The Steve Jackson Games case established that principle.
 >
-> 史蒂夫·杰克逊游戏案确立了这一法则。
+> 而正是史蒂夫·杰克逊游戏案确立了这一法则。
 
 
 
@@ -153,13 +165,13 @@ tag: 翻译
 >
 > In our second big case, *Bernstein v. U.S. Dept. of Justice*, the United States government prohibited a University of California mathematics Ph.D. student from publishing on the Internet an encryption computer program he had created.
 >
-> 在我们的第二个重大案件，伯恩斯坦诉美国司法部案中，美国政府禁止加州大学的一名数学博士生在互联网上分发他创建的一个加密软件。
+> 在我们的第二个重大案件，即伯恩斯坦诉美国司法部案中，美国政府禁止加州大学的一名数学博士生在互联网上分发他创建的一个加密软件。
 >
 >
 >
 > Encryption is a method for scrambling messages so they can only be understood by their intended recipients.
 >
-> 加密算法是一种加扰信息的方法，这样信息只能被它们的目标接收者理解。
+> 加密技术是一种加扰信息的方法，这样信息只能被它们的目标接收者理解。
 >
 >
 >
@@ -272,3 +284,4 @@ tag: 翻译
 > We are working with advocates worldwide to create a global digital environment that upholds both human rights and Constitutional rights, and we continue to take on cutting-edge legal cases to win victories for user rights.
 >
 > 我们正在与世界各地的辩护律师合作，去创造一个既维护人权又维护宪法权利的数字世界，我们继续受理前沿的法律案件，为用户权利赢得胜利。
+

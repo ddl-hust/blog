@@ -8,14 +8,26 @@ _By Hany Michaels, Senior Staff Solutions Architect NSBU, VMware_
 This is the second part of my “Kubernetes in the Enterprise” blog series. As I mentioned in my [last article](http://www.hanymichaels.com/2017/10/04/kubernetes-in-the-enterprise-a-vmware-guide-on-how-to-design-deploy-and-operate-k8saas-with-nsx-t-and-vra/), it is important to get everyone to the same level of understanding about Kubernetes ([K8s](https://kubernetes.io/)) before we can proceed to the design and implementation guides.
 
 ```ini
-这是我的“ kubernetes 在企业中应用” 博客系列的第二篇文章。正如我在上一篇文章提到的，在我们推进设计与实现指南
+这是我的“ kubernetes 在企业中应用” 博客系列的第二篇文章。正如我在上一篇文章提到的，重要的是要让每个人都相同级别的了解 在我们推进设计与实现指南
 ```
 
 
 
-I am not going to take the traditional approach here to explain the Kubernetes architecture and technologies. I will explain everything through comparisons with the v[Sphere platform](https://www.vmware.com/products/vsphere.html) that you, as a VMware user, are already familiar with. You can say that this was the approach I would have liked someone to use to introduce K8s to me. The latter could be very confusing and overwhelming to understand at the beginning. I’d like to add also that I used this approach internally at VMware to introduce Kubernetes to some audiences from different practices, and it has proven to work great and get people up to speed with the core concepts.
+I am not going to take the traditional approach here to explain the Kubernetes architecture and technologies. I will explain everything through comparisons with the [vSphere platform](https://www.vmware.com/products/vsphere.html) that you, as a VMware user, are already familiar with. You can say that this was the approach I would have liked someone to use to introduce K8s to me. The latter could be very confusing and overwhelming to understand at the beginning. I’d like to add also that I used this approach internally at VMware to introduce Kubernetes to some audiences from different practices, and it has proven to work great and get people up to speed with the core concepts.
+
+```ini
+在这里，我不打算采用传统的方法来解释Kubernetes体系结构和技术。我将通过与vSphere平台的比较来解释您作为VMware用户已经熟悉的所有内容。你可以说，这就是我希望别人向我介绍k8的方法。后者在一开始可能会让人感到非常困惑和难以理解。我还想补充一点，我在VMware内部使用这种方法向来自不同实践的一些听众介绍Kubernetes
+```
+
+
 
 An important note before we kick this off: I am not using this comparison for the sake of it, or to prove any similarities or differences between vSphere and Kubernetes. Both are distributed systems at heart, and they must have similarities like any other similar system out there. What I am trying to achieve here at the end of the day is to introduce an incredible technology like Kubernetes to the broader VMware community.
+
+```
+
+```
+
+
 
 ![Kubernetes](img/kubernetes-architecture-1024x512.png)
 
