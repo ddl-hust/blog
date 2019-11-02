@@ -81,7 +81,7 @@ tag: 翻译
 >
 > And when he and his employees had the opportunity to investigate the returned computers, they noticed that all of the electronic mail that had been stored on the company's electronic bulletin board computer, where non-employee users had dialed in and sent personal messages to one another, had been individually accessed and deleted.
 >
-> 当他和他的员工们事后调查归还的计算机时，他们注意到特勤局访问并删除了所有存储在公司 BBS 上的电子邮件，而这些电子邮件是用户进行私密通信的。
+> 当他和他的员工们事后调查归还的计算机时，他们注意到特勤局访问并删除了所有存储在公司 BBS 上的电子邮件，而这些电子邮件是用户用来相互通信。
 >
 > 
 >
@@ -93,7 +93,7 @@ tag: 翻译
 >
 > Steve Jackson tried desperately to find a civil liberties group to help him, to no avail.
 >
-> 史蒂夫·杰克逊拼命试图找到一个公民自由组织来帮助他，但无济于事。
+> 史蒂夫·杰克逊竭尽所能找一个公民自由组织来帮助他，但无济于事。
 >
 > 
 >
