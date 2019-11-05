@@ -17,7 +17,7 @@ I am not going to take the traditional approach here to explain the Kubernetes a
 
 An important note before we kick this off: I am not using this comparison for the sake of it, or to prove any similarities or differences between vSphere and Kubernetes. Both are distributed systems at heart, and they must have similarities like any other similar system out there. What I am trying to achieve here at the end of the day is to introduce an incredible technology like Kubernetes to the broader VMware community.
 
-在我们开始这个之前，有一个重要提示：我并不是为了这个比较，也不是为了证明vSphere和Kubernetes之间的任何异同。两者都是分布式系统的核心，它们必须有类似的系统有相似之处。最后，我试图在这里实现的是向更广泛的 VMware 社区介绍像 Kubernetes 这样的令人难以置信的技术。
+在此之前，有一个重要提醒：我并不是为了这个比较，也不是为了证明 vSphere 和 Kubernetes 之间的任何异同。本质上，两者都是分布式系统，像其他类似的系统一样，二者之间肯定也有相似之处。最后，我想达到的目的是为广泛的 VMware 社区介绍像 Kubernetes 这样不可思议的技术。
 
 
 
