@@ -99,8 +99,9 @@ tag: 持续更新
 | [杜屹东的博客](https://www.duyidong.com/)                    | Java、CI/CD、Kubernetes 、微服务                      | 阿里高级工程师                                   |
 | [ManateeLazyCat](https://manateelazycat.github.io/index.html) | Emacs、Business、Rails、开源                          | 自黑幽默😂                                        |
 | [win-man](https://win-man.github.io/)                        | MySQL                                                 |                                                  |
-| [CrownDaisy](https://crowndaisy.com/)                        | Python、数据分析                                      | INTP、极简主义者x                                |
+| [CrownDaisy](https://crowndaisy.com/)                        | Python、数据分析                                      | INTP、极简主义者                                 |
 | [觉论](https://blog.ryouissei.com/)                          | 用户体验、交互设计                                    | 多摩美术大学高材生😂                              |
+| [Paper](https://paper.seebug.org/)                           | 安全、CTF                                             |                                                  |
 
 ### 云原生相关
 
