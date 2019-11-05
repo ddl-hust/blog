@@ -7,7 +7,7 @@
 (b). zabbix服务端机器所需软件包版本
 OS: CentOS Linux release 7.6.1810 (Core)
 
-```txt
+```ini
 docker-ce-stable 18.09.6
 docker-compose 1.24.0
 MySQL-server 5.7
@@ -19,7 +19,7 @@ zabbix-java-gateway 4.0.7 LTS
 
 (c). zabbix服务端机器所需的docker镜像
 
-```txt
+```ini
 mysql:5.7
 zabbix/zabbix-java-gateway:centos-4.0-latest
 zabbix/zabbix-server-mysql:centos-4.0-latest
@@ -246,7 +246,7 @@ curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACe4a6468bf4ffda94718c37
 --data-urlencode "Url=http://demo.twilio.com/docs/voice.xml" \
 --data-urlencode "To=+86***********" \
 --data-urlencode "From=+1**********" \
--u ACe4a6468bf04cd72fb4ffda94718c3749:2836792e1970c93039faab7 >> twilio.log
+-u ACe4a6 04cd7 1970c9 ab7 >> twilio.log
 
 # via message
 curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACe4a64b4ffda94718c3749/Messages.json \
@@ -254,7 +254,7 @@ curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACe4a64b4ffda94718c3749/
 --data-urlencode "Body= $1 " \
 --data-urlencode "To=+86***********" \
 --data-urlencode "From=+1**********" \
--u ACe4a6468bf04cd72fb4ffda94718c3749:a2e1970c93039faab7 >> twilio.log
+-u ACe4a646 1970c93 aab7 >> twilio.log
 ```
 
 2.将该脚本复制到zabbix-server容器中```/usr/lib/zabbix/alertscripts/```目录下
