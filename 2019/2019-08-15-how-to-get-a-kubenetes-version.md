@@ -72,8 +72,6 @@ link: How-to-choose-the-right-version-of-kubernetes
 | [AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/) |      1.15.5(GA), 1.14.8, 1.13.12, 1.12.10       |        |           |
 |            [EKS](https://aws.amazon.com/cn/eks/)             |   1.14.6(default), 1.13.10, 1.12.10, 1.11.10    |        |           |
 
-
-
 ## 云计算厂商
 
 下面的不是最新的，是九月份时候的，已经过时了，还是参考上面的吧
