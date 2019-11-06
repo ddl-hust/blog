@@ -101,7 +101,7 @@ tag: 持续更新
 | [win-man](https://win-man.github.io/)                        | MySQL                                                 |                                                  |
 | [CrownDaisy](https://crowndaisy.com/)                        | Python、数据分析                                      | INTP、极简主义者                                 |
 | [觉论](https://blog.ryouissei.com/)                          | 用户体验、交互设计                                    | 多摩美术大学高材生😂                              |
-| [Paper](https://paper.seebug.org/)                           | 安全、CTF                                             |                                                  |
+|                                                              |                                                       |                                                  |
 
 ### 云原生相关
 
@@ -123,11 +123,11 @@ tag: 持续更新
 | [茶歇驿站 ](https://maiyang.me/)                             |                                                              |                                               |
 | [Polar Snow Documentation](https://docs.lvrui.io/)           |                                                              |                                               |
 | [DevOps – 成长之路](http://www.rhca.me/)                     |                                                              |                                               |
-| [梦旭随想](https://blog.ihypo.net/index.html)                |                                                              |                                               |
+| [梦旭随想](https://blog.ihypo.net/index.html)                | Kubernetes 、容器                                            | 无栈工程师😂                                   |
 | [我爱西红柿](https://www.bladewan.com/)                      |                                                              |                                               |
-| [Bingo Huang](https://bingohuang.com/)                       |                                                              |                                               |
-| [国南之境](https://hansedong.github.io/)                     |                                                              |                                               |
-| [博客高策](http://gaocegege.com/Blog/)                       |                                                              |                                               |
+| [Bingo Huang](https://bingohuang.com/)                       | Golang、Docker                                               | 一个程序员的自我修养                          |
+| [国南之境](https://hansedong.github.io/)                     | CoreDNS 、Kubernetes、Golang                                 |                                               |
+| [博客高策](http://gaocegege.com/Blog/)                       | 机器学习、Kubernetes、kubebuilder                            | 江湖小虾米                                    |
 | [birdben](https://birdben.github.io/)                        |                                                              |                                               |
 | [浮生若梦](https://fs.tn/)                                   |                                                              |                                               |
 | [ictfox blog](http://www.yangguanjun.com/)                   |                                                              |                                               |
@@ -174,6 +174,8 @@ tag: 持续更新
 | [开源工场](https://openingsource.org/)                       | 开源、英语阅读          | 社区           |
 | [ServiceMesher.com](https://www.servicemesher.com/)          | 云原生 Service Mesher   | 社区           |
 | [阿里中间件团队博客](http://jm.taobao.org/)                  | 中间件                  | 阿里云         |
+| [先知社区](https://xz.aliyun.com/)                           | 安全技术、渗透测试      | 阿里云         |
+| [Paper](https://paper.seebug.org/)                           | 安全、CTF               | 知道创宇       |
 | [美团技术团队](https://tech.meituan.com)                     | 综合                    | 美团           |
 | [闲鱼技术团队](https://www.yuque.com/xytech)                 | 前端                    | 闲鱼           |
 | [腾讯云容器团队](https://tencentcloudcontainerteam.github.io/) | 容器                    | 腾讯云         |

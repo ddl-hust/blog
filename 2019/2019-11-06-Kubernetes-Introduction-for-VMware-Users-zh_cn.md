@@ -3,7 +3,7 @@ Kubernetes Introduction for VMware Users – Part 1: The Theory
 
 原文 [Kubernetes Introduction for VMware Users – Part 1: The Theory]( https://blogs.vmware.com/cloudnative/2017/10/25/kubernetes-introduction-vmware-users/ )
 
-## 给 VMware 用户的 Kubernetes 简介–-第一部分：理论
+## 给 VMware 用户的 Kubernetes 简介: 第一部分：理论
 
 _By Hany Michaels, Senior Staff Solutions Architect NSBU, VMware_
 
@@ -19,8 +19,6 @@ An important note before we kick this off: I am not using this comparison for th
 
 在此之前，有一个重要提醒：我并不是为了这个比较，也不是为了证明 vSphere 和 Kubernetes 之间的任何异同。本质上，两者都是分布式系统，像其他类似的系统一样，二者之间肯定也有相似之处。最后，我想达到的目的是为广泛的 VMware 社区介绍像 Kubernetes 这样不可思议的技术。
 
-
-
 ![Kubernetes](img/kubernetes-architecture-1024x512.png)
 
 Figure: The Kubernetes overall architecture compared to vSphere
@@ -30,59 +28,31 @@ A little bit of history
 
 You should already be familiar with containers before reading this post. I am not going to go through those basics as I am sure there are so many resources out there that talk about this. What I see very often though when I speak with my customers is that they cannot make much sense of why containers have taken our industry by storm and become very popular in record time. To answer this question, and in fact set the context for what is coming, I may have to tell you a little bit about my history as a practical example of how I personally made sense of all the shift that is happening in our industry.
 
-```ini
-在阅读这篇文章之前，您应该已经熟悉容器了。我不会通过这些基本知识，因为我相信有这么多的资源在那里谈论这一点。不过，当我与客户交谈时，我经常看到，他们无法理解为什么集装箱会让我们的行业遭受风暴袭击，并在创纪录的时间内非常受欢迎。为了回答这个问题，并实际上为即将到来的情况设定了背景，我可能必须告诉你一些关于我的历史，作为我个人如何理解我们行业正在发生的所有转变的一个实际例子
-```
-
-
+在阅读这篇文章之前，您应该已经熟悉容器了。我相信网上有很多的资源在普及容器技术，所以我不会再串一遍有关容器的基础知识。不过，当我与客户交谈时，我经常注意到，他们无法理解为什么容器技术会让我们的行业遭受风暴袭击，并在创纪录的时间内非常受欢迎。为了回答这个问题，并实际上为即将到来的情况设定了背景，我可能必须告诉你一些关于我的历史，作为我个人如何理解我们行业正在发生的所有转变的一个实际例子。
 
 I used to be a web developer back in 2003 before I got introduced to the telecom world, and it was my second paying job after being a network engineer/admin. (I know, I was a jack-of-all-trades back then). I used to code in PHP, and I’ve done all sorts of applications from small internal apps used by my employer, to professional voting apps for TV programs, to telco apps interfacing with VSAT hubs and interacting with satellite systems. Life was great, except for one major hurdle that I am sure every developer can relate to: the dependencies.
 
-```ini
 早在2003年，我才成为网络开发人员，后来我被引入电信世界，这是我在成为网络工程师/管理员之后的第二份付费工作。（我知道，那时我是个万无一不的行业）。我过去使用PHP编写代码，我做过各种各样的应用程序，从我的雇主使用的小型内部应用程序，到电视节目的专业投票应用程序，到与VSAT中心接口的电信应用程序，以及与卫星系统交互。生活是伟大的，除了一个主要的障碍，我相信每个开发人员可以涉及到：依赖。
-```
-
-
 
 I first code my app on my laptop using something like the LAMP stack, and when it works well, I upload the source code to the servers, be it hosted out on the internet (anyone remember RackShack?) or on private servers for our end-customers. As you can imagine, as soon as I do that, my app is broken and it just won’t work on those servers. The reason, of course, is that the dependencies I use (like Apache, PHP, MySQL, etc.) have different releases than what I used on my laptop. So I have to figure out a way to either upgrade those releases on the remote servers (bad idea) or just re-code what I did on my laptop to match the remote stacks (worse idea). It was a nightmare, and sometimes I hated myself and questioned why I’m doing this for a living.
 
-```ini
 我首先在我的笔记本电脑上用LAMP堆栈之类的东西编写我的应用程序，当它工作正常时，我上传源代码到服务器，无论是托管在互联网上（谁还记得RackShack？可以想象，只要我这样做，我的应用程序是破碎的，它只是不会在这些服务器上工作。当然，原因是我使用的依赖项（如 Apache、PHP、MySQL 等）的版本与我在笔记本电脑上使用的版本不同。因此，我必须想办法升级远程服务器上的这些版本（坏主意），或者只是重新编写我在笔记本电脑上所做的代码，以匹配远程堆栈（更坏的想法）。那是一场噩梦，有时我恨自己，质疑我为什么要这么做。
-```
-
-
 
 Fast forward 10 years, and along came a company called Docker. I was a VMware consultant in professional services (2013) when I heard about Docker, and let me tell you that I couldn’t make any sense of that technology back in those days. I kept saying things like: “Why would I run containers when I can do that with VMs?” “Why would I give up important features like vSphere HA, DRS or vMotion for those weird benefits of booting up a container instantly or skipping the “hypervisor” layer?” In short, I was looking at this from a pure infrastructure perspective.
 
-```ini
 快进10年，并伴随着一个叫Docker的公司。当我听说 Docker 时，我是一名 VMware 专业服务顾问（2013 年），让我告诉你，在那些日子里，我无法理解该技术。我一直在说："为什么当我能够使用 VM 时运行容器？"我为什么要放弃重要功能，如 vSphere HA、DRS 或 vMotion，以立即启动容器或跳过"虚拟机管理程序"层？简而言之，我是从纯粹的基础架构的角度来看待这个问题的。
-```
-
-
 
 But then I started looking closer until it just hit me. Everything Docker is all about relates to developers. Only when I started thinking like one did it click. What if I had this technology back in 2003 and packaged my dependencies? My web apps would work no matter what server they run on. Better yet, I don’t have to keep uploading source code or setting up anything special. I can just “package” my app in an image and tell my customer to download that image and run it. That’s a web developer’s dream!
 
-```ini
 但后来我开始寻找更近，直到它刚刚击中我。Docker 的所有内容都与开发人员有关。只有当我开始像一个人一样思考时，它才点击。如果我在 2003 年拥有此技术并打包了依赖关系，该怎么办？无论在什么服务器上运行，我的 Web 应用都会工作。更好的是，我不需要继续上传源代码或设置任何特别的东西。我可以在图像中"打包"我的应用程序，并告诉我的客户下载该图像并运行它。这是一个网络开发人员的梦想！
-```
-
-
 
 Docker solved a huge issue for interop and packaging, but now what? As an enterprise customer, how can I operate this app at scale? I still want my HA, my DRS, my vMotion and my DR. It solved my developer problems and it created a whole bunch of new ones for my DevOps team. They need a platform to run those containers the same way they used to run VMs.
 
-```ini
 Docker 解决了互操作和包装的一个大问题，但现在怎么办？作为企业客户，我如何大规模操作此应用程序？我仍然想要我的 HA、我的 DRS、我的 vMotion 和我的 DR。它解决了我的开发人员问题，并为我的 DevOps 团队创建了一大堆新的问题。他们需要一个平台来运行这些容器，就像他们用来运行 VM 一样。
-```
-
-
 
 But then along came Google to tell the world that it has been actually running containers for years (and in fact invented them – Google: cgroups), and that the proper way to do that is through a platform they called Kubernetes. They then open sourced it, gave it as gift to the community, and that changed everything again.
 
-```ini
 但随后，谷歌告诉世界，它实际上运行容器多年（事实上发明了它们 - 谷歌：c组），而这样做的正确方法是通过一个平台，他们称为Kubernetes。然后，他们打开来源，把它作为礼物送给社区，这再次改变了一切。
-```
-
-
 
 Understanding Kubernetes by comparing it to vSphere
 ---------------------------------------------------
