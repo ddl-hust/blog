@@ -48,6 +48,7 @@ tag: 持续更新
 | [王子亭的博客](https://jysperm.me/)                          | 后端、Node.js                                         | 资深老博主                                       |
 | [浮生若梦](https://fs.tn/)                                   | 测试、Linux                                           | 一个测试萌新                                     |
 | [David DaiBackend Developer](https://blog.stdioa.com/)       | 信息安全、C / C++ / Python                            | 全栈                                             |
+| [GitDiG](https://www.gitdig.com/)                            | Golang、Kubernetes、Linux                             | 站点做的很棒、自己开发的                         |
 | [吴良超的学习笔记](http://wulc.me/)                          | 机器学习                                              |                                                  |
 | [Felix's Blog](https://blog.felixc.at/)                      | Linux 内核、Archlinux                                 | 肥猫 😂                                           |
 | [Kiwenlau](https://kiwenlau.com/)                            | 后端的设计、开发运维                                  | [Fundebug](https://fundebug.com/) 创始人         |
@@ -76,7 +77,7 @@ tag: 持续更新
 | [birdben](https://birdben.github.io/)                        | Linux 、Docker                                        |                                                  |
 | [tinyfool](http://tinyfool.org/)                             | 算法                                                  | 资深开发者                                       |
 | [Terry's Thoughts](https://terrywang.net/)                   | Linux 、kernel、DevOps                                |                                                  |
-| [wangcong](http://wangcong.org/)                             | Linux kernel                                          | Linux 内核 maintainer                            |
+| [wangcong](http://wangcong.org/)                             | Linux kernel                                          | 在 Twitter 公司的 Linux 内核 maintainer          |
 | [Chris Chan's BLOG](https://rorschachchan.github.io/)        | Linux、运维开发                                       | 啥都研究啥都不会😂                                |
 | [龙爪槐守望者](http://www.ftium4.com/)                       | IOS、网站策划、交互设计                               |                                                  |
 | [forecho 的独立博客](https://blog.forecho.com/)              | Linux、Web开发                                        | 资深全栈                                         |

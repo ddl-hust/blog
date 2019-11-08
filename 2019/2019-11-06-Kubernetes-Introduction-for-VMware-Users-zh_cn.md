@@ -28,7 +28,7 @@ A little bit of history
 
 You should already be familiar with containers before reading this post. I am not going to go through those basics as I am sure there are so many resources out there that talk about this. What I see very often though when I speak with my customers is that they cannot make much sense of why containers have taken our industry by storm and become very popular in record time. To answer this question, and in fact set the context for what is coming, I may have to tell you a little bit about my history as a practical example of how I personally made sense of all the shift that is happening in our industry.
 
-在阅读这篇文章之前，您应该已经熟悉容器了。我相信网上有很多的资源在普及容器技术，所以我不会再串一遍有关容器的基础知识。不过，当我与客户交谈时，我经常注意到，他们无法理解为什么容器技术会让我们的行业遭受风暴袭击，并在创纪录的时间内非常受欢迎。为了回答这个问题，并实际上为即将到来的情况设定了背景，我可能必须告诉你一些关于我的历史，作为我个人如何理解我们行业正在发生的所有转变的一个实际例子。
+在阅读这篇文章之前，您应该已经熟悉容器了。我相信网上有很多的资源在讲解容器的基础知识，此处我就不再赘述了。不过，当我与客户交谈时，我经常注意到，他们无法理解为什么容器技术会让我们的行业遭受风暴袭击，并在创纪录的时间内非常受欢迎。为了回答这个问题，并实际上为即将到来的情况设定了背景，我可能必须告诉你一些关于我的历史，作为我个人如何理解我们行业正在发生的所有转变的一个实际例子。
 
 I used to be a web developer back in 2003 before I got introduced to the telecom world, and it was my second paying job after being a network engineer/admin. (I know, I was a jack-of-all-trades back then). I used to code in PHP, and I’ve done all sorts of applications from small internal apps used by my employer, to professional voting apps for TV programs, to telco apps interfacing with VSAT hubs and interacting with satellite systems. Life was great, except for one major hurdle that I am sure every developer can relate to: the dependencies.
 
