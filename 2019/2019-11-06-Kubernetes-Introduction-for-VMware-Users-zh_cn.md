@@ -13,7 +13,7 @@ This is the second part of my “Kubernetes in the Enterprise” blog series. As
 
 I am not going to take the traditional approach here to explain the Kubernetes architecture and technologies. I will explain everything through comparisons with the [vSphere platform](https://www.vmware.com/products/vsphere.html) that you, as a VMware user, are already familiar with. You can say that this was the approach I would have liked someone to use to introduce K8s to me. The latter could be very confusing and overwhelming to understand at the beginning. I’d like to add also that I used this approach internally at VMware to introduce Kubernetes to some audiences from different practices, and it has proven to work great and get people up to speed with the core concepts.
 
-在这里，我并不打算用传统的方法来解释 Kubernetes 的体系架构和技术。对于已经十分熟悉 VMware 的用户我将通过与 vSphere 平台的比较来解释 Kubernetes 的体系架构和技术 。你可以说，这就是我希望别人向我介绍 k8s 的方法。后者在一开始可能会让人感到非常困惑和难以理解。我还想补充一点，我在 VMware 内部也是使用这种方法向来自不同实践的听众们介绍 Kubernetes。
+在此，我并不打算用传统的方法来解释 Kubernetes 的体系架构和技术。对于已经十分熟悉 VMware 的用户我将通过与 vSphere 平台的比较来解释 Kubernetes 的体系架构和技术 。你可以说，这就是我希望别人向我介绍 k8s 的方法。后者在一开始可能会让人感到非常困惑和难以理解。我还想补充一点，我在 VMware 内部也是使用这种方法向来自不同经验的听众们介绍 Kubernetes。
 
 An important note before we kick this off: I am not using this comparison for the sake of it, or to prove any similarities or differences between vSphere and Kubernetes. Both are distributed systems at heart, and they must have similarities like any other similar system out there. What I am trying to achieve here at the end of the day is to introduce an incredible technology like Kubernetes to the broader VMware community.
 
