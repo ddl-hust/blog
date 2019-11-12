@@ -1,4 +1,10 @@
-#
+---
+
+title: CentOS7 使用 kubeadm 部署 kubernetes
+date: 2019-05-16
+link:
+
+---
 
 ## 0.准备
 

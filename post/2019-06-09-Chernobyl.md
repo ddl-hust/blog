@@ -1,4 +1,10 @@
-#
+---
+
+title: 切尔诺贝利
+date: 2019-06-09
+link:
+
+---
 
 What is the cost of lies?It's not that we'll mistake them for the truth.The real danger is that if we hear enough lies,then we no longer recognize the truth at all.What can we do then?What else is left but to abandon even the hope of truth and content ourselves instead with stories?In these stories, it doesn't matter who the heroes are.All we want to know is: who is to blame?
 
@@ -16,7 +22,3 @@ your moral conviction doesn't mean anything.
 It leaves you.
 那一刻 你只想躲过那一枪
 And all you
-
-I've know braver souls than you,Khomyuk.Men who had their moment and did nothing.Because when it's your life and the lives of everyone you love,your moral conviction doesn't mean anything.It leaves you.And all you want at that moment is not to be shot.
-
-我认识比你勇敢的人,胡米约克,他们面临抉择时却沉默以对。因为当关系到你和你所爱之人的生命，你的道德信念便一文不值、不复存在。那一刻你只想躲过那一枪。

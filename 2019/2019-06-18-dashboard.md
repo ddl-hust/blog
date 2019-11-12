@@ -1,3 +1,11 @@
+---
+
+title: deploy kubernets dashborad with https
+date: 2019-06-18
+link:
+
+---
+
 # deploy kubernets dashborad with https
 
 ## 0.踩坑

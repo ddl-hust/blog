@@ -1,8 +1,10 @@
 ---
+
 title: 生产环境如何保守地选择 kubernetes 版本
 data: 2019-08-15
 update: 2019-11-05
 link: How-to-choose-the-right-version-of-kubernetes
+
 ---
 
 ## 0. 要开始了？

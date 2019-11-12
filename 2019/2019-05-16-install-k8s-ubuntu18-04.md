@@ -1,4 +1,10 @@
-#
+---
+
+title: ubuntu 1804 使用 kubeadm 部署 kubernetes
+date: 2019-05-16
+link:
+
+---
 
 注意: 这个部署在了digital ocean的VPS上，国内的机器需要代理。
 

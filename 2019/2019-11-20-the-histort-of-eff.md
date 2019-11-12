@@ -1,4 +1,5 @@
 ---
+
 title: 一段在法律与技术冲突的地方捍卫自由的历史
 date: 2019-10-20
 link: the-histor-of-eff

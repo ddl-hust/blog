@@ -1,4 +1,10 @@
-#
+---
+
+title: CentOS7 install gitlab
+date: 2019-05-22
+link:
+
+---
 
 目前gitlab官方给出的安装方式有很多种，普遍采用Omnibus包、Docker安装。官方说的😂```我们强烈建议使用 Omnibus 包安装 GitLab ，因为它安装起来更快、更容易升级版本，而且包含了其他安装方式所没有的可靠性功能。```
 
