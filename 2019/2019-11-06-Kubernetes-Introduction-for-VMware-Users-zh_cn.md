@@ -315,3 +315,5 @@ Remember, we are examining here the kubernetes plugin, not CNI. The former is wh
 
 _Stay tuned to the [Cloud-Native Apps blog](https://blogs.vmware.com/cloudnative/) for Part 3 of Hany’s post on designing Kubernetes for the enterprise, and be sure to follow us on Twitter ([@cloudnativeapps](https://twitter.com/cloudnativeapps))._
 
+
+
