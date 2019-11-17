@@ -43,7 +43,7 @@ date：2019-01-01
 
 ## bio
 
-韭菜 | 屁民🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
+EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
 
 - 喜欢捡洋垃圾、折腾软路由、LEDE、OpenWRT、NAS、群晖、固态硬盘、开发板、Arduino等
 - 技术方面主要擅长 Linux 运维、Docker 容器、Kubernetes、CI/CD 、搓镜像、搓虚拟机
@@ -75,6 +75,8 @@ date：2019-01-01
 ## service
 
 #### Google Cloud Platform‎  |  Amazon AWS  |  namecheap  |  CloudFlare  |  Oracle Cloud
+
+#### Kindle Unlimited | Office 365 
 
 ## game
 
