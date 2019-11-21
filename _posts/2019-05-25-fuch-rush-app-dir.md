@@ -8,7 +8,7 @@ tag:
 copyright: true
 comment: true
 ---
- 
+
 ## 前言
 
 国内的这些毒瘤app，不遵守Android开发的规范，把数据不写到自己的data目录下，在私自sdcard文件目录下拉屎。每次打开文件管理器的时候就会看到这些毒瘤app拉的一堆屎，真的恶心到家。打开无线调试模式通过一系列排除操作，总算清理出来了一堆一堆的屎。
@@ -44,11 +44,11 @@ touch qav theme_pkg webso RedPacket emoji portrait qbiz .gift .signatureTemplate
 
 # weixin
 cd /sdcard/tencent/MicroMsg
-touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 touch newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles
-rm -rf Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+rm -rf Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 rm -rf newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles
-touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 touch newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles
 
 # tencent
@@ -102,11 +102,11 @@ touch msflogs wtlogin mta</Str>
 			<code>123</code>
 			<se>false</se>
 			<Str sr="arg0" ve="3">cd /sdcardtencent/MicroMsg
-touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 touch newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles
-rm -rf Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+rm -rf Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 rm -rf newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles
-touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts 
+touch Game card wallet CDNTemp Handler wxacache CheckResUpdate SQLTrace fts
 touch newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="1"/>
@@ -117,7 +117,7 @@ touch newyear wxanewfiles FailMsgFileCache WeiXin  vusericon xlog wxafiles</Str>
 		<Action sr="act3" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">cd /sdcardtencent/MobileQQ 
+			<Str sr="arg0" ve="3">cd /sdcardtencent/MobileQQ
 touch ArkApp WebViewCheck font_info log ptv_template thumb .apollo
 touch shortvideo thumb2 QWallet artfilter early funcall data
 touch qav theme_pkg webso RedPacket emoji portrait qbiz .gift .signatureTemplate

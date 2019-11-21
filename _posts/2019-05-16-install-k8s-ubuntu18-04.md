@@ -39,7 +39,7 @@ lsmod | grep br_netfilter
 
 4.临时关闭一下SELinux，怎么关闭的？？貌似我的digital ocean Ubuntu18.04没有安装SELinux🤔
 
-在网上找了一篇文章临时关闭SELinux的(turn-off-selinux)[https://www.revsys.com/writings/quicktips/turn-off-selinux.html]
+在网上找了一篇文章临时关闭SELinux的[turn-off-selinux](https://www.revsys.com/writings/quicktips/turn-off-selinux.html)
 
 ```bash
 Test if SELinux is running
@@ -391,5 +391,3 @@ name: Invalid value: "vm_158_35_centos": a DNS-1123 subdomain must consist of lo
 ```
 
 ----
-
-## 6.坑

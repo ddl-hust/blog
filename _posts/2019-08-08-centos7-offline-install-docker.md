@@ -12,7 +12,7 @@ comment: true
 
 接到新项目的机器无法访问外网，所以只能离线安装 Docker，总体思路是从一台可访问外网的机器上下载下来 docker-ce 的 rpm 包及其依赖，再把这些 rpm 传到要部署的机器上安装就行。其中踩了一些坑，在此记录一下。
 
-新项目的机器是系统是 CentOS 7.5 (1804)，所以在 ESXi 上重新开一台虚拟机，装上 CentOS 7.5 (1804)，这一点比较重要。因为刚开始的时候使用的是 CentOS 7.6 (1810)，但环境不一致导致一些依赖的包版本也不一致，7.6 上一些依赖包版本要比 7.5 高一些，最主要的就是 `libsepol`、 `libsemanage`、 `selinux-policy` 等，都是和 SELinux 相关的依赖，虽然可以加个 `skip-broken `参数强制安装，但因为是线上生产环境，为了保险起见还是决定将这几个依赖包升级到要求的版本。
+新项目的机器是系统是 CentOS 7.5 (1804)，所以在 ESXi 上重新开一台虚拟机，装上 CentOS 7.5 (1804)，这一点比较重要。因为刚开始的时候使用的是 CentOS 7.6 (1810)，但环境不一致导致一些依赖的包版本也不一致，7.6 上一些依赖包版本要比 7.5 高一些，最主要的就是 `libsepol`、 `libsemanage`、 `selinux-policy` 等，都是和 SELinux 相关的依赖，虽然可以加个 `skip-broken` 参数强制安装，但因为是线上生产环境，为了保险起见还是决定将这几个依赖包升级到要求的版本。
 
 ## 下载 rpm 包
 
@@ -40,7 +40,7 @@ mv /var/cache/yum/x86_64/7/extras/packages/* /root/docker-ce
 提示要安装 3 个包 即 `docker-ce` 、`docker-ce-cli` 、`containerd.io` 加9个依赖包，一共十二个包会下载到我们指定路径下，剩余 10 个要升级的依赖包即`Updating dependencies`并不会下载到指定的路径下，而是根据对应的 `Repository`下载到 `/var/cache/yum/x86_64/7/` 目录下，所以也需要将这些包也一同移动到我们指定的路径下。
 
 ```bash
-Package							   Version				  Repository
+Package                            Version                Repository
 stalling:
 containerd.io                      1.2.6-3.3.el7          docker-ce-stable
 docker-ce                          3:19.03.1-3.el7        docker-ce-stable
@@ -49,7 +49,7 @@ docker-ce-cli                      1:19.03.1-3.el7        docker-ce-stable
 Installing dependencies:
 audit-libs-python                  2.8.4-4.el7            base
 checkpolicy                        2.5-8.el7              base
-container-selinux                  2:2.107-1.el7_6 		    extras
+container-selinux                  2:2.107-1.el7_6        extras
 libcgroup                          0.41-20.el7            base
 libseccomp                         2.3.1-3.el7            base
 libsemanage-python                 2.5-14.el7             base
@@ -277,4 +277,3 @@ Server:
 2. 需要注意的是 --downloadonly 参数只会将所安装的包及其依赖下载到你指定的位置，但需要升级的包,即 Updating dependencies 默认下载到了# /var/cache/yum/x86_64/7/ 这几个目录下，这一点比较坑
 3. createrepo  创建本地 yum 源
 4. 此方案不仅仅是用与 docker ，离线安装其他包也是支持的
-

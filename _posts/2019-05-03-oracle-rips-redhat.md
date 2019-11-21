@@ -1,6 +1,5 @@
 ---
-
-title: Oracle rips RedHat and 'sort of' launches a new Linux 
+title: Oracle rips RedHat and 'sort of' launches a new Linux
 date: 2019-05-03
 slug:
 tag:
@@ -9,7 +8,7 @@ copyright: true
 comment: true
 ---
 
-## Oracle rips RedHat and 'sort of' launches a new Linux 
+## Oracle rips RedHat and 'sort of' launches a new Linux
 
 [原文链接](https://www.computerworld.com/article/2469218/oracle-rips-red-hat-and--sort-of--launches-a-new-linux.html)
 
@@ -26,7 +25,7 @@ Oracle曾诚意满满地派了100多个程序员帮助红帽子公司开发RedHa
 
 Funny, and I thought Larry Ellison already had his own Linux, [Unbreakable Linux, which Oracle introduced not quite four-years ago](http://practical-tech.com/uncategorized/oracles-red-hat-rip-off/). Of course, [Oracle Unbreakable Linux](http://www.oracle.com/us/technologies/linux/index.html) wasn't really Oracle's Linux. It was [RedHat](http://www.RedHat.com)'s [RedHat Enterprise Linux (RHEL)](http://www.RedHat.com/rhel) with an Oracle Linux logo pasted on the front.
 **[ Find your 2017 salary info and our detailed report at [IT Salary Watch](http://www.computerworld.com/category/it-salary-watch/) ]**
-But, this time, Oracle swears its new Oracle Linux is different. The company claims that it's been optimized for Oracle software and hardware and that Unbreakable Enterprise Kernel is faster than RHEL To be precise, Oracle claims its more than 75 percent faster, as shown by Online Transaction Processing (OLTP) performance tests; 200 percent faster at [InfiniBand](http://www.infinibandta.org/) messaging; and is 137 percent faster at solid state disk access than a "RedHat Compatible Kernel."  
+But, this time, Oracle swears its new Oracle Linux is different. The company claims that it's been optimized for Oracle software and hardware and that Unbreakable Enterprise Kernel is faster than RHEL To be precise, Oracle claims its more than 75 percent faster, as shown by Online Transaction Processing (OLTP) performance tests; 200 percent faster at [InfiniBand](http://www.infinibandta.org/) messaging; and is 137 percent faster at solid state disk access than a "RedHat Compatible Kernel."
 
 Speaking as the guy who designed and ran the very [first Linux server benchmarks](http://practical-tech.com/infrastructure/linux-up-close-time-to-switch) back  in 1999, I'm not impressed by Oracle's claims. An expert can make any operating system look like the greatest thing since sliced bread and its rival look like a two-day old dead dog.
 
@@ -34,13 +33,13 @@ I'm sure on Sun/Oracle hardware, tuned Unbreakable Enterprise Kernel can beat un
 
 Oracle's Unbreakable Enterprise Kernel for Oracle Linux--what a name!--is based on the stable 2.6.32 mainline Linux kernel. For some reason, a few idiots seem to think this represents a Linux fork. Nope. It doesn't. When you get past all the hype, Oracle's new Linux just a Linux distribution that's been optimized for Sun/Oracle hardware. Specifically, Oracle sees this as their Linux for the company's [Oracle Exalogic Elastic Cloud](http://www.oracle.com/us/products/middleware/exalogic/index.html) and high-end, [Non-Uniform Memory Access (NUMA)](http://practical-tech.com/infrastructure/numa-theory-and-practice) servers.
 **[ [Looking to upgrade your career in tech? This comprehensive online course teaches you how.](https://pluralsight.pxf.io/c/321564/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpaths%2Fupgrading-your-technology-career) ]**
-At the time though, according to Edward Scriven, Oracle's Chief Corporate Architect, Oracle will continue to sell its RHEL-compatible Linux under the name Oracle Linux. Still, Oracle insists in its press release that "Existing Oracle Linux 5 and RedHat Enterprise Linux 5 customers can easily upgrade to the Unbreakable Enterprise Kernel. No reinstall of the operating system is required."  
+At the time though, according to Edward Scriven, Oracle's Chief Corporate Architect, Oracle will continue to sell its RHEL-compatible Linux under the name Oracle Linux. Still, Oracle insists in its press release that "Existing Oracle Linux 5 and RedHat Enterprise Linux 5 customers can easily upgrade to the Unbreakable Enterprise Kernel. No reinstall of the operating system is required."
 
-What's more surprising is that Oracle also asserts that "Third-party applications that run on RHEL 5 should run unchanged on Oracle Linux with the Unbreakable Enterprise Kernel, while delivering significant performance and reliability improvements for end users."  
+What's more surprising is that Oracle also asserts that "Third-party applications that run on RHEL 5 should run unchanged on Oracle Linux with the Unbreakable Enterprise Kernel, while delivering significant performance and reliability improvements for end users."
 
 So what the heck is Oracle Unbreakable Enterprise Kernel Linux? It sounds to me like it's just Oracle-branded RHEL that been tuned up for Oracle's hardware. Color me totally unimpressed.
 
-Oh, according to reports, [Ellison claims that Oracle's new Linux "will be more modern](http://www.informationweek.com/blog/main/archives/2010/09/larry_ellison_r.html), it won't be four years behind the mainline, there'll be lots of timely enhancements from Oracle and the Linux community, and it will deliver much better performance."  
+Oh, according to reports, [Ellison claims that Oracle's new Linux "will be more modern](http://www.informationweek.com/blog/main/archives/2010/09/larry_ellison_r.html), it won't be four years behind the mainline, there'll be lots of timely enhancements from Oracle and the Linux community, and it will deliver much better performance."
 
 OK, riddle me this. How can you be bleeding edge, offer stability for high-end applications, and stay compatible with a Linux that you claim is four-years behind the time? The answer to this conundrum? You can't.
 

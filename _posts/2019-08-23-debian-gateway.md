@@ -31,35 +31,33 @@ comment: true
 
 ## 2. 实现效果
 
-#### 1. wget 下载 GitHub release 上的文件，以 Linux为例
+### 1. wget 下载 GitHub release 上的文件，以 Linux为例
 
 `163M Aug 23 21:35 v5.3-rc5.tar.gz` 163M 的文件用时不到 30s
 
 ![1566567341680](https://blog.502.li/img/1566567341680.png)
 
-
-
-#### 2. kubeadm config image pull
+### 2. kubeadm config image pull
 
 使用 kubeadm 命令加上 `--kubernetes-version=` 参数指定镜像的版本号，速度还是可以的😂
 
 ![1566566813113](https://blog.502.li/img/1566566813113.png)
 
-#### 3. 使用 nload 命令查看网关流量情况
+### 3. 使用 nload 命令查看网关流量情况
 
 ![pull gcr.k8s.io 上镜像的速度](https://blog.502.li/img/1566566775553.png)
 
-#### 4. git clone GitHub 上的 repo
+### 4. git clone GitHub 上的 repo
 
 在此还是以 linux 项目为例，clone 过程速度飘忽不定，但一般都会在 10MiB/S 以上，按照这个速度，还和我物理机器的网卡有关，虽然号称是千兆网卡，但实际测试峰值就达不到 500Mbps，欲哭无泪🤦‍♂️
 
 ![git clone 速度](https://blog.502.li/img/1566567116544.png)
 
-#### 5. 要代理的虚拟机
+### 5. 要代理的虚拟机
 
 ![1566565577328](https://blog.502.li/img/1566565577328.png)
 
-#### 5. 网关占用资源
+### 5. 网关占用资源
 
 ![1566565631398](https://blog.502.li/img/1566565631398.png)
 
@@ -67,17 +65,17 @@ comment: true
 
 ## 3. 实现过程
 
-#### 0. project
+### 0. project
 
 主要使用到 [ss-tproxy](https://github.com/zfl9/ss-tproxy) 这个项目，按照项目上的 README 部署部署起来就 ojbk
 
 大佬的博客[ss/ssr/v2ray/socks5 透明代理](https://www.zfl9.com/ss-redir.html) ,很详细，建议认真读完
 
-#### 1. OS
+### 1. OS
 
 首先虚拟机的系统我是使用的 Debian 10，使用 [netinst](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.0.0-amd64-netinst.iso) 镜像安装好的，当然你也可以使用 Ubuntu ，选择 Debian 是因为 Debian 可以再精简一些，安装后的占用不到 700MB 。至于 Alpine 可能要费点功夫，因为编译需要的包比较麻烦。
 
-#### 2. 安装编译环境和依赖
+### 2. 安装编译环境和依赖
 
 Debian 和 Ubuntu 的话就一把梭子就行哈
 
@@ -90,7 +88,7 @@ apt install -y --no-install-recommends --no-install-suggests  \
     dnsmasq iproute2 ipset perl haveged gawk
 ```
 
-#### 3. 安装爱国软件
+### 3. 安装爱国软件
 
 这里根据你的代理软件安装配置好就行，我就剽窃一下 shadowsocks-libev 官方的 wiki
 
@@ -123,7 +121,7 @@ git submodule update --init --recursive
 make install
 ```
 
-#### 4. 安装 Chinadns
+### 4. 安装 Chinadns
 
 安装 Chinadns 实现域名分流，国内的域名交给国内的 DNS (119.29.29.29 或 223.6.6.6) 来解析，国外的域名交给 国外的 DNS (8.8.8.8 或 1.1.1.1)来解析
 
@@ -134,7 +132,7 @@ cd chinadns-ng
 make && make install
 ```
 
-#### 5. 安装 ss-tproxy
+### 5. 安装 ss-tproxy
 
 ```bash
 # Installation of ss-tproxy
@@ -147,7 +145,7 @@ cp -af ss-tproxy.conf gfwlist* chnroute* /etc/ss-tproxy
 cp -af ss-tproxy.service /etc/systemd/system
 ```
 
-#### 6. 配置 ss-redir
+### 6. 配置 ss-redir
 
 ```bash
 cat >> /etc/ss.json << EOF
@@ -180,7 +178,7 @@ EOF
 "method":"" 加密协议
 ```
 
-#### 7. 配置 ss-tproxy
+### 7. 配置 ss-tproxy
 
 剽窃一下官方的配置文件 `/etc/ss-tproxy/ss-tproxy.conf`
 
@@ -249,7 +247,7 @@ file_chnroute6_set='/etc/ss-tproxy/chnroute6.set'  # chnroute6 地址段文件 (
 file_dnsserver_pid='/etc/ss-tproxy/.dnsserver.pid' # dnsmasq 和 chinadns-ng 的 pid 文件
 ```
 
-#### 8. 启动
+### 8. 启动
 
 启动亲需要先关闭本机的 dnsmasq 进程，不然会提示 53 端口已占用
 
@@ -340,4 +338,3 @@ systemctl enable haveged
 systemctl start haveged
 systemctl disable dnsmasq
 ```
-

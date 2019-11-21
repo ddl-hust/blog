@@ -96,7 +96,6 @@ systemctl daemon-reload
 你也可以自己在国外的服务器上下载这些镜像并传输回国内的服务器上。
 
 ```bash
-
 ╭─root@k8s-master ~
 ╰─# kubeadm config images pull
 [config/images] Pulled k8s.gcr.io/kube-apiserver:v1.14.1
@@ -117,7 +116,7 @@ ps：第一次我使用的是```docker save $(docker images -q)```导出了所�
 
 ```docker save -o k8s.tar $(docker images | grep B | cut -d ' ' -f1) | gzip k8s.tar k8s.tar.gz```
 
-然后你在国内的服务器上执行`docker load < k8s.tar.gz`，不用手动gzip解压，docker load 会自动解压并把镜像加载进去。
+然后你在国内的服务器上执行`docker load < k8s.tar.gz`，不用手动 gzip 解压，docker load 会自动解压并把镜像加载进去。
 
 ## 3.安装 kubelet kubeadm kubectl
 
@@ -141,7 +140,7 @@ systemctl enable kubelet && systemctl start kubelet
 使用kubeadm init初始化kubernetes集群，可以指定配置文件，把IP替换为这台机器的内网IP，要k8s-node节点能够访问得到IP。
 ```kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=IP```
 
-最后初始化成功的话会出现以下，
+最后初始化成功的话会出现以下:
 
 ```bash
 [mark-control-plane] Marking the node k8s-master as control-plane by adding the label "node-role.kubernetes.io/master=''"
@@ -196,6 +195,7 @@ ba61bed68ecc        k8s.gcr.io/pause:3.1   "/pause"                 9 minutes ag
 ## 5.将node加入到master管理当中来
 
 node节点的安装过程和master一样，只是在最后一步时不相同。master为init初始化k8s集群，而node节点为join集群当中来。安装docker、kubelet 、kubeadm 、kubectl好，并导入所需要的镜像。再执行
+
 ```kubeadm join IP:6443 --token ************ \--discovery-token-ca-cert-hashsha256:******```
 也就是master节点初始化成功后生成的那个😂。注意这个token是有有效期的，默认是3h。也可以手动生成token给node加入master来用。ttl为token有效期，为0的话就是永久生效。
 ```kubeadm token create $(kubeadm token generate)  --print-join-command --ttl=0```

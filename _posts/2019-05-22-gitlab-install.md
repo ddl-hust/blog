@@ -40,7 +40,6 @@ EOF
 sudo yum makecache
 # 然后安装
 yum install -y gitlab-ee
-
 ```
 
 ### 2.Ubuntu

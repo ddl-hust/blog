@@ -20,7 +20,7 @@ comment: true
 
 下面是我根据 kubernetes GitHub 的 release 总结汇总的一张表格
 
-**<center> Kubernetes release </center>**
+### Kubernetes release
 
 | month   | stable                                                       | stable                                                       | stable                                                       | stable                                                       |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -32,7 +32,7 @@ comment: true
 | 2019-06 | [v1.15.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.0) | [v1.14.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.3) | [v1.13.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.7) |                                                              |
 | 2019-05 | [v1.14.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.2) | [v1.13.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.6) | [v1.12.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.9) | [v1.11.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.10) |
 | 2019-04 | [v1.14.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.1) | [v1.12.8](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.8) |                                                              |                                                              |
-| 2019-03 | [v1.14.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.0) | [v1.13.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.5) | [v1.12.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.7) | [v1.11.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.9) <br>[v1.11.8](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.8) |
+| 2019-03 | [v1.14.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.0) | [v1.13.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.5) | [v1.12.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.7) | [v1.11.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.9) <br> [v1.11.8](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.8) |
 | 2019-02 | [v1.13.4](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.4) <br>[v1.13.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.3) | [v1.12.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.6) | [v1.10.13](https://github.com/kubernetes/kubernetes/releases/tag/v1.10.13) |                                                              |
 | 2019-01 | [v1.13.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.2) | [v1.12.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.5) | [v1.11.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.7) |                                                              |
 | 2018-12 | [v1.13.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.1) <br>[v1.13.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.0) | [v1.12.4](https://github.com/kubernetes/kubernetes/releases/tag/v1.12.4) | [v1.11.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.11.6) | [v1.10.12](https://github.com/kubernetes/kubernetes/releases/tag/v1.10.12) |
@@ -65,8 +65,6 @@ comment: true
 4. 平均每个月 kubernetes 维护的 y 版本为 4 个，现在维护的是 1.15.x、1.14x、1.13.x、1.12.x 还有 alpha 阶段的 1.16.x。1.11.x 应该已经放弃支持了，因为已经三个月没有更新了。
 5. 综上所述我们可以大致推断出下个月更新的版本为 1.15.3 、1.14.6 、1.13.10
 
-
-
 ### GKE 、AKS 、EKS 支持 Kubernetes 版本情况
 
 截至 2019-11-05
@@ -85,7 +83,7 @@ comment: true
 
 **Google kubernetes [官方文档](https://cloud.google.com/kubernetes-engine/docs/release-notes)**
 
- **August 1, 2019**
+### August 1, 2019
 
 ```ini
 1.13.7-gke.15
@@ -164,8 +162,6 @@ AWS 的 Kubernetes 平台叫做 EKS，在创建 kubernetes 集群时可以选择
 
 **Kubernetes version 1.11**
 
-
-
 | Kubernetes Version | Release Notes                                                |
 | ------------------ | ------------------------------------------------------------ |
 | `1.11.10`          | New platform version updating Amazon EKS Kubernetes 1.11 clusters to to a patched version of 1.11.10 to address [CVE-2019-11247](https://groups.google.com/forum/#!topic/kubernetes-security-announce/vUtEcSEY6SM). |
@@ -199,8 +195,6 @@ AWS 的 Kubernetes 平台叫做 EKS，在创建 kubernetes 集群时可以选择
         -   Kubernetes 1.14.3 is now available for preview users.
 
 看来 M$ 的 kubernetes 平台比 Google 更新的还要快，版本 GA 的时候也要早于 GKE 。即便如此，各大云计算厂商仍然会倾向于等到 kubernetes 版本修复得差不了才将上线新版本。
-
-
 
 ## 5. DigitalOcean kubernetes
 
@@ -236,4 +230,3 @@ Linux deploy 3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
 ## 6. 综上
 
 综上所述，汝对 Kubernetes 版本的选择也有了个大致的方向。在此我并没有使用国内的一些云计算厂商做测试。总的来说吧 Google 对 Kubernetes 的驾驭程度肯定要秒杀其他云计算厂商吧，毕竟是亲爹嘛。所以当汝也开始选择 Kubernetes 版本时，适用于生产环境的话，还是要再小版本号 6 以上才合适，比如 1.14.6 1.15.6 1.13.8 等等，都是比较保守的选择。之前的版本可以做测试用。其实选择 1.14.5 1.15.5 等也合适，M$ 家得 kubernetes 就是从 5 开始 GA 的。
-

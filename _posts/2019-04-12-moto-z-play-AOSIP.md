@@ -33,8 +33,8 @@ fastboot oem unlock 【解锁码】
 ## 2.刷recovery  twrp /升级bootloader
 
 [TWRP官网](https://twrp.me/Devices/)
-我的moto z play 刷Android9.0的ROM要求的bootloader必须为Oreo的0xC180 or 0xC182，下载moto官方固件刷入bootloader.img即可，官方固件1.7GB，好大。总不能为了刷个几MB的bootloader下载整个固件包啊,还浪费我流量,于是保存firmware到Google Drive(还好固件分享是通过Google Drive),在挂载了Google Drive的vps上解压出来需要刷的那几个文件刷入即可.刷完bootloader后发现仅仅升级bootloader分区手机无法上网，还需要刷入基带。
-最后在 XDA社区找到了升级到Oreo bootloader的[帖子](https://forum.xda-developers.com/showpost.php?p=78379116&postcount=3),大佬已经帮忙准备好了要刷入的文件.
+我的moto z play 刷 Android9.0 的 ROM 要求的 bootloader 必须为 Oreo 的0xC180 or 0xC182，下载 moto 官方固件刷入 bootloader.img 即可，官方固件 1.7GB，好大。总不能为了刷个几MB的 bootloader 下载整个固件包啊,还浪费我流量,于是保存firmware到Google Drive(还好固件分享是通过Google Drive),在挂载了 Google Drive 的 vps 上解压出来需要刷的那几个文件刷入即可.刷完 bootloader 后发现仅仅升级 bootloader 分区手机无法上网，还需要刷入基带。
+最后在 XDA 社区找到了升级到 Oreo bootloader 的[帖子](https://forum.xda-developers.com/showpost.php?p=78379116&postcount=3)，大佬已经帮忙准备好了要刷入的文件。
 
 ```bash
 fastboot flash partition gpt.bin
@@ -45,24 +45,24 @@ fastboot flash dsp adspso.bin
 fastboot flash oem oem.img
 ```
 
-刷上下载的Twrp
-```fastboot flash recovery twrp-addison.img```
-reboot到recovery就行
+刷上下载的 Twrp
+`fastboot flash recovery twrp-addison.img`
+reboot 到 recovery 就行
 
 ----
 
 ## 3.刷ROM
 
-把ROM的zip包以及magisk放到手机内部存储目录即可,在INSTALL那里选择ROM刷入
-接着刷入magisk的zip包
+把 ROM 的 zip 包以及 magisk 放到手机内部存储目录即可,在 INSTALL 那里选择 ROM 刷入
+接着刷入 magisk 的zip包
 reboot system
 
 ----
 
 ## 4.刷magisk
 
-安装magisk manager，有些精简的ROM没有文件管理器，可以在设置里->存储或下载管理器里找到apk文件安装。
-输入经常使用的magisk模块主要有
+安装 magisk manager，有些精简的 ROM 没有文件管理器，可以在设置里->存储或下载管理器里找到apk 文件安装。
+输入经常使用的 magisk 模块主要有
 
 ```text
 1.Magisk Manager for Recovery Mode(mm)
@@ -79,25 +79,25 @@ reboot system
 ## 5.安装常用工具
 
 ```text
-0.钛备份，每次刷完ROM接着root完后第一个装的就是钛备份，使用它来恢复下面的应用和数据
+0.钛备份，每次刷完 ROM 接着 root 完后第一个装的就是钛备份，使用它来恢复下面的应用和数据
 1.绿色守护，导入处方
-2.RE管理器，卸载删除不必要的应用，方便减少备份包大小
-3.SD Maid，配合RE使用，卸载删除应用，分析分区占用大小
+2.RE 管理器，卸载删除不必要的应用，方便减少备份包大小
+3.SD Maid，配合 RE 使用，卸载删除应用，分析分区占用大小
 4.shadowsocks + obfs，你懂的
 5.Tasker，高效率神器，用过的人都说好😂!
-6.Solid Explorer，MD风格的文件管理器，用了之后放弃RE了🙃
-7.Telegram X 跨平台，16年开始使用到现在，已经放弃用qq了
-8.juiceSSH，用来执行shell，同步硬件时钟用，免得TWRP时间回到1970.
-9.炼妖壶 发现能在这个ROM上使用，好好折腾一下
-10.Lawnchair 替换掉原来的桌面，这个自从2017年使用后就从未更换过。精简！！！！特别适合我这种精简主义者。
-11.My Android tools，同IFW，用来镇压毒瘤app
-12.App Ops，用来驯服一些国内毒瘤app，不给权限不让运行的毒瘤行为
-13.IFW,意图防火墙，用来镇压一些国内的臃肿毒瘤app
+6.Solid Explorer，MD 风格的文件管理器，用了之后放弃RE了🙃
+7.Telegram X 跨平台，16 年开始使用到现在，已经放弃用qq了
+8.juiceSSH，用来执行 shell，同步硬件时钟用，免得 TWRP 时间回到 1970.
+9.炼妖壶 发现能在这个 ROM 上使用，好好折腾一下
+10.Lawnchair 替换掉原来的桌面，这个自从 2017 年使用后就从未更换过。精简！！！！特别适合我这种精简主义者。
+11.My Android tools，同 IFW，用来镇压毒瘤 app
+12.App Ops，用来驯服一些国内毒瘤 app，不给权限不让运行的毒瘤行为
+13.IFW，意图防火墙，用来镇压一些国内的臃肿毒瘤 app
 14.Pixel Icon Pack，图包，美化一下图标
-15.moto相机，感觉没有aosp的好用
-16.快图相册，从Android4.4开始一直使用，精简好用，速度极快
+15.moto 相机，感觉没有 aosp 的好用
+16.快图相册，从Android4.4 开始一直使用，精简好用，速度极快
 17.谷歌拼音输入法,精简
-18.国内那些臃肿的毒瘤app，最后再装😡！
+18.国内那些臃肿的毒瘤 app，最后再装😡！
 19.MX player 看片儿用的
 20.简洁·日历 就像名字那样，十分简洁，没有杂七杂八的功能，就是农历可能不准，记得去年的冬至吗😂
 ```

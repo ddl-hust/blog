@@ -14,7 +14,7 @@ comment: true
 
 那么 FastDFS 采用 Docker 部署适用于什么场景呢？其实比较适合中小型的项目，对高可用，高性能要求不大的情况下。或者将 FastDFS 所有的服务封装在一个容器里运行，和其他服务一起使用 docker-compose 启动，这样用再适合不过了。我的项目就是这种场景，由于服务器资源有限，不可能去单独部署一个 FastDFS 服务器集群，巴拉巴拉整个高可用。所有的项目组件都采用 Docker 部署在一台机器上，FastDFS 里的  nginx 也是没有单独去部署，和 tracker、storage 服务器一起装在一个容器里。为了节省资源没得办法😂
 
-##  构建 docker 镜像
+## 构建 docker 镜像
 
 官方给出了两种构建 docker 镜像的方式，但是我感觉都不好，一是使用的 的是 centos 基础镜像构建，构建出来的大小将近，根本就不用区分本地构建或者网络构建。你构建的整个过程都要都需要连接外网下载构建的包之类的，还用区分什么网络构建和本地构建？所以在这里我们仅仅需要准备配置文件即可。
 
@@ -44,9 +44,9 @@ rm -rf fastdfs
 
 所有的配置文件都在 conf 里，我们根据自身的需要修改一下各个配置文件即可，关于 fastdfs 配置文件的各个参数可以去参考一下下面的博客。
 
--  [用FastDFS一步步搭建文件管理系统](https://www.cnblogs.com/chiangchou/p/fastdfs.html)
+- [用FastDFS一步步搭建文件管理系统](https://www.cnblogs.com/chiangchou/p/fastdfs.html)
 
--  [FastDFS配置参数tracker.conf、storage.conf详解](https://mhl.xyz/Linux/fastdfs-tracker-storage.html)
+- [FastDFS配置参数tracker.conf、storage.conf详解](https://mhl.xyz/Linux/fastdfs-tracker-storage.html)
 
 我修改了默认的配置，数据存放目录修改成了 `/var/fdfs` ,在写 `Dockerfile` 的时候需要建立这个目录，如果你的目录没有修改的话，就把 Dockerfile 里后面那里建立文件夹的路径修改成默认的即可。
 
@@ -86,7 +86,7 @@ tracker_server=tracker_ip:22122    # tracker服务器IP和端口
 http.server_port=28888
 ```
 
-#### nginx 配置文件 nginx.conf   
+#### nginx 配置文件 nginx.conf
 
 ```nginx
 # 在 nginx 配置文件中添加修改下面这段
@@ -103,7 +103,7 @@ server {
 }
 ```
 
-#### nginx 模块配置文件 mod_fastdfs.conf 
+#### nginx 模块配置文件 mod_fastdfs.conf
 
 ```ini
 tracker_server=tracker_ip:22122   # tracker服务器IP和端口
@@ -315,27 +315,27 @@ docker run -d -e FASTDFS_IPADDR=10.10.107.230 \
            -v $PWD/data:/var/fdfs --net=host --name fastdfs fastdfs:alpine
 ```
 
-##  测试
+## 测试
 
-###   测试工具
+### 测试工具
 
 1. 上传客户端：`fdfs_upload_file`
 2. 并发执行工具 ：`xargs`
 3. 测试样本：10W  张表情包图片 ，大小在 **8KB–128KB** 之间
-4. 上传测试命令：```time ls  | xargs -n 1 -I {} -P 256 sh -c "/usr/bin/fdfs_upload_file /etc/fdfs/client.conf {}"```   `-p 参数指定并发执行的任务数量` 
+4. 上传测试命令：``time ls  | xargs -n 1 -I {} -P 256 sh -c "/usr/bin/fdfs_upload_file /etc/fdfs/client.conf {}"` ``-p 参数指定并发执行的任务数量
 5. 下载测试工具： `wget`
 
 ```bash
 下载测试命令：`time cat url.log  | xargs -n 1 -I {} -P 256 sh -c "wget  {}"`
 ```
 
-###   文件上传测试
+### 文件上传测试
 
   测试样本为 10W 张 8KB-100 KB 大小不等的图片
 
 ![1564128425387](https://blog.502.li/img/1564128425387.png)
 
-** 测试文件数量和大小**
+**测试文件数量和大小**
 
 ![1564128874832](https://blog.502.li/img/1564128874832.png)
 
@@ -379,8 +379,6 @@ docker run -d -e FASTDFS_IPADDR=10.10.107.230 \
 
 ![1564130789416](https://blog.502.li/img/1564130789416.png)
 
-
-
 **wget 下载**
 
 使用 `wget -i` 参数指定 `url.log` 为标准输出来测试下载刚刚上传的 10W 张图片 用时 3 分 23 秒
@@ -391,11 +389,11 @@ docker run -d -e FASTDFS_IPADDR=10.10.107.230 \
 
 使用 FastDFS 自带的上传测试工具和 xargs 并发执行工具，通过 xargs -P 参数指定的并发请求数，测得结果为单机性能在网络环境稳定的情况下可以达到 5000 并发上传请求。10W 张图片上传时间耗时 2 分 11 秒左右。使用定时脚本持续测试，总测试上传 100W 张图片。分析 tracker 服务器和 storage 服务器的日志，无论上传还是下载均未发现错误和异常，性能和稳定性较好。
 
-##  优化参数
+## 优化参数
 
 根据业务需求和线上环境调整一下参数，可充分发挥 FastDFS 文件系统的性能
 
-```
+```ini
 # 接收请求的线程数数量
 accept_threads=1
 
@@ -437,7 +435,7 @@ connection_pool_max_idle_time = 3600
 
 ## 常见问题
 
-####  无法连接到 tracker 服务器
+#### 无法连接到 tracker 服务器
 
 需要在 tracker.conf 配置文件中添加允许访问的 IP ,并添加防火墙规则
 
@@ -473,15 +471,10 @@ tracker_query_storage fail, error no: 28, error info: No space left on device
 
 ![1564384530137](https://blog.502.li/img/1564384530137.png)
 
-2. tracker.conf 、storage.conf  默认配置文件监听的地址为 0.0.0.0 即本机所有的 IP 地址，建议修改为 FastDFS 服务器所在的内网 IP 地址。
+2.tracker.conf 、storage.conf  默认配置文件监听的地址为 0.0.0.0 即本机所有的 IP 地址，建议修改为 FastDFS 服务器所在的内网 IP 地址。
 
 ![1564384711746](https://blog.502.li/img/1564384711746.png)
 
-3. 默认运行用户为当前用户和用户组为当前用户，建议指定为权限最小的用户来运行此进程。
+3.默认运行用户为当前用户和用户组为当前用户，建议指定为权限最小的用户来运行此进程。
 
 ![1564384906456](https://blog.502.li/img/1564384906456.png)
-
-### release 版本问题
-
-**fastdfs** 的 GitHub上的 repo 已经有两年没有 release 新版本了，是选用 2017 年的 v5.11 版本还是直接用 master 分支版本？
-

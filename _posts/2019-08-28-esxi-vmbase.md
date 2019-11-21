@@ -30,7 +30,7 @@ comment: true
 apt update && apt install ncdu -y
 ```
 
-2. 默认安装后的系统分区占用情况，虽然在安装的过程中
+2.默认安装后的系统分区占用情况，虽然在安装的过程中
 
 ```bash
 root@ubuntu:~# df -h
@@ -50,7 +50,7 @@ Mem:           3.8G        213M        2.9G        1.1M        759M        3.3G
 Swap:          3.8G          0B        3.8G
 ```
 
-3. 默认给分配了个 swap 文件，使用 swapoff -a 关闭 swap 就行，再修改 fstab 文件，删除 swap 那一行，或注释掉
+3.默认给分配了个 swap 文件，使用 swapoff -a 关闭 swap 就行，再修改 fstab 文件，删除 swap 那一行，或注释掉
 
 ```bash
 root@ubuntu:~# swapoff -a
@@ -59,7 +59,7 @@ root@ubuntu:~# vi /etc/fstab
 
 ```
 
-4. 删除 swap file 之后的分区情况，占用的 1.8GB ，如果直接导出的话，OVA 文件至少得 2GB。我们接下来精简系统不需要得包和文件，最终 OVA 大小缩小到 450MB
+4.删除 swap file 之后的分区情况，占用的 1.8GB ，如果直接导出的话，OVA 文件至少得 2GB。我们接下来精简系统不需要得包和文件，最终 OVA 大小缩小到 450MB
 
 ```bash
 root@ubuntu:~# df -h
@@ -269,13 +269,11 @@ apt purge emacsen-common firmware-linux-free gcc-8-base linux-image-amd64
 
 #### 3. 清理日志和缓存
 
-```
+```bash
 rm -rf /var/lib/apt/lists/*
 apt autoclean
 apt autoremove
 ```
-
-
 
 #### 4. 清理不用的文件
 
@@ -331,7 +329,7 @@ yum list installed | grep firmware | xargs yum remove -y
 
 #### 3. 清理日志和缓存
 
-```
+```bash
 yum clean all
 
 rm -rf /var/cache
@@ -383,4 +381,3 @@ tmpfs                    378M     0  378M   0% /run/user/0
 ### 4. Alpine 3.10
 
 Alpine 虚拟机本来就很精简啦，其实不用搓也行
-
