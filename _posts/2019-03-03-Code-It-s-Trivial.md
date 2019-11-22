@@ -1,6 +1,11 @@
 ---
 title: Code it is trivial 写代码是微不足道的
-date:
+date: 2019-03-03
+update:
+slug: 
+tag:
+copyright: true
+comment: true
 ---
 
 本文转载至stack overflow 创始人 Jeff Atwood的[Code: It's Trivial](https://blog.codinghorror.com/code-its-trivial/)

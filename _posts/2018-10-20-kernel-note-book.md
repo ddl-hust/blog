@@ -1,6 +1,12 @@
 ---
 title: 深入理解 Linux 内核读书笔记
-date:
+date: 2019-10-20
+update:
+slug: 
+tag:
+  - linux
+copyright: true
+comment: true
 ---
 
 1. 在ps命令的输出中很容易识别内核线程，其名称都置于方括号内
