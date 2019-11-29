@@ -23,7 +23,7 @@ comment: true
 
 #### Twitter 🕊 [muzi_ii](https://twitter.com/muzi_ii)
 
-#### GitHub 🕸 [muzi](https://github.com/muzi_502)
+#### GitHub 🕸 [muzi](https://github.com/muzi502)
 
 #### Telegram ☎️ [muzi_ii](https://telegram.me/muzi_ii)
 
