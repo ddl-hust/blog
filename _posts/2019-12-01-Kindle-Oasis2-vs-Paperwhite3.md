@@ -1,5 +1,5 @@
 ---
-title: Kindle Oasis 和 Kindle Paper 使用体验
+title: Kindle Oasis 和 Kindle Paperwhite3 使用体验
 date: 2019-12-01
 update:
 slug: 
