@@ -84,8 +84,6 @@ Kindle Paperwhite3 使用体验就是已经达到够用的水准了，看书和�
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">穷人的世界捡个垃圾都要做个表格分析一下性价比。<br>目前当务之急是把手头的 Kindle Paperwhite3 换到 Kindle Oasis 2，因为自从拿来看漫画就觉着 Kindle Paperwhite3 不够用了😂。<br>至于手机？等过几年再说吧，手头的 6s 还能续命接着用几年滴。毕竟每天 kindle 的使用时间(4h)三倍于手机。 <a href="https://t.co/EUGhXBZC7A">pic.twitter.com/EUGhXBZC7A</a></p>&mdash; 502 (@muzi_ii) <a href="https://twitter.com/muzi_ii/status/1199731167697756161?ref_src=twsrc%5Etfw">November 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endraw %}
 
-
-
 ### 为什么买二手而不买未拆封美版？
 
 如果买国行的话，正品价格最低是 2399 ，而且依照 kindle 千年不降价的作风，对于咱来说买国行实在是买不起。如果你想买国行的话推荐淘宝上的梅先生的 kindle 店买。我上一个 Kindle Paperwhite3 就是在那里买的。
@@ -124,9 +122,23 @@ Kindle Paperwhite3 使用体验就是已经达到够用的水准了，看书和�
 
 ![image-20191202172231655](https://blog.502.li/img/image-20191202172231655.png)
 
+### 看漫画
+
+![image-20191203100634998](https://blog.502.li/img/image-20191203100634998.png)
+
+![image-20191203100645837](https://blog.502.li/img/image-20191203100645837.png)
+
+![image-20191203100655418](https://blog.502.li/img/image-20191203100655418.png)
+
+![image-20191203100706964](https://blog.502.li/img/image-20191203100706964.png)
+
 ## 总体感受
 
-Kindle Oasis2 无论在尺寸还是在速度上已经满足我了，物理翻页键取代触屏翻页也方便多了。
+Kindle Oasis2 无论在尺寸还是在速度上已经满足我了，物理翻页键取代触屏翻页也方便多了。以前使用 Kindle Paperwhite3 看书的时候经常误触，按回退不知怎么地就翻到下一页。物理键取代触摸屏幕翻页效率和准确度上那是一天地上跑的和一个天上飞的区别😂。如果 Kindle Paperwhite3 能有个物理翻页键就完美无缺了。
+
+但美中不足也有一些瑕疵，其中最大的问题就是 Kindle Oasis2 的电池太不耐用了，现在基本上是三天一充，而 Kindle Paperwhite3 一周一充。😥
+
+另一个问题即使金属机身，在冬天躲被窝里看书的时候手汗会留在上面🙃。但瑕不掩瑜，瑕不掩瑜😂
 
 ![image-20191202172126512](https://blog.502.li/img/image-20191202172126512.png)
 
