@@ -12,7 +12,7 @@ comment: true
 
 ## README
 
-内容主要来自在社群里有关企业 Kubernetes 实践过程的直播分享，下面截取聊天记录的自 QA 部分 
+内容主要来自在社群里有关企业 Kubernetes 实践过程的直播分享，下面截取聊天记录的自 QA 部分 。由于这些问题无法被搜索引擎检索到，所以就把这些提问的问题汇总到一起，方便大家自查。
 
 ## Kubernetes 在信也科技的落地实战
 
@@ -1433,3 +1433,23 @@ A：阿里云一般采用 kubernetes on kubernetes 的方案，用户的 kuberne
 
 linearizable read以及通过cache实现的对客户端查询的优化那部分
 2.etcd、API server、Controller及调度器优化实例
+
+## Porter：面向裸金属环境的 Kubernetes 的开源负载均衡器
+
+[提问链接](https://shimo.im/docs/wG6tjHJyQDGgDTQK)
+
+> Q1：Porter 和calico有啥区别，简单了看了下都是用的BGP
+
+A：Porter是一个负载均衡器，而calico是CNI插件，用途不一样。
+
+> Q2：porter有没有竞品？
+
+A：有一个metallb，以及基于F5的负载均衡器插件
+
+> Q3：leaf节点是不是也需要部署服务?
+
+A：不需要，只需要开启BGP就可以了
+
+> Q5：公司服务器就十台左右，部署的 Node 节点也比较少，网络方案使用静态路由是不是最好的选择？就是直接在上级路由器上添加 pod 的路由规则。性能方面是不是最好的选择？
+
+A：pod会有漂移情况的发生，手动更新一是比较麻烦，二是延迟较大。静态配置路由相比于开启BGP的路由器性能上会有一点优势，但是在pod漂移到手动更新路由中间，可能会出现服务中断，如果能承受应该是没问题的
