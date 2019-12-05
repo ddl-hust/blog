@@ -19,26 +19,24 @@ comment: true
 
 - **Blog** 🏠 [blog.502.li](https://blog.502.li)
 
-- Email 📧 [blog@502.li](mailto:blog#502.li)
+- **Email** 📧 [blog@502.li](mailto:blog#502.li)
 
-- Twitter 🕊 [muzi_ii](https://twitter.com/muzi_ii)
+- **Twitter** 🕊 [muzi_ii](https://twitter.com/muzi_ii)
 
-- GitHub 🕸 [muzi](https://github.com/muzi502)
+- **GitHub** 🕸 [muzi](https://github.com/muzi502)
 
-- Telegram ☎️ [muzi_ii](https://telegram.me/muzi_ii)
+- **Telegram** ☎️ [muzi_ii](https://telegram.me/muzi_ii)
 
-- Channel 📣 [rss_kubernetes](https://t.me/rss_kubernetes)
-
-
+- **Channel** 📣 [rss_kubernetes](https://t.me/rss_kubernetes)
 
 ## blog
 
--   为了 https 小绿锁使用了 CloudFlare 的减速 CDN  😥 ，国内用户访问会慢些
+-   为了 https 小绿锁使用了 CloudFlare 的减速 CDN  😥 ，国内用户访问会慢些😟
 -   博客 19 年刚开始捡起来坚持更新，都是一些瞎搞的内容，也会分享一些读书笔记
 -   我坚信独立博客就像一艘小船在互联网的大海里自由航行，这里有我们的言论自由
 -   这里没有删帖、没有封号。只要域名和服务器还在就会被搜索引擎检索到，会在互联网中永远地存在下去
 -   博客中文文章全部为原创或翻译自英文博客，转载是否署名和标注来源是你的自由
--   文章内容使用 WTFPL 协议证书，请任意放心使用，转载墙内请去掉本站信息
+-   文章内容使用 WTFPL 许可证书，请任意放心使用，转载墙内请去掉本站信息，谢谢
 -   英文是~~引用~~剽窃别人的，是英语学习的材料
 -   WTFPL © Do What the Fuck You Want to Public License
 -   这是我收藏的个人独立博客 [友链](https://blog.502.li/link)  以及 [RSS](https://t.me/c/1134301275/1398)，做了简单的分类，在这儿或许能找到你想要的
@@ -59,49 +57,49 @@ EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻�
 
 - 喜欢捡垃圾和折腾，这是我折腾过的 [垃圾 ](https://blog.502.li/phones-history.html)和 [软件](https://blog.502.li/android-tools.html)
 
-- 睡觉前会用 kindle 看书到困，这是我的  [书单 ](https://blog.502.li/booklist.html)
+- 睡觉前会用 kindle Oasis2 看书到困，这是我的  [书单 ](https://blog.502.li/booklist.html)
 
-- 喜欢二次元、喜欢看动漫和轻小说，这是我看过的 [动漫](https://blog.502.li/animal.html)
+- 喜欢二次元、喜欢看动漫和轻小说，这是我看过的 [动漫](https://bgm.tv/user/512178)
 
 ## devices
 
-- Motorola Moto Z Play   
-- iPhone 6s
-- Kindle Oasis 2
-- Kindle Paperwhite 3  
-- SONY SBH60
+- **Motorola Moto Z Play**
+- **iPhone 6s**
+- **Kindle Oasis 2**
+- **Kindle Paperwhite 3**  
+- **SONY SBH60**
 
-- ThinkPad Yoga 12  
-- NETGEAR R6300 V2 
-- NETGEAR WNDR 3700 V4 
-- AMD Ryzen 5 2600  Desktop
+- **ThinkPad Yoga 12**  
+- **NETGEAR R6300 V2** 
+- **NETGEAR WNDR 3700 V4** 
+- **AMD Ryzen 5 2600  Desktop**
 
 ## software
 
-- Debian ❤ xfce4 
-- Visual Studio Code  
-- VMware ESXi  
-- OpenWRT   
-- Asuswrt-Merlin
+- **Debian 10 ❤ xfce4** 
+- **Visual Studio Code**  
+- **VMware vSphere ESXi**  
+- **OpenWRT**  & **LEDE**
+- **Asuswrt-Merlin**
 
 ## service
 
-- Google Cloud Platform‎  
-- Amazon AWS 
-- namecheap 
-- CloudFlare 
-- Oracle Cloud
+- **Google Cloud Platform‎**  
+- **Amazon AWS** 
+- **namecheap** 
+- **CloudFlare** 
+- **Oracle Cloud**
 
-- Kindle Unlimited
-- Office 365
-- DigitalOcean
+- **Kindle Unlimited**
+- **Office 365**
+- **DigitalOcean**
 
 ## game
 
 弃坑不玩游戏了
 
-- ingress
-- 崩坏3rd
+- **ingress**
+- **崩坏3rd**
 
 ## love and passion
 
@@ -110,20 +108,17 @@ EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻�
 - 精简主义者、遵循 Unix 设计理念、一个程序只做一件事儿
 - 理性主义者、反对红色教育、洗脑教育
 - 简单随意、不整花架子、实用主义、轻量级
+- 电子前哨基金会会员，捍卫互联网自由以及保护个人隐私
 
 ## detest and fuck
 
-- 从小就极其讨厌那些告密，举报，打小报告的卑鄙小人，这种人有时连自己的亲人都会出卖！
+- 爱憎分明、嫉恶如仇，极其讨厌那些告密、举报、打小报告的卑鄙小人
 
-- 极其讨厌、憎恶、恶心、唾弃像 baidu、字节跳动、陌陌、360、2345、hao123等这种毫无底线的流氓软件公司，肆无忌惮地侵犯用户隐私。希望他们早点死吧。
+- 极其讨厌、憎恶、恶心、唾弃像 baidu、字节跳动、陌陌、360、2345、hao123等这种毫无底线的流氓软件公司，肆无忌惮地侵犯用户隐私，希望他们早点死吧
 
 - 反对自我审查、自我阉割、个人崇拜、言论审查、网络封锁、实名认证、人脸识别、扫码登录、征信系统、失信名单、人工智能、域名备案等，这些对个人（屁民）没有多少好处，在专制国家只会沦为`极权专制暴政独裁`政府控制人民的工具
 
-- 臃肿的移动 app，国内毒瘤公司的 app 一个比一个臃肿，看谁的安装包大，看谁的功能多，看谁的后台服务多，看谁要的权限多，为了 KPI 使劲往里面加屎，本分工作都最不好还使劲加新功能。聊天软件就该像 telegram 那样只做好聊天功能
-
 - 希望那些在用户手机、浏览器、输入法、ROM 上建墙进行言论审查、网络封锁的毒瘤公司早点死吧
-
-- 国产软件、自主研发、自主知识产权、民族品牌、支持国产、爱国主义、战狼。正是支持国产，GFW 屏蔽掉谷歌等一众国际互联网公司，才导致国内的毒瘤公司越来越作恶，一个比一个恶心
 
 - 扫🐴登录，扫你🐴币，什么🐔儿智障撒币设计，也就你们这些毒瘤公司爱作恶搞这一套圈住用户。你们把用户当🐷吗，圈到猪圈里，去你🐴币的扫🐴登录，扫你奶奶
 
@@ -134,6 +129,5 @@ EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻�
 {% raw %}
 
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">杀毒软件里有理财<br>听歌软件里有购物<br>聊天软件里有视频<br>支付软件里有社交<br>天气软件里有新闻<br>地图软件里有外卖<br>搜索引擎里卖假药<br>浏览器里有小游戏<br>这就是国内互联网现状，每个毒瘤软件都想要整个互联网，把用户当成猪，争相圈到自家猪圈里给用户喂屎。<br>我尽可能拒绝使用国内软件和服务，因为我不想吃屎</p>&mdash; 502 (@muzi_ii) <a href="https://twitter.com/muzi_ii/status/1189843290465529856?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 {% endraw %}
 
