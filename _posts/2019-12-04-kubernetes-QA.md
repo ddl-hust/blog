@@ -1453,3 +1453,80 @@ A：不需要，只需要开启BGP就可以了
 > Q5：公司服务器就十台左右，部署的 Node 节点也比较少，网络方案使用静态路由是不是最好的选择？就是直接在上级路由器上添加 pod 的路由规则。性能方面是不是最好的选择？
 
 A：pod会有漂移情况的发生，手动更新一是比较麻烦，二是延迟较大。静态配置路由相比于开启BGP的路由器性能上会有一点优势，但是在pod漂移到手动更新路由中间，可能会出现服务中断，如果能承受应该是没问题的
+
+## 1205 社群直播：Knative Serverless 之道 - 如何 0 运维、低成本实现应用托管？
+
+[提问链接](https://shimo.im/docs/RhvYRWy8W3RqGYtW)
+
+> Q1：开发怎么远程调试k8s中的应用
+
+A1：Kubernetes 底层首先是一个容器，那咱们就从容器谈起。容器相对于宿主机来说其实只是把业务进程限制在一个更合理的权限范围内。在调试容器里面的业务进程时可以直接 docker exec 到容器内。到了容器内部就和一个 vm 没有什么差别了。而 Kubernetes 的 Deployment 可以认为是编排很多容器，每一个 容器都可以通过 宿主机 docker exec 进去。当然也可以通过 Kubernetes 的方式 kubectl exec 到容器内进行调试。如果实在初期调试阶段建议使用比较完整的 CentOS 或者 Ubuntu 镜像，基础镜像内要有一些基本的调试工具。摸索熟悉了之后可以使用精简的基础镜像，这样更经济。
+
+> Q2：knative的build和开发流程管理可以代替jenkins吗
+
+A2：Knative 的 Build 现在长大了，单独开启了一个项目就是  Tekton。Tekton 的定位不是替换 Jenkins ，这两者在使用方式上差别还是很大的。对于比较习惯 Jenkins 的用户来说切换成 Tekton 是需要一个适应过程的。那么为什么要搞一个 Tekton 呢，Jenkins 不是已经很好了吗？具体 Tekton 的详细设计和实现咱们以后可以单独说明，这里选几个重要的介绍一下区别：
+Tekton 的 Kubernetes 原生特性体现在如下几点：
+Tekton 的所有 Task 都是以 Pod 的粒度执行的，每一个 Task 可以包含很多个 Step。一个 Task 的所有 Step 在同一个 Pod 内串行执行。不同的 Task 通过 Tekton Controller 编排，是跨 Node 节点执行的；
+Tekton 的最基本的执行单元是 Pod，这和 Kubernetes 云原生操作系统是非常契合的。一个人如果掌握了 Kubernetes，再学习 Tekton 就是一件非常容易的事情。但是想一下如果掌握了 Kubernetes 会对学习 Jenkins 有所帮助吗？不太可能。随着 Kubernetes 的流行这种影响也会变的越来越明显；
+再说一下被集成的特性，Tekton 如果现在和 Jenkins 拼生态现在资历还不够，但是他的设计和云原生生态位决定了他可以很容易的通过 Kubernetes api 被集成，而 Jenkins 的 API 需要单独学习，这些都是成本；
+Kubernetes 生态的很多已有的工具，比如 Chart 等等都可以和 Tekton 非常容易的契合在一起，Jenkins 的生态自己比较孤单。长远看 Tekton 是有优势的，但 Tekton 自己的领域能力也需要不断完善；
+
+> Q3：knative编排和K8S应用编排的区别及应用场景?
+
+A3：Kubernetes 的最大价值是把对 IaaS 资源的操作标准化了，比如无论是在 aws 还是在阿里云上面使用计算、存储、网络等资源都可以直接通过 Kubernetes 语义完成，不需要关心不同厂商底层差异化的实现。而 Knative 才是面向应用的编排。Knative 对应用的 Serverless 编排主要体现在对：流量的管理、灰度策略和弹性的管理。并且流量、灰度和弹性这三者是完美的契合在一起的。从另一个角度来说 Knative 是建立在 Kubernetes 之上的，Knative 需要使用 Kubernetes 提供的对 IaaS 的标准化服务。这二者是上下层的依赖和被依赖的关系，不是竞争关系。
+
+> Q4：knative有哪些成功的行业应用实践？
+
+A4：在阿里云上面已经有很多用户在使用了。另外 Google 的 CloudRun 产品完全是建立在 Knative 之上的。
+
+> Q5：knative的现状和预期达到的目的?
+
+A5：Knative 现在已经被众多厂商开始支持了，Knative 的目标是标准化应用 Serverless 编排模型。比如：
+通过 Knative 对应用进行编排
+通过 Knative 支撑上层 faas 系统实现
+这里说的应用其实不限于在线服务，很多 AI 任务也是通过 Knative 驱动的，比如分享中提到的 KFServing 
+
+> Q6：缩容时，怎么才能当pod内的流量消耗完？在销毁？
+
+A6：Kubernetes 中 Pod 是可以设置 Prestop 的，Prestop 可以保证先卸载流量，然后再摘除服务
+
+> Q7：k8s 应用服务器内网无网络，入口只有一台nginx 在dmz区域可以出公网（nginx 与应用服务器网络只开放访问31380/31390），当pods 容器直接回调第三方域名时，该如何解决这个问题。
+
+A7：这个涉及到了具体业务模型和系统架构，可以单独联系我下线沟通
+
+> Q8：感觉knative就是另一种形式的配置即服务，和jenkins X发展的异同?
+
+A8：Knative 是一个应用 Serverless 编排引擎，可以快速给普通应用赋予 Serverless 能力。比如流量、灰度和弹性的完美结合。另外 Knative 的事件模型可以对接外部事件做基于事件驱动的 Serverless 模型。
+
+> Q9：在企业私有云环境部署knative会有哪些挑战？
+
+A9：只要是标准的 Kubernetes 集群之上就能部署 Knative，不过很多镜像需要翻墙
+
+> Q10：阿里云上的容器镜像服务是如何处理鉴权的？
+
+A10：可以参考阿里云镜像仓库的官方文档：
+
+[link](https://cr.console.aliyun.com/cn-hangzhou/instances/authorize)
+
+[link](https://cr.console.aliyun.com/cn-hangzhou/instances/credentials)
+
+> Q11: istio层面的管控和维护成本比较高，如envoy性能问题，网络问题等，这部分工作是由云平台负责的吗，knative这边有没有相应措施
+
+A11: 目前阿里云容器服务 Kubernetes 集群控制台可以通过 UI 管理 Istio 和 Knative，可以快速上手。控制台也提供了很多便捷操作降低运维成本。Knative 主要依赖了 Istio 的 Gateway，Gateway 本身是可以横向扩展的，不会有太大影响。
+
+> Q12：容器的冷启动问题如何解决，第一个流量岂不是延时很高?
+
+A12: 如果缩容到零以后，到一个请求的延时是会很高。第一个请求冷启动的问题是一个公认的业界难题，这也是各大云厂商在竞相解决的问题。相比使用云的客户而言，云厂商自己其实更迫切解决这个问题，敬请关注.... 
+
+> Q13: knative的组件本身怎么部署？如何保证HA？谢谢
+
+A13: Knative 是建立在 Kubernetes 之上的，Knative 组件其实就是 CRD 的 Controller。在 Kubernetes 中 Controller 是可以部署多个实例，通过抢锁保证只有一个 Controller 可以执行写操作。HA 的问题容易解决。
+
+
+
+--------------以下内容请勿随意修改------------
+
+本周直播主题：《Knative Serverless 之道：如何 0 运维、低成本实现应用托管？》
+
+下一场直播时间：12.19 （周四）敬请期待！
+
