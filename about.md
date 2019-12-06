@@ -120,11 +120,21 @@ EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻�
 
 ## twitter
 
-{% raw %}
-
 ----
+
+### #
+
+{% raw %}
 
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">杀毒软件里有理财<br>听歌软件里有购物<br>聊天软件里有视频<br>支付软件里有社交<br>天气软件里有新闻<br>地图软件里有外卖<br>搜索引擎里卖假药<br>浏览器里有小游戏<br>这就是国内互联网现状，每个毒瘤软件都想要整个互联网，把用户当成猪，争相圈到自家猪圈里给用户喂屎。<br>我尽可能拒绝使用国内软件和服务，因为我不想吃屎</p>&mdash; 502 (@muzi_ii) <a href="https://twitter.com/muzi_ii/status/1189843290465529856?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endraw %}
 
 ----
+
+{% raw %}
+
+### #
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="zh-cn"><p lang="zh" dir="ltr">我已经身处险境了<br>我们现在都身处险境<br>因为那些机密和谎言<br>基本上成为了我们的一部分<br>当真相浮出水面 ，我们不断用谎言覆盖<br>直到我们都记不起真相是什么<br>但真相依旧在那里<br>我们撒的每一个谎言都是对真相的透支，早晚要还<br>这就是压力管式石墨沸水堆反应堆核心爆炸的原因--谎言<br><a href="https://twitter.com/hashtag/%E5%88%87%E5%B0%94%E8%AF%BA%E8%B4%9D%E5%88%A9?src=hash&amp;ref_src=twsrc%5Etfw">#切尔诺贝利</a><a href="https://twitter.com/hashtag/%E7%9C%9F%E7%90%86%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#真理部</a> <a href="https://t.co/JoReG3XQoh">pic.twitter.com/JoReG3XQoh</a></p>&mdash; 502 (@muzi_ii) <a href="https://twitter.com/muzi_ii/status/1188793882181423104?ref_src=twsrc%5Etfw">2019年10月28日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endraw %}
