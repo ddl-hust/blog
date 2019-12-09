@@ -14,7 +14,7 @@ comment: true
 
 内容主要来自在社群里有关企业 Kubernetes 实践过程的直播分享，下面截取聊天记录的自 QA 部分 。由于提问链接在石墨文档上协作编辑，而石墨文档里的内容是无法被搜索引擎检索到的。这些问题不整理起来就永远地躺尸在石墨文档了，所以就把这些提问的问题汇总到一起，方便大家自查。
 
-## Kubernetes 在信也科技的落地实战
+## 20191203-Kubernetes 在信也科技的落地实战
 
 [提问链接](https://shimo.im/docs/3RkcgcPq3JjVtxwr)
 
@@ -74,7 +74,7 @@ A：因为我们只用了k8s中的pod，并且关闭了k8s中的异常节点自�
 
 A:目前我们上容器的还是以java为主的后端服务偏多。目前能了解到的是前端应用都是放到nginx中来对外提供服务的。对于前端发布的工作流以及如何保证发布顺序以及关联性的目前都是通过人肉去控制和完成的，没有做到自动化。
 
-## 基于云原生日志分类处理方案与落地实践
+## 20191119-基于云原生日志分类处理方案与落地实践
 
 [提问链接](https://shimo.im/docs/RKYXGj6hvYJWTPQD)
 
@@ -134,7 +134,7 @@ A：
 
 Q: 我看loki现在还是在beta阶段，为什么考虑用？
 
-## 1121 社群直播：给 K8s API “做减法”：阿里云原生应用管理的挑战和实践
+## 20191121-给 K8s API “做减法”：阿里云原生应用管理的挑战和实践
 
 [提问链接](https://shimo.im/docs/TX63YhJ8VjVvYXkW)
 
@@ -183,7 +183,7 @@ A10：OAM刚刚发布一个月左右，具体有哪些公司已经在使用我�
 
 目前有一些小的场景在使用，具体还没有统计过，后续会继续用在一些需要较高性能的场景。
 
-## 10.10 社群文字直播：超大规模商用 K8s 场景下，阿里巴巴如何动态解决容器资源的按需分配问题？
+## 20191010-超大规模商用 K8s 场景下，阿里巴巴如何动态解决容器资源的按需分配问题？
 
 [提问链接](https://shimo.im/docs/Jc6yppJhcDYdPXRH)
 
@@ -253,7 +253,7 @@ A16：类似cadvisor方式直接从node的cgroup获取实时资源消耗数据�
 
 A17：单机节点不足的时候，应用可以通过HPA进行增加副本应对。但是VPA如果选择原节点进行更新的话，是失败的。只能调度到其他资源丰富的节点。在流量陡升的场景下，重建容器未h h必能满足需求，很可能导致雪崩，即重建过程中，整个应用其他未升级的副本接受更多流量，OOM掉，新启动的容器再瞬间被OOM，所以重启容器需要慎重。快速扩容（HPA)或者快速提升高优先级资源，抑制低优先级容器资源的方式效果更明显。
 
-## 1107 社群直播：如何实现 K8s 一键部署？开发部署提速 8 倍？带你上手一款下载超 10 万次的 IDEA 插件
+## 20191107-如何实现 K8s 一键部署？开发部署提速 8 倍？带你上手一款下载超 10 万次的 IDEA 插件
 
 [提问链接](https://shimo.im/docs/6HDpcqJ3yQx8yHh3)
 
@@ -302,7 +302,7 @@ A11：master节点不宜作为node节点部署应用，会导致集群不稳定�
 
 A12:
 
-## Kubernetes在SHAREit的落地实战
+## 20191015-Kubernetes在SHAREit的落地实战
 
 [提问链接](https://shimo.im/docs/KDWHyyPCtYCPcVdy)
 
@@ -348,7 +348,7 @@ A：我觉得你应该需要重新定制alertmanager的镜像，在dockerfile中
 
 > Q：hpa部分你们怎么做到根据不同业务选择不同的策略?
 
-## Jenkins X：基于 Kubernetes 的 Serverless Jenkins
+## 20191031-Jenkins X：基于 Kubernetes 的 Serverless Jenkins
 
 [提问链接](https://shimo.im/docs/rXvrqchvXx63QtVy)
 
@@ -405,7 +405,7 @@ A: Jenkins 的备份有很多种方案。其中一种最常见也是比较暴力
 
 > Q： jenkins X能支持jenkins现有的插件嘛？
 
-## k3s在边缘计算中的应用实践
+## 20191107-k3s在边缘计算中的应用实践
 
 [提问链接](https://shimo.im/docs/x3WjRWHhdJVPkdQG)
 
@@ -583,7 +583,7 @@ A：在实际的应用部署中，几乎没有任何差异，至少到目前为�
 
 来自 18群 的无痕 2019-11-07 22:38:44，睡觉了拜拜！
 
-## 扇贝 Service Mesh 发展历程
+## 20191112-扇贝 Service Mesh 发展历程
 
 [提问链接](https://shimo.im/docs/C9xJT8Hj66cg8Chc)
 
@@ -663,7 +663,7 @@ A：灰度发布也是基于配置不同 endpoints 权重这个思路来的，�
 
 A: traceing 目前还是原始的日志方式，在研究替代方案，后续有进展可以再分享一下。流量监控我们有做 pod 的进出流量统计，也有从 Envoy metrics 获取的请求统计
 
-## 基于CDN的边缘计算平台设计和思考
+## 20191126-基于CDN的边缘计算平台设计和思考
 
 [提问链接](https://shimo.im/docs/pkxrK9PGDcVgXpkx)
 
@@ -735,7 +735,7 @@ A：升级的话，我们目标保持跟ACK中心同步的节奏。主要根据A
 q18请问您那块容器主要跑在虚拟机还是物理机上？
 都有
 
-## 蔚来汽车的Kubernetes实践
+## 20191110-蔚来汽车的Kubernetes实践
 
 [提问链接](https://shimo.im/docs/DRgJKGJdvV9cXDKD)
 
@@ -835,7 +835,7 @@ A: 我们是在yaml注入了能获取设置资源的env参数，然后在ci打�
 
 A： 我们一天的日志量最多能达到近10T的数据，当然这不全是k8s这边的日志，1个节点最多的话大概能跑到30多个pod，filebeat我们是走的统一的一份配置，因为日志都是json规范好字段传输，也无需做过多处理，因为日志分析主要不在这个场景做，我们这个场景只是提供开发看日志，当然其中一些网关数据我们会做报警和具体的图示，需要分析的大数据专门走我们的hadoop集群，我们这边有用到MR 和 spark，但是大数据相关的东西都没有在K8S上面。
 
-## 基于 Ceph 的 Kubernetes 数据持久化
+## 20191029-基于 Ceph 的 Kubernetes 数据持久化
 
 [提问链接](https://shimo.im/docs/Px6xTrqGdDCJp8hW)
 
@@ -929,7 +929,7 @@ PG 是指定存储池存储对象的目录有多少个，PGP 是存储池 PG 的
 
 目前最大的不太清楚，不少大公司可能不会公布。存储日志、备份数据等等。
 
-## 小公司如何优雅地推进应用上Kubernetes容器云
+## 20190820-小公司如何优雅地推进应用上Kubernetes容器云
 
 [提问链接](https://shimo.im/docs/wrhTKPcqcp3htR6h)
 
@@ -986,7 +986,7 @@ b、浏览器设置header参数即可，负载层会判断来源实现不同转�
 
 A：文件其实是不存在的，是直接脚本生成yaml数据，通过api调用，python脚本会写好基本变量，只需要传值即可，脚本截取部分你应该能看明白。
 
-![-](https://uploader.shimo.im/f/eRzQkIIdx4AdvY0U.png)
+![-](https://blog.502.li/img/1575858093858.png)
 
 > Q：听说你们汇桔网大裁员啊！还有几个运维？？
 
@@ -1026,7 +1026,7 @@ A：volume这块后面会上分布式，暂时文件上传暂时上传到oss上�
 
 > Q：  K8S PYTHON client  的对象如何转json的？自己实现decoder？
 
-## Prometheus架构与实践分享
+## 20190917-Prometheus架构与实践分享
 
 [提问链接](https://shimo.im/docs/HPdrhHpP3DVk9wDk)
 
@@ -1140,7 +1140,7 @@ A:需要程序里面集成sdk，并提供查询累计登录用户的http接口�
 
 > Q： 选型的时候为什么选择m3？没考虑其他远程存储吗，是有什么考虑。远程存储你们只是用来备份一份吗还是也会一起从远程读数据？之前远程读的性能比较烂，目前prom新版本的stream远程读你们有试验吗
 
-## eBay Kubernetes集群的存储实践
+## 20190827-eBay Kubernetes集群的存储实践
 
 [提问链接](https://shimo.im/docs/dJ6Gccp3JrdrCtrP)
 
@@ -1190,7 +1190,7 @@ A：对于emptydir，我们使用xfs quota限制。对于PV/PVC，我们在contr
 
 > Q：ceph rbd和本地磁盘有做过benchmark么？cg v2应该只能限制本地盘吧？
 
-A：![-](https://uploader.shimo.im/f/PLfMQZT4SOMLOKjU.png)
+A：![-](https://blog.502.li/img/1575857922468.png)
 
 > Q：kernel network storage有没有什么好的学习材料？
 
@@ -1204,7 +1204,7 @@ A：异地容灾是federation层面的部署，感觉和用哪类workload api没
 
 A：我们是直接在原有的scheduler基础上做了修改，当时还没有extender机制，后续会考虑以extend方式放到外部
 
-## 基于Kubernetes的DevOps平台实战
+## 20190903-基于Kubernetes的DevOps平台实战
 
 [提问链接](https://shimo.im/docs/vjw3P6rD8pyGJXqQ)
 
@@ -1296,7 +1296,7 @@ A：这个我们是在入口去做的，因为使用的公有云，直接就上�
 
 这个是没有通过验证，要确认证书或者相关配置，具体的配置可以参考[我的文档](https://github.com/k8sre/docs/blob/master/kubernetes/kubernetes高可用集群之二进制部署.md)
 
-## 云原生可观察性之日志管理
+## 20190919-云原生可观察性之日志管理
 
 [提问链接](https://shimo.im/docs/KWJqTyw9Q3pqPDcv)
 
@@ -1316,7 +1316,7 @@ A： 我们正在调研 Loki，Grafana Labs 已经用 loki 提供日志服务了
 
 A：收集日志的 agent 最好用比较轻量一点的比如 fluentbit，可以把 fluentd 作为 fluentbit 的接收者，用 fluentd 实现集中的解析后再发到最终的存储，这样就不用每个节点去部署 fluentd 了。类似这样的架构
 
-![-](https://uploader.shimo.im/f/cKq6I9f3a9Y8Fp6Q.png)
+![-](https://blog.502.li/img/1575857978783.png)
 
 > Q：请问一下，单台日志量多少？
 
@@ -1351,7 +1351,7 @@ A：目前是不同服务的日志每天一个index，如果想不同index的话
 
 标准输出，日志不会落到容器内挂载的盘，但是会落到容器所在的节点的盘上，通常这个节点的容器日志会有 rotation 设置，定期清理
 
-## 9.19 社群文字直播：当 K8s 集群达到万级规模，阿里巴巴如何解决系统各组件性能问题？
+## 20190919-当 K8s 集群达到万级规模，阿里巴巴如何解决系统各组件性能问题？
 
 [提问链接](https://shimo.im/docs/6KwX3CR3yRHWdtYV)
 
@@ -1434,7 +1434,7 @@ A：阿里云一般采用 kubernetes on kubernetes 的方案，用户的 kuberne
 linearizable read以及通过cache实现的对客户端查询的优化那部分
 2.etcd、API server、Controller及调度器优化实例
 
-## Porter：面向裸金属环境的 Kubernetes 的开源负载均衡器
+## 20190829-Porter：面向裸金属环境的 Kubernetes 的开源负载均衡器
 
 [提问链接](https://shimo.im/docs/wG6tjHJyQDGgDTQK)
 
@@ -1454,7 +1454,7 @@ A：不需要，只需要开启BGP就可以了
 
 A：pod会有漂移情况的发生，手动更新一是比较麻烦，二是延迟较大。静态配置路由相比于开启BGP的路由器性能上会有一点优势，但是在pod漂移到手动更新路由中间，可能会出现服务中断，如果能承受应该是没问题的
 
-## 1205 社群直播：Knative Serverless 之道 - 如何 0 运维、低成本实现应用托管？
+## 20191205-Knative Serverless 之道 - 如何 0 运维、低成本实现应用托管？
 
 [提问链接](https://shimo.im/docs/RhvYRWy8W3RqGYtW)
 
