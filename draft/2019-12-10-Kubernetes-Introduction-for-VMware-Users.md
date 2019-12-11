@@ -18,6 +18,8 @@ By Hany Michaels, Senior Staff Solutions Architect NSBU, VMware
 
 October 25, 2017
 
+> ## Kubernetes Introduction for VMware Users – Part 1: The Theory
+
 ## 给 VMware 用户的 Kubernetes 简介——第一部分：理论
 
 >This is the second part of my “Kubernetes in the Enterprise” blog series. As I mentioned in my [last article](http://www.hanymichaels.com/2017/10/04/kubernetes-in-the-enterprise-a-vmware-guide-on-how-to-design-deploy-and-operate-k8saas-with-nsx-t-and-vra/), it is important to get everyone to the same level of understanding about Kubernetes ([K8s](https://kubernetes.io/)) before we can proceed to the design and implementation guides.
@@ -38,7 +40,9 @@ October 25, 2017
 
 图片：Kubernetes 和 vSphere 整体架构对比
 
-## A little bit of history
+> ## A little bit of history
+
+## 插曲
 
 > You should already be familiar with containers before reading this post. I am not going to go through those basics as I am sure there are so many resources out there that talk about this. What I see very often though when I speak with my customers is that they cannot make much sense of why containers have taken our industry by storm and become very popular in record time. To answer this question, and in fact set the context for what is coming, I may have to tell you a little bit about my history as a practical example of how I personally made sense of all the shift that is happening in our industry.
 
@@ -68,7 +72,9 @@ Docker 解决了交互和打包的一个大问题，但现在怎么办？作为�
 
 但是后来 Google 告诉世界，他们实际上运行容器很多年了（其实是他们发明的 - Google: cgroups），而这样做的正确方法是通过一个称为 Kubernetes平台，然后他们把 Kubernetes 作为礼物开源给了社区 ，这再次改变了一切。
 
-## Understanding Kubernetes by comparing it to vSphere
+> ## Understanding Kubernetes by comparing it to vSphere
+
+## 通过和 vSphere 的比较来理解 Kubernetes
 
 > So what is Kubernetes? Simply put: it is to containers what vSphere was for VMs to make them data center ready. If you used to run VMware Workstation back in the early 2000s, you know that they were not seriously considered for running inside data centers. Kubernetes brings a way to run and operate containers in a production-ready manner. This is why we will start to compare vSphere side-by-side with Kubernetes in order to explain the details of this distributed system and get you up to speed on its features and technologies.
 
@@ -80,7 +86,9 @@ Docker 解决了交互和打包的一个大问题，但现在怎么办？作为�
 
 图片：从容器到 Kubernetes 的与VM 从 Workstation 到 vSphere 演进的对比
 
-## System Overview
+> ## System Overview
+
+## 系统概览
 
 > Just like vSphere’s vCenter and ESXi hosts, Kuberentes has the concept of master and nodes. In this context, the K8s master is equivalent to vCenter in that it is the management plane of the distributed system. It is also the APIs’ entry point where you interact with your workloads management. Similarly, the K8s nodes act as the compute resources like ESXi hosts. This is where you run your actual workloads (in K8s’ case we call them pods). The nodes could be virtual machines or physical servers. In vSphere’s case, of course, the ESXi hosts have to be physical always.
 
@@ -94,85 +102,101 @@ You can see also that K8s has a key-value store called “etcd.” It is similar
 
 > On the differences side, K8s master can also run workloads, but vCenter cannot. The latter is just a virtual appliance dedicated to management. In K8s master case, it’s still considered a compute resource, but it’s not a good idea to run enterprise apps on it. Only system related apps would be fine.
 
-不同的是，K8s master 节点也可以运行工作负载，但 vCenter 不能运行。后者只是专用于管理的虚拟机。在 K8s master 节点，它仍然被视为计算资源，但并不建议用来运行企业应用。只适合运行与 kubernetes 系统相关的应用。
+不同的是，K8s master 节点也可以运行工作负载，但 vCenter 不能运行。后者只是专用于管理的虚拟机。在 K8s master 节点，它仍然被视为计算资源，但并不建议用来运行企业应用。 master 节点只适合运行与 kubernetes 系统相关的应用。
 
-So, how does this look in the real world? You will mainly use CLI to interact with this system (GUI is also a viable option). In the screenshot below, you can see that I am using a Windows machine to connect to my Kubernetes cluster via command like (I am using cmder in case you are wondering). We see in the screenshot that I have one master and 4 x nodes. They run K8s v1.6.5, and the nodes operating system is Ubuntu 16.04. At the time of this writing, we are mainly living in a Linux world where your master and nodes are always based on Linux distributions.
+> So, how does this look in the real world? You will mainly use CLI to interact with this system (GUI is also a viable option). In the screenshot below, you can see that I am using a Windows machine to connect to my Kubernetes cluster via command like (I am using cmder in case you are wondering). We see in the screenshot that I have one master and 4 x nodes. They run K8s v1.6.5, and the nodes operating system is Ubuntu 16.04. At the time of this writing, we are mainly living in a Linux world where your master and nodes are always based on Linux distributions.
 
-> 那么，在现实世界中，情况如何呢？你将主要使用 CLI 与此系统进行交互（GUI 也是一个可行的选项）。在下面的屏幕截图中，你可以看到我使用 Windows 计算机通过类似命令（如果你想知道的情况下使用 cmder）连接到我的 Kubernetes 群集。我们在屏幕截图中看到，我有一个主节点和 4 个 x 节点。它们运行 K8s v1.6.5，节点操作系统为 Ubuntu 16.04。在撰写本文时，我们主要生活在 Linux 世界中，你的主节点和节点始终基于 Linux 发行版。
+那么，在现实世界中是怎样的呢？你将主要使用 CLI 与此系统进行交互（GUI 也是一个可行的选项）。在下面的截图中，你可以看到我在 Windows 计算机上使用类似的命令（使用的是 cmder）连接到我的 Kubernetes 群集。我们在截图中看到，我有一个 master 节点和 4 个 node 节点。集群运行 K8s v1.6.5，节点操作系统为 Ubuntu 16.04。在撰写本文时，我们主要生活在 Linux 世界中，master 节点和 node 节点始终基于 Linux 发行版。
 
 ![Kubernetes](https://blog.502.li/img/clidash-1024x563.png)
 
-## Workloads Form-factor
+> ## Workloads Form-factor
 
-In vSphere, a virtual machine is the logical boundary of an operating system. In Kubernetes, pods are the boundaries for containers. Just like an ESXi host that can run multiple VMs, a K8s node can run multiple pods. Each Pod gets a routed IP address just like VMs to communicate with other pods.
+## 工作负载
 
-> 在 vSphere 中，虚拟机是操作系统的逻辑边界。在Kubernetes，吊舱是容器的边界。与可以运行多个 VM 的 ESXi 主机一样，K8s 节点可以运行多个 Pod。每个 Pod 获取路由 IP 地址，就像 VM 一样与其他 Pod 通信。
+> In vSphere, a virtual machine is the logical boundary of an operating system. In Kubernetes, pods are the boundaries for containers. Just like an ESXi host that can run multiple VMs, a K8s node can run multiple pods. Each Pod gets a routed IP address just like VMs to communicate with other pods.
 
-In vSphere, applications run inside OS. In Kubernetes, applications run inside containers. A VM can run one single OS, while a Pod can run multiple containers.
+在 vSphere 中，虚拟机是操作系统的逻辑边界。而在 Kubernetes ，pods 是容器的边界。与可以运行多个 VM 的 ESXi 主机一样，K8s 节点可以运行多个 Pod。每个 Pod 获取路由 IP 地址，就像 VM 一样与其他 Pod 进行通信。
 
-> 在 vSphere 中，应用程序在操作系统内运行。在 Kubernetes 中，应用程序在容器内运行。VM 可以运行单个操作系统，而 Pod 可以运行多个容器。
+> In vSphere, applications run inside OS. In Kubernetes, applications run inside containers. A VM can run one single OS, while a Pod can run multiple containers.
+
+在 vSphere 中，应用程序在操作系统内运行。而在 Kubernetes 中，应用程序在容器内运行。VM 可以运行单个操作系统，而 Pod 却可以运行多个容器。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-pods-1024x486.png)
 
-This is how you can list the pods inside a K8s cluster using the kubectl tool from the CLI. You can check the health of the pods, the age, the IP addresses and the nodes they are currently running inside.
+> This is how you can list the pods inside a K8s cluster using the kubectl tool from the CLI. You can check the health of the pods, the age, the IP addresses and the nodes they are currently running inside.
 
-> 这是使用 CLI 中的 kubectl 工具列出 K8s 群集中的 Pod 的方式。你可以检查 Pod 的运行状况、年龄、IP 地址以及它们当前在其中运行的节点。
+这是使用 CLI 中的 kubectl 工具列出 K8s 群集中的 Pod 的方式。你可以检查 Pod 的运行状况、创建时间、IP 地址以及它们当前运行在哪个节点。
 
 ![Kubernetes](https://blog.502.li/img/cli2-1024x450.png)
 
-## Management
+> ## Management
 
-So how do we manage our master, nodes and pods? In vSphere, we use the Web Client to manage most (if not all) the components in our virtual infrastructure. This is almost the same with Kubernetes with the use of the Dashboard. It is a nice GUI-based web portal where you can access your browser similarly to  Web Client. We’ve also seen in the previous sections that you can manage your K8s cluster using the kubeclt command from the CLI. It’s always debatable where you will spend most of your time — the CLI or the Dashboard, especially because the latter is becoming more powerful every day (check [this video](https://www.youtube.com/watch?v=3lhf7T9Bp2E) for more details). I personally find the Dashboard very convenient for quickly monitoring the health or showing the details of the various K8s components rather than typing long commands. It’s a preference, and you will find the balance between them naturally.
+## 管理
 
-> 那么，我们如何管理主机、节点和 Pod？在 vSphere 中，我们使用 Web 客户端来管理虚拟基础架构中的大多数（如果不是全部）组件。这与使用仪表板的 Kubernetes 几乎相同。这是一个不错的基于 GUI 的 Web 门户，你可以在其中访问浏览器，类似于 Web 客户端。我们在前几节中还看到，你可以使用 CLI 中的 kubeclt 命令管理 K8s 群集。你总是在大部分时间里花在哪里——CLI或仪表板，特别是因为后者每天都在变得更强大（请查看[此视频]（https：//www.youtube.com/watch？v_3lhf7T9Bp2E），了解更多详情）。我个人认为仪表板非常方便，可以快速监视运行状况或显示各种 K8s 组件的详细信息，而不是键入长命令。这是一个偏好，你会发现他们之间的平衡自然。
+> So how do we manage our master, nodes and pods? In vSphere, we use the Web Client to manage most (if not all) the components in our virtual infrastructure. This is almost the same with Kubernetes with the use of the Dashboard. It is a nice GUI-based web portal where you can access your browser similarly to  Web Client. We’ve also seen in the previous sections that you can manage your K8s cluster using the kubeclt command from the CLI. It’s always debatable where you will spend most of your time — the CLI or the Dashboard, especially because the latter is becoming more powerful every day (check [this video](https://www.youtube.com/watch?v=3lhf7T9Bp2E) for more details). I personally find the Dashboard very convenient for quickly monitoring the health or showing the details of the various K8s components rather than typing long commands. It’s a preference, and you will find the balance between them naturally.
+
+那么，我们如何管理主机、节点和 Pod 呢？在 vSphere 中，我们使用 Web 客户端来管理虚拟化基础架构中的大多数（如果不是全部）组件。这和在 Kubernetes 使用仪表盘一样。这是一个通过浏览器访问、基于 GUI 、类似于 web 客户端的门户网站。我们在前几节中还看到，你可以使用  kubectl 命令来管理 K8s 群集。你总是在大部分时间里花在哪里——CLI 或仪表盘，特别是因为后者每天都在变得更强大（请查看[此视频](https://www.youtube.com/watch?v3lhf7T9Bp2E)，了解更多详情）。我个人认为仪表盘非常方便，可以快速查看运行状况或显示各种 k8s 组件的详细信息，而不是输入很长的命令。这是个人喜好，你会自然地在两者之间找到平衡。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-management-1024x469.png)
 
-## Configurations
+> ## Configurations
 
-One of the very profound concepts in Kubernetes is the desired state of configurations. You declare what you want for almost any Kubernetes component through a YAML file, and you create that using your kubectl (or through dashboard) as your desired state. Kubernetes will always strive from this moment on to keep that as a running state in your environment. For example, if you want to have four replicas of one pod, K8s will keep monitoring those pods. If one dies or the nodes it’s running have issues, it will self-heal and automatically create that pod somewhere else.
+## 配置
 
-> Kubernetes 中非常深刻的概念之一是所需的配置状态。通过 YAML 文件声明几乎任何 Kubernetes 组件所需的内容，并使用库布（或通过仪表板）创建该组件作为所需状态。Kubernetes 将始终努力从这一刻起，保持它作为运行状态，在你的环境中。例如，如果要有一个窗格的四个副本，K8 将继续监视这些窗格。如果一个人死亡或它正在运行的节点有问题，它将自我修复，并自动创建该窗格在其他地方。
+> One of the very profound concepts in Kubernetes is the desired state of configurations. You declare what you want for almost any Kubernetes component through a YAML file, and you create that using your kubectl (or through dashboard) as your desired state. Kubernetes will always strive from this moment on to keep that as a running state in your environment. For example, if you want to have four replicas of one pod, K8s will keep monitoring those pods. If one dies or the nodes it’s running have issues, it will self-heal and automatically create that pod somewhere else.
 
-Back to our YAML configuration files — you can think of them like a .VMX file for a VM, or a .OVF descriptor for a virtual appliance that you want to deploy in vSphere. Those files define the configuration of the workload/component you want to run. Unlike VMX/OVF files that are exclusive to VMs/Appliances, the YAML configuration files are used to define any K8s component like ReplicaSets, Services, Deployments, etc. as we will see in the coming sections.
+Kubernetes 中非常重要的概念之一是所描述的配置状态。通过 YAML 文件几乎可以声明任何 Kubernetes 组件所需的资源，并使用 kubectl 命令（或通过仪表盘）创建该对象作为所描述的状态。从创建后开始，在你的集群中Kubernetes 始终会努力将保持为所描述的运行状态。例如，如果要有一个 pod 的四个副本，K8s 将继续监视这些pod。如果一个 pod 挂掉或它正在运行的节点有问题，它将自我修复，并自动在其他节点创建该 pod 。
 
-> 回到我们的 YAML 配置文件 - 你可以将它们想象成 一个 。VM 或 的 VMX 文件。要在 vSphere 中部署的虚拟设备的 OVF 描述符。这些文件定义要运行的工作负载/组件的配置。与 VMX/OVF 文件是 VM/设备独有的不同，YAML 配置文件用于定义任何 K8s 组件，如副本集、服务、部署等，我们将在下一节中看到。
+> Back to our YAML configuration files — you can think of them like a .VMX file for a VM, or a .OVF descriptor for a virtual appliance that you want to deploy in vSphere. Those files define the configuration of the workload/component you want to run. Unlike VMX/OVF files that are exclusive to VMs/Appliances, the YAML configuration files are used to define any K8s component like ReplicaSets, Services, Deployments, etc. as we will see in the coming sections.
+
+回到我们的 YAML 配置文件 — 你可以将它们想象成 一个描述 VM 或 的 .VMX 文件或者在 vSphere 中部署虚拟设备所需的 .OVF 描述符文件。这些文件定义要运行的工作负载/组件的配置。与 VMX/OVF 文件是 VM/设备独有的不同的是，YAML 配置文件用于定义任何 K8s 组件，如 ReplicaSets、Services、 Deployments 等，我们将在下一节中讨论。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-confiugrations-1024x511.png)
 
-## Virtual Clusters
+> ## Virtual Clusters
+
+## 虚拟化集群
 
 In vSphere, we have physical ESXi hosts grouped logically to form clusters. We can slice those clusters into other virtual clusters called “Resource Pools.” Those resource pools are mostly used for capping resources. In Kubernetes, we have something very similar. We call them “namespaces,” and they could also be used to ensure resource quotas as we will see in the next section. They are most commonly used, however, as a means of multi-tenancy across applications (or users if you are using shared K8s clusters). This is also one of the ways  we can perform security segmentation with NSX-T across those namespaces as we will see in future posts.
 
-> 在 vSphere 中，我们有物理 ESXi 主机逻辑分组以形成群集。我们可以将这些群集分割成其他虚拟群集，称为"资源池"。这些资源池主要用于限制资源。在Kubernetes，我们有一些非常相似的东西。我们称它们为"命名空间"，它们还可用于确保资源配额，我们将在下一节中看到。但是，它们最常用作跨应用程序（或者使用共享 K8s 群集的用户）的多租户方法。这也是我们可以在这些命名空间使用 NSX-T 执行安全分段的方法之一，我们将在以后的帖子中看到。
+在 vSphere 中，我们将 ESXi 物理机逻辑分组以形成群集。我们可以将这些群集分割成其他虚拟化群集，称为"资源池"。这些资源池主要用于限制资源。在 Kubernetes 中，我们有一些非常相似的东西。我们称之为"命名空间"，它们还可用于确保资源配额，我们将在下一节中看到。但是，它们最常用作跨应用程序（或者使用共享 K8s 群集的用户）的多租户方法。这也是我们可以在这些命名空间使用 NSX-T 执行安全分段的方法之一，我们将在以后的帖子中看到。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-namespaces-1024x651.png)
 
-## Resource Management
+> ## Resource Management
 
-As I mentioned in the previous section, namespaces in Kubernetes are commonly used as a means of segmentation. The other use case for it is resource allocation, and it is referred to as “Resource Quotas.” As we saw in previous sections, the definition of that is through YAML configuration files where we declare the desirted state. In vSphere, we similarly define this from the Resource Pools settings as you see in the screenshot below.
+## 资源管理
 
-> 正如我在上一节中提到的那样，Kubernetes 中的命名空间通常用作分段方法。它的另一个用例是资源分配，它被称为"资源配额"。正如我们在前面各节中所看到的，它的定义是通过 YAML 配置文件来声明期望状态的。在 vSphere 中，我们同样从资源池设置中定义这一点，如下图所示。
+> As I mentioned in the previous section, namespaces in Kubernetes are commonly used as a means of segmentation. The other use case for it is resource allocation, and it is referred to as “Resource Quotas.” As we saw in previous sections, the definition of that is through YAML configuration files where we declare the desirted state. In vSphere, we similarly define this from the Resource Pools settings as you see in the screenshot below.
+
+正如我在上一节中提到的那样，Kubernetes 中通常用命名空间来进行划分。它的另一个用途是资源分配，称之为"资源配额"。正如我们在前面各节中所看到的，它的定义是通过 YAML 配置文件来声明期所望的状态。在 vSphere 中，我们同样从资源池设置中定义这一点，如下图所示。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-resource-quotas.png)
 
-## Workloads Identification
+> ## Workloads Identification
 
-This is fairly easy and almost identical between vSphere and Kubernetes. In the former, we use the concepts of tags to identify or group similar workloads, while in the latter we use the term “labels” to do this. In Kubernetes’ case, this is mandatory where we use things like “selectors” to identify our containers and apply the different configurations for them.
+## 标记工作负载
 
-> 这是相当容易和几乎相同的vSphere和Kubernetes。在前者中，我们使用标记的概念来标识或分组类似的工作负载，而在后者中，我们使用术语"标签"来执行此操作。在 Kubernetes 的案例中，我们使用"选择器"之类的东西来识别我们的容器并为其应用不同的配置，这是强制性的。
+> This is fairly easy and almost identical between vSphere and Kubernetes. In the former, we use the concepts of tags to identify or group similar workloads, while in the latter we use the term “labels” to do this. In Kubernetes’ case, this is mandatory where we use things like “selectors” to identify our containers and apply the different configurations for them.
+
+标记工作负载相当容易且 vSphere 和 Kubernetes 几乎一样。在 vSphere 中，我们使用 tags 的概念来识别或分组相似的工作负载，而在 Kubernetes 中，我们使用术语"labels"来执行此操作。在 Kubernetes 的案例中，我们强制使用"选择器"之类来识别我们的容器并为其应用不同的配置。
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-labels-1024x331.png)
 
-## Redundancy
+> ## Redundancy
 
-Now to the real fun. If you were/are a big fan of vSphere FT like me, you will love this feature in Kubernetes despite some differences in the two technologies. In vSphere, this is a VM with a running instance and a shadow one in a lock-step. We record the instructions from the running instance and replay it in the shadow VM. If the running instance goes down, the shadow VM kicks in immediately. vSphere then tries to find another ESXi host to bring another shadow instance to maintain the same redundancy. In Kubernetes, we have something very similar here. The ReplicaSets are a number you specify to run multiple instances of a pod. If one pod goes down, the other instances are available to serve the traffic. In the same time, K8s will try to bring up a substitute for that pod on any available node to maintain the desired state of the configuration. The major difference, as you may have already noticed, is that in the case of K8s, the pod instances are always live and service traffic. They are not shadowed workloads.
+## 冗余
 
-> 现在到真正的乐趣。如果你像我一样喜欢vSphere FT，你会喜欢这个功能在Kubernetes，尽管这两个技术有一些差异。在 vSphere 中，这是一个具有正在运行的实例的 VM，在锁步骤中具有影子实例。我们记录正在运行的实例中的指令，并在卷影 VM 中重播它。如果正在运行的实例出现故障，则卷影 VM 会立即启动。然后，vSphere 会尝试查找另一个 ESXi 主机，以引入另一个卷影实例以维护相同的冗余。在Kubernetes，我们这里有一些非常相似的东西。副本集是你为运行一个窗格的多个实例而指定的数字。如果一个吊舱出现故障，则其他实例可用于为流量提供服务。同时，K8 将尝试在任何可用节点上为该吊舱提供一个替代项，以保持所需的配置状态。你可能已经注意到，主要区别是，在 K8s 的情况下，pod 实例始终是实时和服务流量。它们不是隐藏工作负载。
+> Now to the real fun. If you were/are a big fan of vSphere FT like me, you will love this feature in Kubernetes despite some differences in the two technologies. In vSphere, this is a VM with a running instance and a shadow one in a lock-step. We record the instructions from the running instance and replay it in the shadow VM. If the running instance goes down, the shadow VM kicks in immediately. vSphere then tries to find another ESXi host to bring another shadow instance to maintain the same redundancy. In Kubernetes, we have something very similar here. The ReplicaSets are a number you specify to run multiple instances of a pod. If one pod goes down, the other instances are available to serve the traffic. In the same time, K8s will try to bring up a substitute for that pod on any available node to maintain the desired state of the configuration. The major difference, as you may have already noticed, is that in the case of K8s, the pod instances are always live and service traffic. They are not shadowed workloads.
+
+现在到真正的乐趣。如果你像我一样喜欢vSphere FT，你会喜欢这个功能在Kubernetes，尽管这两个技术有一些差异。在 vSphere 中，这是一个具有正在运行的实例的 VM，在锁步骤中具有影子实例。我们记录正在运行的实例中的指令，并在卷影 VM 中重播它。如果正在运行的实例出现故障，则卷影 VM 会立即启动。然后，vSphere 会尝试查找另一个 ESXi 主机，以引入另一个卷影实例以维护相同的冗余。在Kubernetes，我们这里有一些非常相似的东西。副本集是你为运行一个窗格的多个实例而指定的数字。如果一个吊舱出现故障，则其他实例可用于为流量提供服务。同时，K8 将尝试在任何可用节点上为该吊舱提供一个替代项，以保持所需的配置状态。你可能已经注意到，主要区别是，在 K8s 的情况下，pod 实例始终是实时和服务流量。它们不是隐藏工作负载。
 
 ![Kubernetes](https://blog.502.li/img/kuberentes-replicasets-1024x546.png)
 
-## Load Balancing
+> ## Load Balancing
+
+## 负载均衡
 
 While this might not be a built-in feature in vSphere, it is still a common thing to run load-balancers on that platform. In the vSphere world, we have either virtual or physical load-balancers to distribute the network traffic across multiple VMs. This could be running in many different configuration modes, but let’s assume here that we are referring to the one-armed configuration. In this case, you are load-balancing your network traffic east-west to your VMs.
 
@@ -194,7 +218,9 @@ There is another very important load-balancing mechanism in Kuberentes called �
 
 ![Kubernetes](https://blog.502.li/img/kubernetes-ingress-1024x532.png)
 
-## Storage & Networking
+> ## Storage & Networking
+
+## 存储和网络
 
 Storage and networking are rich topics when it comes to Kubernetes. It is almost impossible to talk briefly about these two topics in an introduction blog post, but you can be sure that I will be blogging in details soon about the different concepts and options for each subject. For now, let’s quickly examine how the networking stack works in Kubernetes since we will have a dependency on it in a later section.
 

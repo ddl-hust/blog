@@ -1,11 +1,10 @@
 ---
 title: 生产环境如何保守地选择 kubernetes 版本
 date: 2019-08-15
-update: 2019-11-05
+update: 2019-12-11
 slug: How-to-choose-the-right-version-of-kubernetes
 tag:
   - kubernetes
-  - k8s
 copyright: true
 comment: true
 ---
@@ -24,7 +23,8 @@ comment: true
 
 | month   | stable                                                       | stable                                                       | stable                                                       | stable                                                       |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 2019-11 |                                                              |                                                              |                                                              |                                                              |
+| 2019-12 | [v1.17.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0) |                                                              |                                                              |                                                              |
+| 2019-11 | [v1.16.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.16.3) | [v1.15.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.6) | [v1.14.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.9) |                                                              |
 | 2019-10 | [v1.16.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.16.1) <br>[v1.16.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.16.2) | [v1.15.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.5) | [v1.14.8](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.8) | [v1.13.12](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.12) |
 | 2019-09 | [v1.16.0](https://github.com/kubernetes/kubernetes/releases/tag/v1.16.0) | [v1.15.4](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.4) | [v1.14.7](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.7) | [v1.13.11](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.11) |
 | 2019-08 | [v1.15.2](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.2)<br>[v1.15.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.15.3) | [v1.14.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.5) <br>[v1.14.6](https://github.com/kubernetes/kubernetes/releases/tag/v1.14.6) | [v1.13.9](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.9) <br>[v1.13.10](https://github.com/kubernetes/kubernetes/releases/tag/v1.13.10) | CVE                                                          |
