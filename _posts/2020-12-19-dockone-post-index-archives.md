@@ -10,12 +10,11 @@ tag:
   - DockOne 微信分享汇总
 copyright: true
 comment: true
-
 ---
 
 ## README
 
-目前国内有关容器和 kubernetes 的社区，DockOne 无疑是最优秀的社群分享平台。每周都会在微信群中直播分享 kubernetes 相关的技术。
+目前国内有关容器和 kubernetes 的社区，[DockOne](http://dockone.io/) 无疑是最优秀的社群分享平台。每周都会在微信群中直播分享 kubernetes 相关的技术。在此整理和汇总一下每次分享的主题，方便读者们找到感兴趣的内容。
 
 ## 社群分享汇总列表
 
