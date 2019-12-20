@@ -14,6 +14,48 @@ comment: true
 
 内容主要来自在社群里有关企业 Kubernetes 实践过程的直播分享，下面截取聊天记录的自 QA 部分 。由于提问链接在石墨文档上协作编辑，而石墨文档里的内容是无法被搜索引擎检索到的。这些问题不整理起来就永远地躺尸在石墨文档了，所以就把这些提问的问题汇总到一起，方便大家自查。
 
+## 20191219：阿里云如何基于标准 K8s 打造边缘计算云原生基础设施
+
+[提问链接](https://shimo.im/docs/KH6cCkrKHW33CJx6)
+
+> Q1：如何适配不同的平台？OS不同（linux及各种发行版、非linux）、硬件架构不同（x86、ARM等等）。不同平台的节点能在同一个集群内管理吗？
+
+A1：可以的；当前ack@edge支持OS类型：linux（centos、ubuntu），windows server；CPU架构：X86，arm边缘节点接入；支持异构节点在同一个集群管理；k8s管控托管在云上，异构节点的支持主要在边缘端实施；
+
+> Q2：如何应对worker节点网络不一定通的问题，通过servicename或者clusterIP是否还能访问？
+
+A2: 分两个角度：1. ACK@Edge提供了完整的标准的k8s能力，所以servicename和clusterIP默认是可以work的；2. 如果worker节点间网络不通，那么Pod间东西向流量是不可达的；所以我们扩展了service的scope能力，service的流量只会被限制在一组网络可达的节点之间转发（就是分享中提到的edgeunit）；
+
+
+> Q： 边缘能自治到什么程度，还能正常做增删改查吗？apiserver资源发生变化时节点还能感知和同步吗？目前如果触发了边缘自治，对我的应用程序会有哪些影响？
+
+A3: 首先，明确边缘自治工作的时机是在边缘节点和云端管控失联后，此时为了防止脑裂云端会限制相关应用和节点资源的操作；apiserver资源的变化只能够在网络恢复后同步到worker节点，并且网络恢复后，woker节点相关的资源状态仍然以apiserver数据为准；进入自治状态后，节点上agent和应用都只能够消费断网前一刻的资源状态，自治组件edgehub替代apiserver接管了所有发往apiserver的请求；
+
+> Q： k8s具备很好的应用容灾能力，ack@edge在应用容灾方面具备哪些能力？
+
+A4: ack@edge就是标准的k8s；除了具备k8s原生的应用、资源管理能力之外，在边缘场景还提供了断网自治，元信息保持等等能力，这些也都是为应用容灾考虑；除此之外，因为提供的标准k8s完整能力，k8s周边生态servicemesh、knative等都能很好支持；
+
+> Q： 项目是否有开源的计划
+
+A5: edgehub、edgetunnel、edgeunit、knative-edge等相关边缘能力都在开源流程中，敬请期待；
+
+> Q：可否直接打通云，边，端的网络，比如我边上的pod访问云上的服务，直接通过servicename.namespace.cluster.svc.local，而不是用ingress暴露云上服务，目前kubeedge经过定制是具备这个能力的，还未做生产验证。,,,阿里的和kubeedge及k3s有什么区别
+
+A6: 这个问题的本质是容器网络能否跨云，边，端；在ack@edge中我们也支持overlay跨公网的安全方案，支持反向网络穿透打通云、边，支持VPN网络等；
+
+> Q：ack@edge是否有提供原生k8s API?还是经过封装后的API?云边直连的安全问题，要把apiserver直接暴露到外网是不是不太安全？
+
+A7: ack@edge的设计理念是将原生的k8s托管在云上，支持接入边缘算力；用户可以很便捷的通过产品界面配置并生产出一个原生的高可用的k8s集群，并默认安装上支持边缘能力的addons和operator，因此边缘k8s提供了原生的API；云上apiserver通过阿里云slb暴露，对外提供服务，通过云上slb服务的安全能力结合k8s的认证、鉴权能力保证了云上apiserver的安全；
+
+> Q： ack@edge容器化后的程序与激光雷达、深度相机、imu、com通信协议的底层控制板等传感器的通信和数据交互是如何进行的？是否能够提供稳定的数据交互通道？点云及图像数据的传输与直接运行在操作系统上的程序是否会有差别 ？
+
+A8: 应用容器化与否和对物联网协议的支持不冲突；传统的裸进程部署和容器化部署对应用而言是不感知的；数据通道需要依赖其他的物联网协议支持
+
+
+> Q9：ack@edge在面向IoT设备接入是通过什么实现的？是通过容器加载的IoT PaaS还是有一些专门的组件支持，例如设备接入、M2M引擎、MQTT Broker、设备影子这些。
+>
+> Q10: 请问operator为k8s带来的意义是什么呢？operator的应用现状可以给简单介绍吗。
+
 ## 20191218:：Open Policy Agent在Kubernetes中的应用
 
 [提问链接](https://shimo.im/docs/thXyGRP36CHpjvTk)
