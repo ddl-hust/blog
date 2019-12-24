@@ -43,7 +43,7 @@ comment: true
 
 ## bio
 
-EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8S☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
+搬砖社畜 | 屁民一只 🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8s☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
 
 - 喜欢捡洋垃圾、折腾软路由、LEDE、OpenWRT、NAS、群晖、服务器、固态硬盘、开发板、Arduino 等
 - 技术方面主要擅长 Linux 运维、Docker 、Kubernetes、CI/CD 、监控、日志、搓镜像、搓虚拟机
@@ -65,6 +65,7 @@ EFF 电子前哨基金会成员 | 屁民一只 🤦‍♂️垃圾佬🛠️翻�
 
 - **Motorola Moto Z Play**
 - **iPhone 6s**
+- **iPhone 7**
 - **Kindle Oasis 2**
 - **Kindle Paperwhite 3**
 - **SONY SBH60**
