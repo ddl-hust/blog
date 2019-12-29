@@ -43,10 +43,10 @@ comment: true
 
 ## bio
 
-搬砖社畜 | 屁民一只 🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8s☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
+EFF Member | 搬砖社畜 | 屁民一只 🤦‍♂️垃圾佬🛠️翻车王🚐😫运维工程师🔧手稳💪不删库👍不跑路🏃容器虚拟化📦Docker🐳K8s☸️Android📳刷机搞~~基~~机📱📲素食者🍇🍈🍉🍊🍋🍌🍍🍎🍏水果迷 | LineageOS | Resurrection Remix OS | AOSIP | Debian❤xfce | 开源软件😘自由软件 | Lite | Simple | Unix | GNU/Debian User | OpenWRT | LEDE
 
 - 喜欢捡洋垃圾、折腾软路由、LEDE、OpenWRT、NAS、群晖、服务器、固态硬盘、开发板、Arduino 等
-- 技术方面主要擅长 Linux 运维、Docker 、Kubernetes、CI/CD 、监控、日志、搓镜像、搓虚拟机
+- 技术方面主要擅长 Linux 运维、Docker 、Kubernetes、CI/CD 、监控、日志、搓集群、搓镜像、搓虚拟机
 - 业余装机、修电脑、修手机、装系统、拆机、魔改、贴膜、换屏、飞线、找资源、下片等等都会干😂
 - 从不玩抖音快手等短视频，并且十分厌恶这些东西，娱乐至死、它们会让人放弃思考
 - 没有女朋友、单身很快乐、有自由又不花钱、不想找、大概三十岁之前都不想找女朋友🙃
@@ -60,45 +60,6 @@ comment: true
 - 睡觉前会用 kindle Oasis2 看书到困，这是我的  [书单](https://blog.502.li/booklist.html)
 
 - 喜欢二次元、喜欢看动漫和轻小说，这是我看过的 [动漫](https://bgm.tv/user/512178)
-
-## devices
-
-- **Motorola Moto Z Play**
-- **iPhone 6s**
-- **iPhone 7**
-- **Kindle Oasis 2**
-- **Kindle Paperwhite 3**
-- **SONY SBH60**
-- **ThinkPad Yoga 12**
-- **NETGEAR R6300 V2**
-- **NETGEAR WNDR 3700 V4**
-- **AMD Ryzen 5 2600 Desktop**
-
-## software
-
-- **Debian 10 ❤ xfce4**
-- **Visual Studio Code**
-- **VMware vSphere ESXi**
-- **OpenWRT** & **LEDE**
-- **Asuswrt-Merlin**
-
-## service
-
-- **Google Cloud Platform‎**
-- **Amazon AWS**
-- **namecheap**
-- **CloudFlare**
-- **Oracle Cloud**
-- **Kindle Unlimited**
-- **Office 365**
-- **DigitalOcean**
-
-## game
-
-弃坑不玩游戏了
-
-- **ingress**
-- **崩坏3rd**
 
 ## love and passion
 
