@@ -55,6 +55,8 @@ Google 家的  GKE  中的每个节点都是使用 [Container-Optimized OS](http
 
 #### 官方宣传册
 
+PPT 做的不错呦😂
+
 ![image-20191231163325900](https://blog.502.li/img/image-20191231163325900.png)
 
 ![image-20191231163400135](https://blog.502.li/img/image-20191231163400135.png)
@@ -102,11 +104,9 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 
 ## 安装体验
 
-咱的虚拟化平台是 VMware vSphere ，因为硬件服务器大多数都是 Dell 的，而 VMware 是 Dell 母公司，对于我司这种传统企业来讲使用 VMware vSphere 这种用户 UI 友好的虚拟化无疑是最好的选择。哈哈😂。其他虚拟化平台比如 OpenStack 安装步骤可能会有所不同
+咱的虚拟化平台是 VMware vSphere ，因为硬件服务器大多数都是 Dell 的，而  Dell  是 VMware 母公司，对于我司这种传统企业来讲使用 VMware vSphere 这种用户 UI 友好的虚拟化无疑是最好的选择，哈哈😂。其他虚拟化平台比如 OpenStack 安装步骤会有所不同。
 
-## Container-Optimized OS
-
-#### 卒
+### Container-Optimized OS
 
 因为仅仅是针对 GCE 进行优化的系统，传统的虚拟化比如 KVM 、 ESXi 可能用不了。另外还需要拿 [Chromium OS](https://www.chromium.org/chromium-os)  的源码来编译镜像，没有现成的  ISO 或者 OVA 虚拟机模板可用，咱就不折腾了。毕竟硬件资源有限，现场编译一个 [Chromium OS](https://www.chromium.org/chromium-os)  也需要十几个小时😥
 
@@ -145,7 +145,7 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 
 ![image-20191231105906355](https://blog.502.li/img/image-20191231105906355.png)
 
-#### 2.
+#### 2.添加 OVA 虚拟机模板
 
 ![image-20191231110111943](https://blog.502.li/img/image-20191231110111943.png)
 
@@ -195,9 +195,9 @@ HOME_URL="https://vmware.github.io/photon/"
 BUG_REPORT_URL="https://github.com/vmware/photon/issues"
 ```
 
-目前的内核版本是 4.19.79 ，比 CentOS 那种五年前的 3.18 高到不知道哪里去了。不过个人认为，对于容器虚拟化这种依赖于内核特性的技术来讲还是要选择高一点的版本比较好。像 CentOS 那种五年前的 3.18 版本，那时候容器所依赖的很多内核特性在这些版本上还不够成熟。从使用来讲，或外的公有云像 GKE 、AKS、AKE 等都是使用的 4.14 内核版本以上。
+目前的内核版本是 4.19.79 ，比 CentOS 7 系那种五年前的 3.18 内核高到不知道哪里去了。不过个人认为，对于容器虚拟化这种依赖于内核特性的技术来讲还是要选择高一点的版本比较好。像 CentOS 那种五年前的 3.18 版本，那时候容器所依赖的很多内核特性在这些版本上还不够成熟。从使用来讲，或外的公有云像 GKE 、AKS、AKE 等都是使用的 4.14 内核版本以上。
 
-4.19 版本有个小问题，就是如果 kube-proxy 使用 IPVS 的化，需要开启相应的内核模块，主要依赖的内核模块有以下
+4.19 版本有个小问题，就是如果 kube-proxy 使用 IPVS 的话，需要开启相应的内核模块，主要依赖的内核模块有以下
 
 ```bash
 modprobe -- ip_vs
@@ -230,8 +230,6 @@ root@photon-machine [ ~ ]# free -h
 Mem:          2.0Gi       109Mi       1.6Gi       0.0Ki       238Mi       1.8Gi
 Swap:            0B          0B          0B
 ```
-
-
 
 #### 磁盘
 
