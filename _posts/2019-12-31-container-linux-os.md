@@ -760,6 +760,58 @@ RancherOS 将各个平台的安装镜像都放在了 GitHub [release](https://gi
 
 ![image-20191231142454934](https://blog.502.li/img/image-20191231142454934.png)
 
+使用 ISO 启动之后进入得是一个 liveCD 型得系统，并没有安装虚拟机得磁盘当中，我们需要将 RancherOS 安装到磁盘上。提前准备好 cloud-init 的配置文件，只需要执行 `ros install -c cloud-config.yml -d /dev/sda` 命令就行啦。-d 参数后面跟着安装到的磁盘。
+
+不过需要像 CoreOS 那样准备给一个 `cloud-config.yml` 配置文件，将我们得 ssh 公钥和用户密码填写到里面，不过 `cloud-config` 能配置得选项非常多，在此就不赘述了，等抽空专门写一篇博客来讲讲 cloud-init 的使用。（又挖坑😂，不知何时能填上🙃
+
+```bash
+[root@rancher rancher]# ros install -c cloud-config.yml -d /dev/sda
+INFO[0000] No install type specified...defaulting to generic
+Installing from rancher/os:v1.5.5
+Continue [y/N]: y
+INFO[0002] start !isoinstallerloaded
+INFO[0002] trying to load /bootiso/rancheros/installer.tar.gz
+69b8396f5d61: Loading layer [==================================================>]  11.89MB/11.89MB
+cae31a9aae74: Loading layer [==================================================>]  1.645MB/1.645MB
+78885fd6d98c: Loading layer [==================================================>]  1.536kB/1.536kB
+51228f31b9ce: Loading layer [==================================================>]   2.56kB/2.56kB
+d8162179e708: Loading layer [==================================================>]   2.56kB/2.56kB
+3ee208751cd2: Loading layer [==================================================>]  3.072kB/3.072kB
+Loaded image: rancher/os-installer:latest
+INFO[0002] Loaded images from /bootiso/rancheros/installer.tar.gz
+INFO[0002] starting installer container for rancher/os-installer:latest (new)
+Installing from rancher/os-installer:latest
+mke2fs 1.45.2 (27-May-2019)
+64-bit filesystem support is not enabled.  The larger fields afforded by this feature enable full-strength checksumming.  Pass -O 64bit to rectify.
+Creating filesystem with 7863808 4k blocks and 7864320 inodes
+Filesystem UUID: fe29cb27-b4ac-4c75-a12d-895ea7e52af9
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+Continue with reboot [y/N]:y
+INFO[0288] Rebooting
+INFO[0288] Setting reboot timeout to 60 (rancher.shutdown_timeout set to 60)
+....^[            ] reboot:info: Setting reboot timeout to 60 (rancher.shutdown_timeout set to 60)
+.=.[            ] reboot:info: Stopping /docker : 3d39a73e4089
+...........M..........[            ] reboot:info: Stopping /open-vm-tools : ccd97f8a7775
+:.[            ] reboot:info: Stopping /ntp : acf47c78a711
+.>.[            ] reboot:info: Stopping /network : 08be8ef68e27
+..<..[            ] reboot:info: Stopping /udev : 4986cd58a227
+.=.[            ] reboot:info: Stopping /syslog : 254137c5e66a
+.<.[            ] reboot:info: Stopping /acpid : a2ededff859c
+..C..[            ] reboot:info: Stopping /system-cron : 899028a78e3a
+..H.[            ] reboot:info: Console Stopping [/console] : 6fc9ef66b43c
+Connection to 10.20.172.119 closed by remote host.
+Connection to 10.20.172.119 closed.
+
+```
+
 
 
 ### 内核以及发行版信息
@@ -872,22 +924,118 @@ Swap:            0          0          0
 
 #### 磁盘
 
+由于系统服务是以容器的方式来运行的，而容器内的进程要访问系统文件系统的话就要将这些文件挂载到容器里去，所以会出现这么多的分区情况，不过绝大多数都是容器挂载的数据卷。
+
 ```bash
+[root@rancher rancher]# df -h
 Filesystem                Size      Used Available Use% Mounted on
-overlay                   1.9G    505.4M      1.4G  26% /
+overlay                  28.0G      1.0G     25.5G   4% /
 tmpfs                     1.9G         0      1.9G   0% /dev
 tmpfs                     1.9G         0      1.9G   0% /sys/fs/cgroup
-none                      1.9G    864.0K      1.9G   0% /run
-tmpfs                     1.9G         0      1.9G   0% /media
-tmpfs                     1.9G         0      1.9G   0% /mnt
-none                      1.9G    864.0K      1.9G   0% /var/run
+/dev/sda1                28.0G      1.0G     25.5G   4% /media
+/dev/sda1                28.0G      1.0G     25.5G   4% /opt
+none                      1.9G    944.0K      1.9G   0% /run
+/dev/sda1                28.0G      1.0G     25.5G   4% /mnt
+/dev/sda1                28.0G      1.0G     25.5G   4% /home
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/resolv.conf
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/logrotate.d
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/lib/firmware
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/sbin/iptables
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/docker
+none                      1.9G    944.0K      1.9G   0% /var/run
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/log
 devtmpfs                  1.9G         0      1.9G   0% /host/dev
 shm                      64.0M         0     64.0M   0% /host/dev/shm
-tmpfs                     1.9G    505.4M      1.4G  26% /etc/hostname
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/selinux
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/hosts
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/lib/modules
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/hostname
 shm                      64.0M         0     64.0M   0% /dev/shm
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/bin/system-docker
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/boot2docker
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/share/ros
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/m-user-docker
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/waagent
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/docker
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/kubelet
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/rancher
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/bin/ros
+/dev/sda1                28.0G      1.0G     25.5G   4% /usr/bin/system-docker-runc
+/dev/sda1                28.0G      1.0G     25.5G   4% /etc/ssl/certs/ca-certificates.crt.rancher
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/rancher/cache
+/dev/sda1                28.0G      1.0G     25.5G   4% /var/lib/rancher/conf
 devtmpfs                  1.9G         0      1.9G   0% /dev
 shm                      64.0M         0     64.0M   0% /dev/shm
 ```
+
+#### 文件系统
+
+````bash
+[root@rancher rancher]# mount
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/system-docker/overlay2/l/TBWLXSEPWSCBGMNSU37HJXNRO3:/var/lib/system-docker/overlay2/l/DWK2WF5FKFYZTH74WUBGHTRF4V:/var/lib/system-docker/overlay2/l/HDUW6LV2DFEIJPW3IA33YTCNWX:/var/lib/system-docker/overlay2/l/ZDK3KMGDSN5O33AR6XJJF27NFO:/var/lib/system-docker/overlay2/l/TSWFV744M2LUOSPV2N6QHON4NP:/var/lib/system-docker/overlay2/l/QZ3U27554L5LKMJDYP3DC356L7:/var/lib/system-docker/overlay2/l/D6LSXZS2UGAZ7NMKQJKMQVT24P:/var/lib/system-docker/overlay2/l/KHB3OKMEQIL2P34QMHYF3HWTLT,upperdir=/var/lib/system-docker/overlay2/fc79b6b6cf5c6d0b34b5abb95a1a19d765c1a00d66d0cff1ef3778d109471522/diff,workdir=/var/lib/system-docker/overlay2/fc79b6b6cf5c6d0b34b5abb95a1a19d765c1a00d66d0cff1ef3778d109471522/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (rw,nosuid,nodev,noexec,relatime,mode=755)
+none on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+none on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+none on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+none on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+none on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+none on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+none on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+none on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+none on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+none on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /media type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /opt type ext4 (rw,relatime,data=ordered)
+none on /run type tmpfs (rw,relatime)
+nsfs on /run/docker/netns/default type nsfs (rw)
+nsfs on /run/system-docker/netns/default type nsfs (rw)
+nsfs on /run/system-docker/netns/d15f3e062bb6 type nsfs (rw)
+/dev/sda1 on /mnt type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /home type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/resolv.conf type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/logrotate.d type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /usr/lib/firmware type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /usr/sbin/iptables type ext4 (ro,relatime,data=ordered)
+/dev/sda1 on /etc/docker type ext4 (rw,relatime,data=ordered)
+none on /var/run type tmpfs (rw,relatime)
+nsfs on /var/run/docker/netns/default type nsfs (rw)
+nsfs on /var/run/system-docker/netns/default type nsfs (rw)
+nsfs on /var/run/system-docker/netns/d15f3e062bb6 type nsfs (rw)
+/dev/sda1 on /var/log type ext4 (rw,relatime,data=ordered)
+devtmpfs on /host/dev type devtmpfs (rw,relatime,size=1949420k,nr_inodes=487355,mode=755)
+none on /host/dev/pts type devpts (rw,relatime,mode=600,ptmxmode=000)
+shm on /host/dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+mqueue on /host/dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /etc/selinux type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hosts type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /usr/lib/modules type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hostname type ext4 (rw,relatime,data=ordered)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+/dev/sda1 on /usr/bin/system-docker type ext4 (ro,relatime,data=ordered)
+/dev/sda1 on /var/lib/boot2docker type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /usr/share/ros type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/m-user-docker type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/waagent type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/docker type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/kubelet type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/rancher type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /usr/bin/ros type ext4 (ro,relatime,data=ordered)
+/dev/sda1 on /usr/bin/system-docker-runc type ext4 (ro,relatime,data=ordered)
+/dev/sda1 on /etc/ssl/certs/ca-certificates.crt.rancher type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/rancher/cache type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /var/lib/rancher/conf type ext4 (rw,relatime,data=ordered)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=1949420k,nr_inodes=487355,mode=755)
+none on /dev/pts type devpts (rw,relatime,mode=600,ptmxmode=000)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,relatime,name=systemd)
+none on /sys/fs/selinux type selinuxfs (ro,relatime)
+````
 
 ### 系统服务容器化
 
@@ -1000,36 +1148,40 @@ GLOBAL OPTIONS:
 
 ### 系统进程
 
-
+- 可以看到，使用 `ros service ps` 命令来查看正在运行的系统服务，这些服务都是以容器的方式来运行的。比如用户空间里的 `user-docker` 、`syslog` 、`udevd`   等等都是以容器的方式来运行的，而不是以传统进程服务来运行的。包括我们安装 RancherOS 到磁盘的时候  `starting installer container for rancher/os-installer:latest (new)` 这个安装程序也是由容器的方式来运行的，把磁盘设备和 `cloud-init` 配置文件一并挂载到容器中。
 
 ```bash
-[root@rancher rancher]# ros s ps
-Name                    Command                                                            State                              Ports
-udev                    /usr/bin/ros entrypoint udevd                                      Up Less than a second
-system-volumes          /usr/bin/ros entrypoint echo                                       Created
-preload-user-images     /usr/bin/ros entrypoint ros preload-images                         Exited (0) Less than a second ago
-logrotate               /usr/bin/entrypoint.sh /usr/sbin/logrotate -v /etc/logrotate.conf  Exited (0) 4 minutes ago
-cloud-init-execute      /usr/bin/ros entrypoint cloud-init-execute -pre-console            Exited (0) Less than a second ago
-open-vm-tools           /usr/bin/ros entrypoint /usr/bin/vmtoolsd                          Up Less than a second
-container-data-volumes  /usr/bin/ros entrypoint echo                                       Created
-subscriber              /usr/bin/ros entrypoint os-subscriber                              Exited (0) 37 minutes ago
-command-volumes         /usr/bin/ros entrypoint echo                                       Created
-user-volumes            /usr/bin/ros entrypoint echo                                       Created
-media-volumes           /usr/bin/ros entrypoint echo                                       Created
-all-volumes             /usr/bin/ros entrypoint echo                                       Created
-docker                  ros user-docker                                                    Up Less than a second
-network                 /usr/bin/ros entrypoint netconf                                    Up Less than a second
-ntp                     /usr/bin/ros entrypoint /bin/start_ntp.sh                          Up Less than a second
-udev-cold               /usr/bin/ros entrypoint ros udev-settle                            Exited (0) Less than a second ago
-console                 /usr/bin/ros entrypoint ros console-init                           Up Less than a second
-syslog                  /usr/bin/entrypoint.sh rsyslogd -n                                 Up Less than a second
-system-cron             container-crontab                                                  Up Less than a second
-acpid                   /usr/bin/ros entrypoint /usr/sbin/acpid -f                         Up Less than a second
+[root@rancher rancher]# ros service ps
+Name                    Command                                                            State                     Ports
+docker                  ros user-docker                                                    Up 9 minutes             
+logrotate               /usr/bin/entrypoint.sh /usr/sbin/logrotate -v /etc/logrotate.conf  Created                  
+system-cron             container-crontab                                                  Up 9 minutes             
+container-data-volumes  /usr/bin/ros entrypoint echo                                       Created                  
+console                 /usr/bin/ros entrypoint ros console-init                           Up 9 minutes             
+system-volumes          /usr/bin/ros entrypoint echo                                       Created                  
+ntp                     /usr/bin/ros entrypoint /bin/start_ntp.sh                          Up 9 minutes             
+subscriber              /usr/bin/ros entrypoint os-subscriber                              Exited (0) 2 minutes ago 
+syslog                  /usr/bin/entrypoint.sh rsyslogd -n                                 Up 9 minutes             
+media-volumes           /usr/bin/ros entrypoint echo                                       Created                  
+preload-user-images     /usr/bin/ros entrypoint ros preload-images                         Exited (0) 9 minutes ago 
+udev                    /usr/bin/ros entrypoint udevd                                      Up 9 minutes             
+udev-cold               /usr/bin/ros entrypoint ros udev-settle                            Exited (0) 9 minutes ago 
+network                 /usr/bin/ros entrypoint netconf                                    Up 9 minutes             
+open-vm-tools           /usr/bin/ros entrypoint /usr/bin/vmtoolsd                          Up 9 minutes             
+acpid                   /usr/bin/ros entrypoint /usr/sbin/acpid -f                         Up 9 minutes             
+command-volumes         /usr/bin/ros entrypoint echo                                       Created                  
+cloud-init-execute      /usr/bin/ros entrypoint cloud-init-execute -pre-console            Exited (0) 9 minutes ago 
+user-volumes            /usr/bin/ros entrypoint echo                                       Created                  
+all-volumes             /usr/bin/ros entrypoint echo          
 ```
 
 ###  包管理器
 
-和 CoreOS 一样，RancherOS 也没得相应的包管理器😂，都是采用容器来运行所需的服务，使用 `ros` 命令来管理相应的服务。
+和 CoreOS 一样，RancherOS 也没得相应的包管理器😂，都是采用容器来运行所需的服务，使用 `ros` 命令来管理相应的服务。如果想要运行一个服务的话，需要使用 ros 来创建相应的容器来运行才可以。而使用 ros 来创建服务
+
+
+
+### 使用体验
 
 ## 结束
 
