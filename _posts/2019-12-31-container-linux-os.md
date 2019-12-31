@@ -96,27 +96,27 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 
 咱的虚拟化平台是 VMware vSphere ，因为硬件服务器大多数都是 Dell 的，而 VMware 是 Dell 母公司，对于我司这种传统企业来讲使用 VMware vSphere 这种用户 UI 友好的虚拟化无疑是最好的选择。哈哈😂。其他虚拟化平台比如 OpenStack 安装步骤可能会有所不同
 
-### Container-Optimized OS
+## Container-Optimized OS
 
 #### 卒
 
 因为仅仅是针对 GCE 进行优化的系统，传统的虚拟化比如 KVM 、 ESXi 可能用不了。另外还需要拿 [Chromium OS](https://www.chromium.org/chromium-os)  的源码来编译镜像，没有现成的  ISO 或者 OVA 虚拟机模板可用，咱就不折腾了。毕竟硬件资源有限，现场编译一个 [Chromium OS](https://www.chromium.org/chromium-os)  也需要十几个小时😥
 
-### Photon OS
+## Photon OS
 
 可以现成编译一个 ISO 镜像，也可以使用官方已经编译好的 ISO 镜像或者 OVA 虚拟机模板。不过也支持常见的公有云，比如 Amazon AMI 、Google GCE Image、Azure VHD。甚至还有 Raspberry Pi3 Image 树莓派3😂
 
-#### [官方文档](https://vmware.github.io/photon/assets/files/html/3.0/photon_installation/)
+### [官方文档](https://vmware.github.io/photon/assets/files/html/3.0/photon_installation/)
 
 官方的安装文档中都给出了各种环境的安装方式，选择自己的环境按照文档一步一步来就行，不过在此注意以下几点。
 
-#### 安装镜像
+### 安装镜像
 
-- ##### [ISO](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
+- #### [ISO](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
 
 通用的方案，适用于各种环境，无论是虚拟机还是物理机，由于咱使用的是 VMware vSphere 虚拟化，咱就使用 OVA 格式，因为后者对 vSphere 进行了优化。对于 VMware 用户来讲最好使用 OVA 格式来进行安装。
 
-- ##### [OVA](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
+- #### [OVA](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
 
 	> Pre-installed minimal environment, customized for VMware hypervisor  environments. These customizations include a highly sanitized and  optimized kernel to give improved boot and runtime performance for  containers and Linux applications. Since an OVA is a complete virtual  machine definition, we've made available a Photon OS OVA that has  virtual hardware version 11; this will allow for compatibility with  several versions of VMware platforms or allow for the latest and  greatest virtual hardware enhancements.
 
@@ -129,11 +129,11 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 - [Azure VHD](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
 - [Raspberry Pi3](https://github.com/vmware/photon/wiki/Downloading-Photon-OS)
 
-#### 安装
+### 安装
 
 下载好 OVA 虚拟机模板后，登录到 ESXi 或者 vCenter 中直接使用 OVA 创建虚拟机模板即可，对于 `VMware® Workstation 1x Pro`  可以直接将 OVA 导入成为虚拟机来运行。
 
-##### 1. 导入 OVA 虚拟机模板
+#### 1. 导入 OVA 虚拟机模板
 
 ![image-20191231105906355](https://blog.502.li/img/image-20191231105906355.png)
 
@@ -141,26 +141,26 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 
 ![image-20191231110111943](https://blog.502.li/img/image-20191231110111943.png)
 
-##### 3. 选择存储
+#### 3. 选择存储
 
 ![image-20191231110153113](https://blog.502.li/img/image-20191231110153113.png)
 
-##### 4. 同意许可协议
+#### 4. 同意许可协议
 
 ![image-20191231110231422](https://blog.502.li/img/image-20191231110231422.png)
 
-##### 5.部署选项
+#### 5.部署选项
 
 - 选择好网络
 - 磁盘置备的方式：精简就是使用到的时候再对磁盘进行制令。厚置备就是创建虚拟机的时候对磁盘进行置零，性能会好一些。
 
 ![image-20191231110339494](https://blog.502.li/img/image-20191231110339494.png)
 
-##### 6. 即将完成
+#### 6. 即将完成
 
 ![image-20191231110531238](https://blog.502.li/img/image-20191231110531238.png)
 
-#### 系统启动
+### 系统启动
 
 ![image-20191231111131193](https://blog.502.li/img/image-20191231111131193.png)
 
@@ -171,7 +171,7 @@ RancherOS 是 Rancher 团队所维护的开源项目，也是对标 CoreOS 一�
 - `vi /etc/ssh/sshd_config` 把 `PermitRootLogin` 配置项修改为 `yes` 即可
 - 重启 sshd 服务 `systemctl restart sshd`
 
-#### 内核
+### 内核
 
 ```bash
 Linux  4.19.79-1.ph3-esx #1-photon SMP Tue Oct 22 23:53:27 UTC 2019 x86_64 GNU/Linux
@@ -201,9 +201,9 @@ modprobe -- nf_conntrack_ipv4
 
 在 4.19 版本之后 nf_conntrack_ipv4 内核模块替换成了 nf_conntrack ，参看 [coreos/bugs#2518](https://github.com/coreos/bugs/issues/2518)
 
-#### 资源占用情况
+### 资源占用情况
 
-##### 内存
+#### 内存
 
 - 系统初始化启动之后内存仅仅使用了 45Mi
 
@@ -225,7 +225,7 @@ Swap:            0B          0B          0B
 
 
 
-##### 磁盘
+#### 磁盘
 
 使用 OVA 虚拟机模板启动后的虚拟机，磁盘仅仅占用了 515MB ，确实是相当轻量化，这还是包含了 docker。
 
@@ -242,11 +242,11 @@ tmpfs          1000M     0 1000M   0% /tmp
 tmpfs           200M     0  200M   0% /run/user/0
 ```
 
-##### 负载
+#### 负载
 
 ![image-20191231113306435](https://blog.502.li/img/image-20191231113306435.png)
 
-#### 进程和服务
+### 进程和服务
 
 ```bash
 ● photon-machine
@@ -297,7 +297,7 @@ tmpfs           200M     0  200M   0% /run/user/0
 
 ```
 
-#### 包管理工具
+### 包管理工具
 
 Photon OS 默认的包管理工具是 tdnf ，不过也支持 yum ，两者使用方式有细微的差别，使用的也是相同的软件包源，而且对于国内用户来讲，软件包源在国外服务器上（https://dl.bintray.com/vmware/），速度感人，肉眼可见 KB/s 级别的速度。你懂的，操他奶奶的 GFW，尼玛死了😡，搞网络封锁耽误这人搬砖。安装速度慢得一批，单单下载 50 MB 的软件包就下不下来，不得不用上我那台透明代理的旁路网关。
 
@@ -348,7 +348,7 @@ docker-engine                         23477360     84%
 
 不过可以根据官方的编译文档，把整个软件包源编译出来 ，放在本地使用，然后添加本的 yum 源码即可。
 
-#### docker 容器引擎
+### docker 容器引擎
 
 ```ini
 root@photon-machine [ ~ ]# docker info
@@ -398,7 +398,7 @@ Insecure Registries:
 Live Restore Enabled: false
 ```
 
-#### 使用体验
+### 使用体验
 
 总体来讲，除了安装软件速度极慢之外，使用起来和普通的 Linux 发行版无多大差别，系统资源占用比传统的 Linux 发行版要低的多。即便是运行了 docker 进程后系统内存也仅仅占用 100 Mb 左右，而磁盘占用才 500MB 算是比较轻量化的。至于性能方面，目前我还是找不到可以测试对比的方案。
 
@@ -423,13 +423,13 @@ modprobe -- nf_conntrack
 
 CoreOS 的稳定性以及生产实践已经相当成熟了，那么接下来就介绍 CoreOS 的使用体验。
 
-### CoreOS Container Linux
+## CoreOS Container Linux
 
 CoreOS 使用用来创建一套大规模的集群环境，单独使用的意义并不大。而且对于我司的 VMware vSphere 并没有进行优化。所以就按照裸金属部署的方式来安装体验。
 
-#### [官方文档](http://coreos.com/os/docs/latest/)
+### [官方文档](http://coreos.com/os/docs/latest/)
 
-##### Cloud Providers
+#### Cloud Providers
 
 适用于公有云
 
@@ -438,7 +438,7 @@ CoreOS 使用用来创建一套大规模的集群环境，单独使用的意义�
 - [Google Compute Engine](http://coreos.com/os/docs/latest/booting-on-google-compute-engine.html)
 - [Microsoft Azure](http://coreos.com/os/docs/latest/booting-on-azure.html)[QEMU](http://coreos.com/os/docs/latest/booting-with-qemu.html)
 
-##### Bare Metal 
+#### Bare Metal
 
 适用于物理机
 
@@ -449,7 +449,7 @@ CoreOS 使用用来创建一套大规模的集群环境，单独使用的意义�
 - [Booting from ISO](http://coreos.com/os/docs/latest/booting-with-iso.html)
 - [Root filesystem placement](http://coreos.com/os/docs/latest/root-filesystem-placement.html)
 
-##### Community Platforms 
+#### Community Platforms
 
 社区提供支持的
 
@@ -463,11 +463,11 @@ These [platforms and providers](http://coreos.com/os/docs/latest/community-platf
 - [VirtualBox](http://coreos.com/os/docs/latest/booting-on-virtualbox.html)
 - [VMware](http://coreos.com/os/docs/latest/booting-on-vmware.html)
 
-#### 安装镜像 [OVA](https://stable.release.core-os.net/amd64-usr/current/coreos_production_vmware_ova.ova)
+### 安装镜像 [OVA](https://stable.release.core-os.net/amd64-usr/current/coreos_production_vmware_ova.ova)
 
 下载下来 OVA 虚拟机模板 [OVA](https://stable.release.core-os.net/amd64-usr/current/coreos_production_vmware_ova.ova)
 
-#### 安装
+### 安装
 
 和 Photon OS 安装步骤一样，在 ESXi 上导入 OVA 虚拟机模板即可，不过需要在最后一步配置好 OS ，包括主机名、配置文件数配置文件 url、加密的配置文件等等，根据自身需求配好即可。可以参照官方[配置文件的文档](https://coreos.com/os/docs/latest/clc-examples.html) 。这一步是必须要做的，不然没有 ssh 公钥和密码你是无法登录到系统中的。
 
@@ -510,11 +510,11 @@ $1$nCzW8953$un/JUMJDE2588l7Y6KkP.
 
 配置完成之后就把整个内容复制粘贴到第二个框框 `CoreOS config data` 里
 
-##### 其他设置
+#### 其他设置
 
 ![image-20191231125441199](https://blog.502.li/img/image-20191231125441199.png)
 
-#### 系统启动
+### 系统启动
 
 可能是 coreos config 配置文件没有配好，而导致启动后输入设置的密码提示错误😥，僵硬，只能通过修改 grub 启动参数来跳过了。
 
@@ -524,7 +524,7 @@ $1$nCzW8953$un/JUMJDE2588l7Y6KkP.
 - ![image-20191231133509428](https://blog.502.li/img/image-20191231133509428.png)
 - 启动进入系统之后输入 `sudo passwd` 来修改 root 密码。然后切换到 root 用户下 `passwd core` 修改 core 这个用户的密码。修改之后就可以通过 ssh 登录啦😂，比 Photon OS 要折腾一番呀。不过啊，使用 OVA 部署最好结合 could-init 来设置虚拟机的 ssh 密钥，网络，主机名等参数。
 
-#### 资源占用情况
+### 资源占用情况
 
 ##### 内存
 
@@ -536,7 +536,7 @@ Swap:            0B          0B          0B
 
 ```
 
-##### 磁盘
+#### 磁盘
 
 CoreOS 的磁盘分区和 Photon OS 略有不同
 
@@ -557,7 +557,7 @@ tmpfs            481M     0  481M   0% /tmp
 tmpfs             97M     0   97M   0% /run/user/500
 ```
 
-#### 内核以及发行版信息
+### 内核以及发行版信息
 
 ```bash
 Linux localhost 4.19.86-coreos #1 SMP Mon Dec 2 20:13:38 -00 2019 x86_64 Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz GenuineIntel GNU/Linux
@@ -575,7 +575,7 @@ BUG_REPORT_URL="https://issues.coreos.com"
 COREOS_BOARD="amd64-usr"
 ```
 
-#### docker 容器引擎
+### docker 容器引擎
 
 ```ini
 core@localhost ~ $ docker info
@@ -625,13 +625,13 @@ Insecure Registries:
 Live Restore Enabled: false
 ```
 
-#### 负载
+### 负载
 
 ![image-20191231135348120](https://blog.502.li/img/image-20191231135348120.png)
 
 
 
-#### 进程和服务
+### 进程和服务
 
 ```bash
 ● localhost
@@ -688,7 +688,7 @@ Live Restore Enabled: false
 
 ```
 
-#### 包管理工具
+### 包管理工具
 
 **没得😂**，你没看错，确实如此，在 CoreOS 上没有你可以用的包管理器，不像 PhotonOS 那样有个 tdnf/yum 让你爽一把😂。在 CoreOS 一切皆容器。可以看一下 `stackexchange.com` 这个答案😂：
 
@@ -703,11 +703,11 @@ Live Restore Enabled: false
 
 官方推荐使用 [coreos](https://github.com/coreos)/**[toolbox](https://github.com/coreos/toolbox)** 来安装所需要的软件，这个工具以后再详细讲解一下吧。
 
-#### 使用体验
+### 使用体验
 
 安装过程要出于安全考虑比 Photon OS 多于个步骤来登录到系统，目前我还没有找到启动的时候添加 ssh 密钥的办法。总的来讲，再 CoreOS 里一切皆容器运行所需要的服务，这种里面要先进的多。下面的 RancherOS 更是将一切皆容器贯彻到底，甚至将 systemd 取代掉，使用 docker 来管理系统服务。
 
-### RancherOS
+## RancherOS
 
 目前 RancherOS 的版本是 v1.5.5
 
@@ -724,11 +724,11 @@ Fedora: 31
 Ubuntu: bionic
 ```
 
-#### [官方文档](https://rancher.com/docs/os/v1.x/en/)
+### [官方文档](https://rancher.com/docs/os/v1.x/en/)
 
 [安装文档](https://rancher.com/docs/os/v1.x/en/installation/running-rancheros/)
 
-##### Cloud 云平台
+#### Cloud 云平台
 
 [Amazon EC2](https://rancher.com/docs/os/v1.x/en/installation/running-rancheros/cloud/aws)
 
@@ -744,7 +744,7 @@ Ubuntu: bionic
 
 [Aliyun](https://rancher.com/docs/os/v1.x/en/installation/running-rancheros/cloud/aliyun)
 
-##### Bare Metal & Virtual Servers 裸金属
+#### Bare Metal & Virtual Servers 裸金属
 
 [PXE](https://rancher.com/docs/os/v1.x/en/installation/running-rancheros/server/pxe)
 
@@ -752,17 +752,17 @@ Ubuntu: bionic
 
 [Raspberry Pi](https://rancher.com/docs/os/v1.x/en/installation/running-rancheros/server/raspberry-pi)
 
-#### [安装镜像](https://github.com/rancher/os/releases/)
+### [安装镜像](https://github.com/rancher/os/releases/)
 
 RancherOS 将各个平台的安装镜像都放在了 GitHub [release](https://github.com/rancher/os/releases/) 页面上。对于 VMware 用户就使用 [rancheros-vmware.iso](https://github.com/rancher/os/releases/download/v1.5.5/rancheros-vmware.iso) 这个镜像即可。没得 OVA 虚拟机模板只能手动搓一个啦。下载完成之后将这个镜像上传到 vSphere 的数据存储中，按照创建常规虚拟机的方式来创建虚拟机。
 
-#### 安装
+### 安装
 
 ![image-20191231142454934](https://blog.502.li/img/image-20191231142454934.png)
 
 
 
-#### 内核以及发行版信息
+### 内核以及发行版信息
 
 ```bash
 [root@rancher rancher]# uname -a
@@ -780,7 +780,7 @@ BUG_REPORT_URL="https://github.com/rancher/os/issues"
 BUILD_ID=
 ```
 
-#### docker 容器引擎
+### docker 容器引擎
 
 在 RancherOS 中有两套 docker ，一套是用来容器化运行系统服务的，包括用户空间的 docker ，而另一套 docker 就是用户空间的 docker
 
@@ -835,7 +835,7 @@ Server:
  Product License: Community Engine
 ```
 
-#### rancher 引擎
+### rancher 引擎
 
 ```bash
 [root@rancher rancher]# du -sh /var/lib/rancher/engine/*
@@ -850,15 +850,15 @@ Server:
 8.3M    /var/lib/rancher/engine/runc
 ```
 
-#### 资源占用
+### 资源占用
 
-##### 负载
+#### 负载
 
 - 可以看出 RancherOS 运行着大量的 `system-docker-containerd-shim` 这是因为它将系服务也都容器化来运行，但奇怪的是无法使用 docker 命令来管理这些服务。
 
 ![image-20191231143958024](https://blog.502.li/img/image-20191231143958024.png)
 
-##### 内存
+#### 内存
 
 - 初始化启动后内存使用了 1224MB😂，要比 CoreOS 和 Photon OS 加起来还多😂
 
@@ -870,7 +870,7 @@ Mem:          3947       1224       2722        993          0        993
 Swap:            0          0          0
 ```
 
-##### 磁盘
+#### 磁盘
 
 ```bash
 Filesystem                Size      Used Available Use% Mounted on
@@ -889,11 +889,11 @@ devtmpfs                  1.9G         0      1.9G   0% /dev
 shm                      64.0M         0     64.0M   0% /dev/shm
 ```
 
-#### 系统服务容器化
+### 系统服务容器化
 
 通过 top 命令和 ps 命令查看系统运行的进程可以发现以下几个重要的进程
 
-##### top
+#### top
 
 ```bash
  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
@@ -962,7 +962,7 @@ shm                      64.0M         0     64.0M   0% /dev/shm
    18     2 root     IW<      0   0%   0% [kworker/1:0H]
 ```
 
-#### ros
+### ros
 
 > A system service is a container that can be run in either System Docker or Docker. Rancher provides services that are already available in RancherOS by adding them to the [os-services repo](https://github.com/rancher/os-services). Anything in the `index.yml` file from the repository for the tagged release will be an available system service when using the `ros service list` command.
 
@@ -998,7 +998,7 @@ GLOBAL OPTIONS:
    --version, -v  print the version
 ```
 
-#### 系统进程
+### 系统进程
 
 
 
@@ -1027,6 +1027,10 @@ system-cron             container-crontab                                       
 acpid                   /usr/bin/ros entrypoint /usr/sbin/acpid -f                         Up Less than a second
 ```
 
-####  包管理器
+###  包管理器
 
 和 CoreOS 一样，RancherOS 也没得相应的包管理器😂，都是采用容器来运行所需的服务，使用 `ros` 命令来管理相应的服务。
+
+## 结束
+
+文章写的太仓促了，感觉这些容器优化行操作系统都值得玩一玩得，尤其是 RancherOS 这种将 systemc 取代掉使用 docker 来管理系统服务得牛皮技术，值得研究一哈。因为时间有限，所以就没有详细地展开来将，就等到 2020 年吧😂。祝大家 2020 年元旦快乐，新的一年里……省略千字祝福😝
