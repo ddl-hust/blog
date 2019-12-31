@@ -53,6 +53,12 @@ Google 家的  GKE  中的每个节点都是使用 [Container-Optimized OS](http
 
 ### Photon OS
 
+#### 官方宣传册
+
+![image-20191231163325900](https://blog.502.li/img/image-20191231163325900.png)
+
+![image-20191231163400135](https://blog.502.li/img/image-20191231163400135.png)
+
 剽窃一段 VMware 官方的[文档](https://vmware.github.io/photon/)介绍：
 
 > Project Photon OS™ is an open source, minimal Linux container host  that is optimized for cloud-native applications, cloud platforms, and  VMware infrastructure. Photon OS 3.0 introduces ARM64 support, installer improvements and updated packages. We invite partners, customers, and  community members to collaborate on using Photon OS to run  high-performance virtual machines and containerized applications.
