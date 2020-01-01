@@ -40,7 +40,7 @@ Google 家的  GKE  中的每个节点都是使用 [Container-Optimized OS](http
 > - Prometheus：
 > - flannel：
 
-在linux世界里有大量的发行版可以做为服务器系统使用, 但是这些系统大多部署复杂, 更新系统更是困难重重. 这些都是CoreOS试图解决的问题。
+在 Linux 世界里有大量的发行版可以做为服务器系统使用, 但是这些系统大多部署复杂, 更新系统更是困难重重. 这些都是 CoreOS 试图解决的问题。
 
 #### 特点如下
 
