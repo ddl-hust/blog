@@ -61,13 +61,13 @@ email 发送确实可以，但有些限制，比如 GCP 就 ban 掉了 GCE 的 2
 
 >   Alright, a new bot. How are we going to call it? Please choose a name for your bot.
 
-#### 4.发送 Bot 的名字（昵称）
+#### 4.发送 Bot 的 name 和 username
 
 >   Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
 
 ![image-20200102213405851](https://blog.502.li/img/image-20200102213405851.png)
 
-bot 的名字有要求，最好以 `xxx_bot` 来命名 比如 `linuxlogin_bot`
+bot 有两个名字，第一个发送的是 `first_name`: "linuxloginbot"，第二个发送的是"`username`": "linuxlogin_bot" 。其中 username 有要求，要 `xxx_bot` 来命名 比如 `linuxlogin_bot`
 
 #### 5.得到 Bot 的 token，用于标识这个 Bot
 
@@ -113,7 +113,7 @@ https://api.telegram.org/bot（ 这里加上你的token ）/sendMessage?chat_id=
 https://api.telegram.org/bot1067796083:AAFjONLJ9-F2Y6IRSmQoBVAAgRhd589MXpk/sendMessage?chat_id=613640483&text=message
 ```
 
-把这段 `url` 复制粘贴到浏览器测试一下即可，或者通过 `curl` & `wge`t 命令也可以。看看你的 telegram 能否正常接受消息。如果出现的话，恭喜你成功了第一步😂
+把这段 `url` 复制粘贴到浏览器测试一下即可，或者通过 `curl` & `wget`命令也可以。看看你的 telegram 能否正常接受消息。如果出现的话，恭喜你成功了第一步😂
 
 ```json
 {
