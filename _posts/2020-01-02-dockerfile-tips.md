@@ -15,8 +15,28 @@ comment: true
 
 - [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) 推荐看一下官方博客上写的
 - [Dockerfile 最佳实践](https://yeasy.gitbooks.io/docker_practice/appendix/best_practices.html#dockerfile-最佳实践) 
+- [docker-library](https://github.com/docker-library)/**[docs](https://github.com/docker-library/docs)** 官方示例
 
 ## 几个搓镜像的小技巧
+
+
+
+#### 构建上下文
+
+
+
+执行 `docker build` 命令时，当前的工作目录被称为构建上下文。默认情况下，Dockerfile 就位于该路径下。也可以通过 -f 参数来指定 dockerfile ，但 docker 客户端会将当前工作目录下的所有文件发送到 docker 守护进程进行构建。所以来说，当执行 docker build 进行构建镜像时，当前目录一定要 `干净` ，切记不要在家里录下创建一个 `Dockerfile`  紧接着 `docker build` 一把梭 😂。
+
+正确做法是为项目建立一个文件夹，把构建镜像时所需要的资源放在这个文件夹下。比如这样：
+
+```bash
+mkdir project
+cd !$
+vi Dockerfile
+# 编写 Dockerfile
+```
+
+> tips：也可以通过 `.dockerignore` 文件来忽略不需要的文件发送到 docker 守护进程
 
 #### 基础镜像
 
@@ -273,6 +293,52 @@ apk add --no-cache --virtual .build-deps gcc libc-dev make perl-dev openssl-dev 
 ```
 
 构建完成之后可以使用 `apk del .build-deps` 命令，一并将这些编译依赖全部删除。需要注意的是，`.build-deps` 后面接的是编译时以来的软件包，并不是所有的编译依赖都可以删除，不要把运行时的依赖包接在后面，最好单独 add 一下。
+
+#### 最小化层数
+
+docker 在 1.10 以后，只有 `RUN、COPY 和 ADD` 指令会创建层，其他指令会创建临时的中间镜像，但是不会直接增加构建的镜像大小了。前文提到了建议使用 git 或者 wget 的方式来将文件打入到镜像当中，但如果我们必须要使用 COPY 或者 ADD 指令呢？
+
+还是拿 FastDFS 为例:
+
+```dockerfile
+# centos 7
+FROM centos:7
+# 添加配置文件
+# add profiles
+ADD conf/client.conf /etc/fdfs/
+ADD conf/http.conf /etc/fdfs/
+ADD conf/mime.types /etc/fdfs/
+ADD conf/storage.conf /etc/fdfs/
+ADD conf/tracker.conf /etc/fdfs/
+ADD fastdfs.sh /home
+ADD conf/nginx.conf /etc/fdfs/
+ADD conf/mod_fastdfs.conf /etc/fdfs
+
+# 添加源文件
+# add source code
+ADD source/libfastcommon.tar.gz /usr/local/src/
+ADD source/fastdfs.tar.gz /usr/local/src/
+ADD source/fastdfs-nginx-module.tar.gz /usr/local/src/
+ADD source/nginx-1.15.4.tar.gz /usr/local/src/
+```
+
+多个文件需要添加到容器中不同的路径，每个文件使用一条 ADD 指令的话就会增加一层镜像，这样戏曲就多了 12 层镜像😂。其实大可不必，我们可以将这些文件全部打包为一个文件为 `src.tar.gz` 然后通过 ADD 的方式把文件添加到当中去，然后在 RUN 指令后使用 `mv` 命令把文件移动到指定的位置。这样仅仅一条 ADD 和RUN 指令取代掉了 12 个 ADD 指令😂
+
+```dockerfile
+FROM alpine:3.10
+COPY src.tar.gz /usr/local/src.tar.gz
+RUN set -xe \
+    && apk add --no-cache --virtual .build-deps gcc libc-dev make perl-dev openssl-dev pcre-dev zlib-dev tzdata \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && tar -xvf /usr/local/src.tar.gz -C /usr/local \
+    && mv /usr/local/src/conf/fastdfs.sh /home/fastdfs/ \
+    && mv /usr/local/src/conf/* /etc/fdfs \
+    && chmod +x /home/fastdfs/fastdfs.sh \
+    && rm -rf /usr/local/src/* /var/cache/apk/* /tmp/* /var/tmp/* $HOME/.cache
+VOLUME /var/fdfs
+```
+
+其他最小化层数无非就是把构建项目的整个步骤弄成一条 RUN 指令，不过多条命令合并可以使用 `&&` 或者 `;` 这两者都可以，不过据我在 docker hub 上的所见所闻，使用 `;` 的居多，尤其是官方的 `Dockerfile` 。
 
 ## docker 镜像分析工具
 
