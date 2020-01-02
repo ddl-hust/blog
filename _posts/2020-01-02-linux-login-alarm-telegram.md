@@ -35,6 +35,8 @@ email 发送确实可以，但有些限制，比如 GCP 就 ban 掉了 GCE 的 2
 
 通过 telegram 的 api ，使用 bot 你可以很轻松地向自己发送消息，比微信QQ 那种狗屎玩意好用的多。
 
+>   需要注意的是，如果是 IOS 用户的话，通过 IOS 的通知消息推送机制，可以不挂梯子就能正常收到 telegram 的通知。包括其他需要挂梯子的应用也是，比如 Google voice。
+
 ## 怎么弄
 
 ### 首先有个 telegram 账号
@@ -114,7 +116,27 @@ https://api.telegram.org/bot1067796083:AAFjONLJ9-F2Y6IRSmQoBVAAgRhd589MXpk/sendM
 把这段 `url` 复制粘贴到浏览器测试一下即可，或者通过 `curl` & `wge`t 命令也可以。看看你的 telegram 能否正常接受消息。如果出现的话，恭喜你成功了第一步😂
 
 ```json
-{"ok":true,"result":{"message_id":2,"from":{"id":13,"is_bot":true,"first_name":"linuxloginbot","username":"linuxlogin_bot"},"chat":{"id":13,"first_name":"\u3164\u6728\u5b50","username":"muzi_ii","type":"private"},"date":1577973988,"text":"message"}}
+{
+  "ok": true,
+  "result": {
+    "message_id": 2,
+    "from": {
+      "id": 13,
+      "is_bot": true,
+      "first_name": "linuxloginbot",
+      "username": "linuxlogin_bot"
+    },
+    "chat": {
+      "id": 13,
+      "first_name": "木子",
+      "username": "muzi_ii",
+      "type": "private"
+    },
+    "date": 1577973988,
+    "text": "message"
+  }
+}
+
 ```
 
 
