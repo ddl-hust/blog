@@ -56,6 +56,7 @@ rss: https://blog.502.li/atom.xml
 | [觉论](https://blog.ryouissei.com/)                    | 用户体验、交互设计             | 多摩美术大学高材生😂      |
 | [Present Day, Present Time](https://gobomb.github.io/) | Go 、Shell、Docker、Kubernetes | Server Reboot Engineer 😂 |
 | [小竹's blog](https://blog.justforlxz.com/)            | deepin linux、C++、Web前端     | 正在使用C++拯救世界x     |
+| [瓠樽](https://blog.dylanwu.space/)                    | 前端、艺术、阅读               | 目测是位硬核博主😂        |
 
 ### 个人收藏
 
