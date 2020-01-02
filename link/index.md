@@ -32,19 +32,30 @@ comment: true
 ### 推荐个人独立博客列表
 
 -  [tuna]( https://tuna.moe/ ) 收集的博客列表  [tuna/blogroll]( https://github.com/tuna/blogroll )
-- [timqian](https://github.com/timqian)/**[chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs)** 目前为止收藏最多的个人独立博客列表，GitHub 上 3.5k 的 start
+- [chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs)目前为止收藏最多的个人独立博客列表，GitHub 上 3.5k 的 start
 
 ## 小伙伴
 
 ### 友链
 
-| 站点                                                   | 主要内容                       | 印象                     |
+-   欢迎与咱交换友链或者 py 交易😂
+
+```yaml
+title: 木子的博客
+url: https://blog.502.li
+bio: 垃圾佬、搬砖社畜、运维工程师x
+avatar: https://blog.502.li/favicon.ico
+rss: https://blog.502.li/atom.xml
+```
+
+| 站点                                                   | 主要内容                       | 印象😋                    |
 | ------------------------------------------------------ | ------------------------------ | ------------------------ |
 | [土豆不好吃](https://www.bennythink.com/)              | Linux、VPS、Python             | 有脾气的小土豆           |
 | [Steven's Blog](https://blog.hly0928.com/)             | 技术、消费电子、评测           | 大学萌新的普通 Blog      |
 | [考えるF4n9X](https://fanqxu.com/)                     | 渗透测试、社会工程学           | 社工                     |
 | [觉论](https://blog.ryouissei.com/)                    | 用户体验、交互设计             | 多摩美术大学高材生😂      |
 | [Present Day, Present Time](https://gobomb.github.io/) | Go 、Shell、Docker、Kubernetes | Server Reboot Engineer 😂 |
+| [小竹's blog](https://blog.justforlxz.com/)            | deepin linux、C++、Web前端     | 正在使用C++拯救世界x     |
 
 ### 个人收藏
 
