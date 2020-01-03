@@ -36,27 +36,28 @@ comment: true
 
 ## 小伙伴
 
-### 友链
-
 -   欢迎与咱交换友链或者 py 交易😂
 
 ```yaml
 title: 木子的博客
 url: https://blog.502.li
-bio: 垃圾佬、搬砖社畜、运维工程师x
+bio: 垃圾佬、搬砖社畜、运维工程师
 avatar: https://blog.502.li/favicon.ico
 rss: https://blog.502.li/atom.xml
 ```
 
-| 站点                                                   | 主要内容                       | 印象😋                    |
-| ------------------------------------------------------ | ------------------------------ | ------------------------ |
-| [土豆不好吃](https://www.bennythink.com/)              | Linux、VPS、Python             | 有脾气的小土豆           |
-| [Steven's Blog](https://blog.hly0928.com/)             | 技术、消费电子、评测           | 大学萌新的普通 Blog      |
-| [考えるF4n9X](https://fanqxu.com/)                     | 渗透测试、社会工程学           | 社工                     |
-| [觉论](https://blog.ryouissei.com/)                    | 用户体验、交互设计             | 多摩美术大学高材生😂      |
-| [Present Day, Present Time](https://gobomb.github.io/) | Go 、Shell、Docker、Kubernetes | Server Reboot Engineer 😂 |
-| [小竹's blog](https://blog.justforlxz.com/)            | deepin linux、C++、Web前端     | 正在使用C++拯救世界x     |
-| [瓠樽](https://blog.dylanwu.space/)                    | 前端、艺术、阅读               | 目测是位硬核博主😂        |
+### 友链
+
+| 站点                                                   | 主要内容                       | 印象😋                                                        |
+| ------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------ |
+| [土豆不好吃](https://www.bennythink.com/)              | Linux、VPS、Python             | 有脾气的小土豆                                               |
+| [蝉時雨](https://chanshiyu.com/)                       | 前端、Java、vue、博客          | [Aurora](https://github.com/chanshiyucx/aurora) 作者、诗意少年 |
+| [Steven's Blog](https://blog.hly0928.com/)             | 技术、消费电子、评测           | 大学萌新的普通 Blog                                          |
+| [考えるF4n9X](https://fanqxu.com/)                     | 渗透测试、社会工程学           | 社工                                                         |
+| [觉论](https://blog.ryouissei.com/)                    | 用户体验、交互设计             | 多摩美术大学高材生😂                                          |
+| [Present Day, Present Time](https://gobomb.github.io/) | Go 、Shell、Docker、Kubernetes | Server Reboot Engineer 😂                                     |
+| [小竹's blog](https://blog.justforlxz.com/)            | deepin linux、C++、Web前端     | 正在使用C++拯救世界                                          |
+| [瓠樽](https://blog.dylanwu.space/)                    | 前端、艺术、阅读               | 目测是位硬核博主😂                                            |
 
 ### 个人收藏
 
