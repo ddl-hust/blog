@@ -1,5 +1,5 @@
 ---
-title: VPS 安全加固之用户登陆后向 telegram 发送登录信息
+title: VPS 安全加固之用户登录后向 telegram 发送登录信息
 date: 2020-01-02
 update:
 slug: 
@@ -139,11 +139,9 @@ https://api.telegram.org/bot1067796083:AAFjONLJ9-F2Y6IRSmQoBVAAgRhd589MXpk/sendM
 
 ```
 
-
-
 ![image-20200102220642854](https://blog.502.li/img/image-20200102220642854.png)
 
-#### 8.用户登陆后执行脚本
+#### 8.用户登录后执行脚本
 
 ```bash
 #!/bin/bash
@@ -162,7 +160,7 @@ curl -s "https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}" --data-
 
 -   将该脚本放到 `/etc/profile.d/` 目录下，并 把该脚本的权限设置为` 555` ，即任何用户都可执行。
 -   `/etc/profile.d/` 下的脚本文件会在用户登录成功后自动执行，如还需要其他的操作追加在脚本里即可。
--   message 需要传递的数据根据自身需求设定即可，通过 `&&`  将多个命令的执行结果传递到 message 变量。`hostname` 获取主机名，以区分多台服务器；`TZ=UTC-8 date` 来获取登录时刻的北京时间；`who` 用来获取当前用户和 IP 等信息；`w` 命令用于获取当前用户登陆后执行的命令。
+-   message 需要传递的数据根据自身需求设定即可，通过 `&&`  将多个命令的执行结果传递到 message 变量。`hostname` 获取主机名，以区分多台服务器；`TZ=UTC-8 date` 来获取登录时刻的北京时间；`who` 用来获取当前用户和 IP 等信息；`w` 命令用于获取当前用户登录后执行的命令。
 
 #### 大功告成啦
 
