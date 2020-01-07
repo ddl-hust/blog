@@ -1,5 +1,5 @@
 ---
-title: 心理测量者小说里的书单
+title: PSYCHO-PASS 心理测量者小说读后感
 date: 2020-01-06
 update:
 slug: 
