@@ -58,6 +58,9 @@ rss: https://blog.502.li/atom.xml
 | [Present Day, Present Time](https://gobomb.github.io/) | Go 、Shell、Docker、Kubernetes | Server Reboot Engineer 😂                                     |
 | [小竹's blog](https://blog.justforlxz.com/)            | deepin linux、C++、Web前端     | 正在使用C++拯救世界                                          |
 | [瓠樽](https://blog.dylanwu.space/)                    | 前端、艺术、阅读               | 目测是位硬核博主😂                                            |
+| [Himself65 Blog](https://www.himself65.com/)           | Rust、Node                     | 扩散性百万甜面包                                             |
+
+
 
 ### 个人收藏
 
